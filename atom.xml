@@ -3,11 +3,11 @@
   <title>42&#39;s blog</title>
   
   <subtitle>life is Strange</subtitle>
-  <link href="/sjh95zs.github.io/atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://sjh95zs.github.io/sjh95zs.github.io/"/>
+  <link href="http://sjh95zs.github.io/"/>
   <updated>2019-08-04T04:33:36.728Z</updated>
-  <id>http://sjh95zs.github.io/sjh95zs.github.io/</id>
+  <id>http://sjh95zs.github.io/</id>
   
   <author>
     <name>42:p</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
-    <link href="http://sjh95zs.github.io/sjh95zs.github.io/2019/08/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://sjh95zs.github.io/sjh95zs.github.io/2019/08/04/我的第一篇博客文章/</id>
+    <link href="http://sjh95zs.github.io/2019/08/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>http://sjh95zs.github.io/2019/08/04/我的第一篇博客文章/</id>
     <published>2019-08-04T02:26:11.000Z</published>
     <updated>2019-08-04T04:33:36.728Z</updated>
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="Hexo杂谈" scheme="http://sjh95zs.github.io/sjh95zs.github.io/categories/Hexo%E6%9D%82%E8%B0%88/"/>
+      <category term="Hexo杂谈" scheme="http://sjh95zs.github.io/categories/Hexo%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="Hexo" scheme="http://sjh95zs.github.io/sjh95zs.github.io/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://sjh95zs.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://sjh95zs.github.io/sjh95zs.github.io/2019/08/04/hello-world/"/>
-    <id>http://sjh95zs.github.io/sjh95zs.github.io/2019/08/04/hello-world/</id>
+    <link href="http://sjh95zs.github.io/2019/08/04/hello-world/"/>
+    <id>http://sjh95zs.github.io/2019/08/04/hello-world/</id>
     <published>2019-08-04T01:03:17.023Z</published>
     <updated>2019-08-04T01:03:17.023Z</updated>
     
