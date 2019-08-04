@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
-    <link href="http://sjh95zs.github.io/2019/08/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://sjh95zs.github.io/2019/08/04/我的第一篇博客文章/</id>
+    <link href="http://sjh95zs.github.io/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>http://sjh95zs.github.io/我的第一篇博客文章/</id>
     <published>2019-08-04T02:26:11.000Z</published>
     <updated>2019-08-04T04:33:36.728Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://sjh95zs.github.io/2019/08/04/hello-world/"/>
-    <id>http://sjh95zs.github.io/2019/08/04/hello-world/</id>
+    <link href="http://sjh95zs.github.io/hello-world/"/>
+    <id>http://sjh95zs.github.io/hello-world/</id>
     <published>2019-08-04T01:03:17.023Z</published>
     <updated>2019-08-04T01:03:17.023Z</updated>
     
