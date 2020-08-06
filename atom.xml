@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sjh95zs.github.io/"/>
-  <updated>2019-08-04T07:30:43.627Z</updated>
+  <updated>2020-08-06T10:50:42.403Z</updated>
   <id>http://sjh95zs.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序的学习之路(1)</title>
+    <link href="http://sjh95zs.github.io/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://sjh95zs.github.io/微信小程序的学习/</id>
+    <published>2020-08-05T16:00:00.000Z</published>
+    <updated>2020-08-06T10:50:42.403Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;小程序的基本配置&quot;&gt;&lt;a href=&quot;#小程序的基本配置&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本配置&quot;&gt;&lt;/a&gt;小程序的基本配置&lt;/h1&gt;&lt;h2 id=&quot;全局配置&quot;&gt;&lt;a href=&quot;#全局配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://sjh95zs.github.io/categories/web/"/>
+    
+    
+      <category term="小程序" scheme="http://sjh95zs.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
