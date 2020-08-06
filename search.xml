@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>微信小程序的学习之路(1)</title>
-    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
-<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-      </tags>
   </entry>
   <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
@@ -112,21 +107,26 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>微信小程序的学习之路(1)</title>
+    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
+<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
   </entry>
 </search>
