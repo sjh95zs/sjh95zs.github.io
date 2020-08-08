@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. Help指令** 帮助信息：git help **** 显示所有命令：git help -a **** 查看git的使用手册：git help -g **** 查看更详细的内容：git help 命令名称/手册名称，如git help push ** 2. 配置 git的配置有三个范围** system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git">
+<meta name="description" content="1. Help指令 帮助信息：git help 显示所有命令：git help -a 查看git的使用手册：git help -g 查看更详细的内容：git help 命令名称/手册名称，如git help push  2. 配置 git的配置有三个范围  system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置 global">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git — 分布式版本控制系统">
 <meta property="og:url" content="http://sjh95zs.github.io/Git — 分布式版本控制系统/index.html">
 <meta property="og:site_name" content="42&#39;s blog">
-<meta property="og:description" content="1. Help指令** 帮助信息：git help **** 显示所有命令：git help -a **** 查看git的使用手册：git help -g **** 查看更详细的内容：git help 命令名称/手册名称，如git help push ** 2. 配置 git的配置有三个范围** system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git">
+<meta property="og:description" content="1. Help指令 帮助信息：git help 显示所有命令：git help -a 查看git的使用手册：git help -g 查看更详细的内容：git help 命令名称/手册名称，如git help push  2. 配置 git的配置有三个范围  system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置 global">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-08-08T07:59:07.767Z">
+<meta property="og:updated_time" content="2020-08-08T08:04:10.989Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git — 分布式版本控制系统">
-<meta name="twitter:description" content="1. Help指令** 帮助信息：git help **** 显示所有命令：git help -a **** 查看git的使用手册：git help -g **** 查看更详细的内容：git help 命令名称/手册名称，如git help push ** 2. 配置 git的配置有三个范围** system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git">
+<meta name="twitter:description" content="1. Help指令 帮助信息：git help 显示所有命令：git help -a 查看git的使用手册：git help -g 查看更详细的内容：git help 命令名称/手册名称，如git help push  2. 配置 git的配置有三个范围  system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置 global">
 
 
 
@@ -357,9 +357,19 @@
       
 
       
-        <h1 id="1-Help指令"><a href="#1-Help指令" class="headerlink" title="1. Help指令"></a>1. Help指令</h1><p>** 帮助信息：git help **<br>** 显示所有命令：git help -a **<br>** 查看git的使用手册：git help -g **<br>** 查看更详细的内容：git help 命令名称/手册名称，如git help push **</p>
+        <h1 id="1-Help指令"><a href="#1-Help指令" class="headerlink" title="1. Help指令"></a>1. Help指令</h1><ul>
+<li><strong>帮助信息：git help</strong></li>
+<li><strong>显示所有命令：git help -a</strong></li>
+<li><strong>查看git的使用手册：git help -g</strong></li>
+<li><strong>查看更详细的内容：git help 命令名称/手册名称，如git help push</strong></li>
+</ul>
 <h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><blockquote>
-<p>git的配置有三个范围<br>** system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置 **<br>** global-全局范围，在这个范围上去配置git，不同用户可以拥有自己的配置 **<br>** local-项目配置，针对单个项目 **</p>
+<p>git的配置有三个范围</p>
+<ul>
+<li><strong>system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置</strong></li>
+<li><strong>global-全局范围，在这个范围上去配置git，不同用户可以拥有自己的配置</strong></li>
+<li><strong>local-项目配置，针对单个项目</strong></li>
+</ul>
 </blockquote>
 <h2 id="全局配置用户信息"><a href="#全局配置用户信息" class="headerlink" title="全局配置用户信息"></a>全局配置用户信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">添加用户： git config --global user.name  //输入自己的用户名</span><br><span class="line">添加邮箱： git config --global user.email //输入自己的邮箱</span><br><span class="line">查看配置信息： git config --list </span><br><span class="line">删除用户配置： git config --<span class="built_in">unset</span> --global user.name</span><br><span class="line">删除用户邮箱： git config --<span class="built_in">unset</span> --global user.email</span><br></pre></td></tr></table></figure>
 
