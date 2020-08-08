@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="小程序的基本配置全局配置小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/index&quot;">
+<meta name="description" content="小程序的基本配置 全局配置 小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等 例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/inde">
 <meta name="keywords" content="小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="微信小程序的学习之路(1)">
 <meta property="og:url" content="http://sjh95zs.github.io/微信小程序的学习/index.html">
 <meta property="og:site_name" content="42&#39;s blog">
-<meta property="og:description" content="小程序的基本配置全局配置小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/index&quot;">
+<meta property="og:description" content="小程序的基本配置 全局配置 小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等 例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/inde">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-08-06T10:50:42.403Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信小程序的学习之路(1)">
-<meta name="twitter:description" content="小程序的基本配置全局配置小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/index&quot;">
+<meta name="twitter:description" content="小程序的基本配置 全局配置 小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等 例如: 1234567891011121314151617181920212223242526&amp;#123;  &quot;pages&quot;: [  //页面路径列表    &quot;pages/index/index&quot;,    &quot;pages/logs/inde">
 
 
 
@@ -357,18 +357,20 @@
       
 
       
-        <h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
-<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+        <h1>小程序的基本配置</h1>
+<h2>全局配置</h2>
+<p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
+例如:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3>entryPagePath</h3>
+<p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3>Pages</h3>
+<p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
+<h5>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5>
+<p>如开发目录:</p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -408,6 +410,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/HTML和HTML5/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -491,7 +497,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -605,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序的基本配置"><span class="nav-number">1.</span> <span class="nav-text">小程序的基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#全局配置"><span class="nav-number">1.1.</span> <span class="nav-text">全局配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#entryPagePath"><span class="nav-number">1.1.1.</span> <span class="nav-text">entryPagePath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pages"><span class="nav-number">1.1.2.</span> <span class="nav-text">Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。"><span class="nav-number">1.1.2.0.1.</span> <span class="nav-text">小程序中新增/减少页面，都需要对 pages 数组进行修改。</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">小程序的基本配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.1.</span> <span class="nav-text">全局配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.1.</span> <span class="nav-text">entryPagePath</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null"><span class="nav-number">1.1.2.</span> <span class="nav-text">Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#null"><span class="nav-number">1.1.2.0.1.</span> <span class="nav-text">小程序中新增/减少页面，都需要对 pages 数组进行修改。</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
