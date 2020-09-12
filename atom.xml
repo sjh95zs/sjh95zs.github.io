@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sjh95zs.github.io/"/>
-  <updated>2020-08-06T10:50:42.403Z</updated>
+  <updated>2020-09-12T09:09:52.030Z</updated>
   <id>http://sjh95zs.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML5中的Canvas元素</title>
+    <link href="http://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/"/>
+    <id>http://sjh95zs.github.io/HTML5中的Canvas元素/</id>
+    <published>2020-09-12T09:02:40.013Z</published>
+    <updated>2020-09-12T09:09:52.030Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;HTML5中的Canvas元素&quot;&gt;&lt;a href=&quot;#HTML5中的Canvas元素&quot; class=&quot;headerlink&quot; title=&quot;HTML5中的Canvas元素&quot;&gt;&lt;/a&gt;HTML5中的Canvas元素&lt;/h2&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://sjh95zs.github.io/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序的学习之路(1)</title>
