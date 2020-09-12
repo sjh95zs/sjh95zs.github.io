@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sjh95zs.github.io/"/>
-  <updated>2020-09-12T09:09:52.030Z</updated>
+  <updated>2020-08-06T10:50:42.403Z</updated>
   <id>http://sjh95zs.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>HTML5中的Canvas元素</title>
-    <link href="http://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/"/>
-    <id>http://sjh95zs.github.io/HTML5中的Canvas元素/</id>
-    <published>2020-09-12T09:02:40.013Z</published>
-    <updated>2020-09-12T09:09:52.030Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;HTML5中的Canvas元素&quot;&gt;&lt;a href=&quot;#HTML5中的Canvas元素&quot; class=&quot;headerlink&quot; title=&quot;HTML5中的Canvas元素&quot;&gt;&lt;/a&gt;HTML5中的Canvas元素&lt;/h2&gt;&lt;h3
-        
-      
-    
-    </summary>
-    
-      <category term="HTML" scheme="http://sjh95zs.github.io/categories/HTML/"/>
-    
-    
-      <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
-    
-  </entry>
   
   <entry>
     <title>微信小程序的学习之路(1)</title>
@@ -55,7 +29,11 @@
       
         
         
-          &lt;h1 id=&quot;小程序的基本配置&quot;&gt;&lt;a href=&quot;#小程序的基本配置&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本配置&quot;&gt;&lt;/a&gt;小程序的基本配置&lt;/h1&gt;&lt;h2 id=&quot;全局配置&quot;&gt;&lt;a href=&quot;#全局配置&quot; class=&quot;headerlink&quot;
+          &lt;h1&gt;小程序的基本配置&lt;/h1&gt;
+&lt;h2&gt;全局配置&lt;/h2&gt;
+&lt;p&gt;小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
+例如:
+&lt;figure class=&quot;highlight
         
       
     
@@ -81,8 +59,11 @@
       
         
         
-          &lt;h1 id=&quot;1-Help指令&quot;&gt;&lt;a href=&quot;#1-Help指令&quot; class=&quot;headerlink&quot; title=&quot;1. Help指令&quot;&gt;&lt;/a&gt;1. Help指令&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;帮助信息：git
+          &lt;h1&gt;1. Help指令&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;帮助信息：git help&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;显示所有命令：git help -a&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查看git的使用手册：git
         
       
     
@@ -92,6 +73,35 @@
     
     
       <category term="Git" scheme="http://sjh95zs.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5中的Canvas元素</title>
+    <link href="http://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/"/>
+    <id>http://sjh95zs.github.io/HTML5中的Canvas元素/</id>
+    <published>2019-09-10T16:00:00.000Z</published>
+    <updated>2020-09-12T09:17:55.698Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2&gt;HTML5中的Canvas元素&lt;/h2&gt;
+&lt;h3&gt;创建Canvas元素&lt;/h3&gt;
+&lt;p&gt;向HTML5页面添加canvas元素，规定元素的id、宽度和高度：&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://sjh95zs.github.io/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
     
   </entry>
   
@@ -108,7 +118,16 @@
       
         
         
-          &lt;h1 id=&quot;常用属性&quot;&gt;&lt;a href=&quot;#常用属性&quot; class=&quot;headerlink&quot; title=&quot;常用属性&quot;&gt;&lt;/a&gt;常用属性&lt;/h1&gt;&lt;h3 id=&quot;class&quot;&gt;&lt;a href=&quot;#class&quot; class=&quot;headerlink&quot;
+          &lt;h1&gt;常用属性&lt;/h1&gt;
+&lt;h3&gt;class&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：规定元素的一个或多个类名&lt;/li&gt;
+&lt;li&gt;值：多个类名之间用空格分隔&lt;/li&gt;
+&lt;li&gt;注意：类名不能以数字开头&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;id&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：规定元素的唯
         
       
     
@@ -134,7 +153,9 @@
       
         
         
-          &lt;h1 id=&quot;简言&quot;&gt;&lt;a href=&quot;#简言&quot; class=&quot;headerlink&quot;
+          &lt;h1&gt;简言&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&amp;gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些
         
       
     
