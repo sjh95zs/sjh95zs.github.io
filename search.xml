@@ -1,64 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git — 分布式版本控制系统</title>
-    <url>/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1>1. Help指令</h1>
-<ul>
-<li><strong>帮助信息：git help</strong></li>
-<li><strong>显示所有命令：git help -a</strong></li>
-<li><strong>查看git的使用手册：git help -g</strong></li>
-<li><strong>查看更详细的内容：git help 命令名称/手册名称，如git help push</strong></li>
-</ul>
-<h1>2. 配置</h1>
-<blockquote>
-<p>git的配置有三个范围</p>
-</blockquote>
-<ul>
-<li><strong>system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置</strong></li>
-<li><strong>global-全局范围，在这个范围上去配置git，不同用户可以拥有自己的配置</strong></li>
-<li><strong>local-项目配置，针对单个项目</strong></li>
-</ul>
-<h2>全局配置用户信息</h2>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加用户： git config --global user.name  //输入自己的用户名</span><br><span class="line">添加邮箱： git config --global user.email //输入自己的邮箱</span><br><span class="line">查看配置信息： git config --list </span><br><span class="line">删除用户配置： git config --<span class="built_in">unset</span> --global user.name</span><br><span class="line">删除用户邮箱： git config --<span class="built_in">unset</span> --global user.email</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>cat ~/.gitconfig — 全局范围里做的这些配置，会保存在一个叫 .gitconfig 的文件里面。这个文件会放在当前用户的主目录下面，波浪号就表示当前用户的主目录，我们可以使用 cat 命令查看一下这个文件里的东西</p>
-</blockquote>
-<h1>3. 初始化</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">初始化当前目录： git init</span><br><span class="line">进入.git目录（默认是隐藏模式）：cd.git</span><br><span class="line">查看目录下的文件: ls</span><br></pre></td></tr></table></figure></p>
-<h1>4. 提交</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加指定文件至暂存区：git add 文件名</span><br><span class="line">添加所有文件至暂存区：git add .</span><br><span class="line">提交： git commit -m <span class="string">"该次提交的描述"</span></span><br><span class="line">查看当前状态：git status</span><br><span class="line">查看以往提交的记录：git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<h1>5. 区别对比</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">显示修改前的对比： git diff</span><br></pre></td></tr></table></figure></p>
-<h1>6. 分支</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">列出所有本地分支：git branch</span><br><span class="line">列出所有远程分支：git branch -r</span><br><span class="line">列出所有本地分支和远程分支：git branch -a</span><br><span class="line">创建一个分支：git branch 分支名</span><br><span class="line">切换分支：git checkout 分支名</span><br><span class="line">合并指定分支到当前分支：git merge 指定分支</span><br><span class="line">重命名分支：git branch -m 旧分支名 新分支名</span><br><span class="line">删除分支：git branch -d 分支名</span><br></pre></td></tr></table></figure></p>
-<h1>7. 远程仓库有关</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">推送至远程仓库：git push -u 远程版本库名 推送上去的分支名</span><br><span class="line">克隆项目：git <span class="built_in">clone</span> 项目链接</span><br></pre></td></tr></table></figure></p>
-]]></content>
+    <title>HTML5中的Canvas元素</title>
+    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<h2 id="HTML5中的Canvas元素"><a href="#HTML5中的Canvas元素" class="headerlink" title="HTML5中的Canvas元素"></a>HTML5中的Canvas元素</h2><h3 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h3><p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h3><p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">"#fff"</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript使用id来寻找canvas元素：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后，创建context对象:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>getContext(‘2d’)对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">"#fff"</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure>
+
+<h3 id="理解坐标"><a href="#理解坐标" class="headerlink" title="理解坐标"></a>理解坐标</h3><p>上面的fillRect方法用于参数(0,0,175,70)。<br>意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
+<h2 id="未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp"><a href="#未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp" class="headerlink" title="未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp"></a>未完待续，更多实例请观看：<a href="https://www.w3school.com.cn/html5/html_5_canvas.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/html5/html_5_canvas.asp</a></h2>]]></content>
       <categories>
-        <category>Git</category>
+        <category>HTML</category>
       </categories>
       <tags>
-        <tag>Git</tag>
+        <tag>HTML</tag>
       </tags>
   </entry>
   <entry>
     <title>微信小程序的学习之路(1)</title>
     <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1>小程序的基本配置</h1>
-<h2>全局配置</h2>
-<p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
-例如:
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3>entryPagePath</h3>
-<p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3>Pages</h3>
-<p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
-<h5>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5>
-<p>如开发目录:</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
+<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>web</category>
@@ -68,90 +51,93 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML5中的Canvas元素</title>
-    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<h2>HTML5中的Canvas元素</h2>
-<h3>创建Canvas元素</h3>
-<p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure></p>
-<h3>通过JavaScript来绘制</h3>
-<p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">"#fff"</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>JavaScript使用id来寻找canvas元素：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>然后，创建context对象:</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>getContext('2d')对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">"#fff"</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure></p>
-<h3>理解坐标</h3>
-<p>上面的fillRect方法用于参数(0,0,175,70)。
-意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
-<h2>未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp</h2>
+    <title>Git — 分布式版本控制系统</title>
+    <url>/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h1 id="1-Help指令"><a href="#1-Help指令" class="headerlink" title="1. Help指令"></a>1. Help指令</h1><ul>
+<li><strong>帮助信息：git help</strong></li>
+<li><strong>显示所有命令：git help -a</strong></li>
+<li><strong>查看git的使用手册：git help -g</strong></li>
+<li><strong>查看更详细的内容：git help 命令名称/手册名称，如git help push</strong></li>
+</ul>
+<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><blockquote>
+<p>git的配置有三个范围</p>
+<ul>
+<li><strong>system-系统范围，在这个级别的配置会影响到整个系统，也就是不管你使用那个用户登录到系统上，git都会使用这个系统范围的设置</strong></li>
+<li><strong>global-全局范围，在这个范围上去配置git，不同用户可以拥有自己的配置</strong></li>
+<li><strong>local-项目配置，针对单个项目</strong></li>
+</ul>
+</blockquote>
+<h2 id="全局配置用户信息"><a href="#全局配置用户信息" class="headerlink" title="全局配置用户信息"></a>全局配置用户信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加用户： git config --global user.name  //输入自己的用户名</span><br><span class="line">添加邮箱： git config --global user.email //输入自己的邮箱</span><br><span class="line">查看配置信息： git config --list </span><br><span class="line">删除用户配置： git config --<span class="built_in">unset</span> --global user.name</span><br><span class="line">删除用户邮箱： git config --<span class="built_in">unset</span> --global user.email</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>cat ~/.gitconfig — 全局范围里做的这些配置，会保存在一个叫 .gitconfig 的文件里面。这个文件会放在当前用户的主目录下面，波浪号就表示当前用户的主目录，我们可以使用 cat 命令查看一下这个文件里的东西</p>
+</blockquote>
+<h1 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. 初始化</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">初始化当前目录： git init</span><br><span class="line">进入.git目录（默认是隐藏模式）：cd.git</span><br><span class="line">查看目录下的文件: ls</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-提交"><a href="#4-提交" class="headerlink" title="4. 提交"></a>4. 提交</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加指定文件至暂存区：git add 文件名</span><br><span class="line">添加所有文件至暂存区：git add .</span><br><span class="line">提交： git commit -m <span class="string">"该次提交的描述"</span></span><br><span class="line">查看当前状态：git status</span><br><span class="line">查看以往提交的记录：git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="5-区别对比"><a href="#5-区别对比" class="headerlink" title="5. 区别对比"></a>5. 区别对比</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">显示修改前的对比： git diff</span><br></pre></td></tr></table></figure>
+
+<h1 id="6-分支"><a href="#6-分支" class="headerlink" title="6. 分支"></a>6. 分支</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">列出所有本地分支：git branch</span><br><span class="line">列出所有远程分支：git branch -r</span><br><span class="line">列出所有本地分支和远程分支：git branch -a</span><br><span class="line">创建一个分支：git branch 分支名</span><br><span class="line">切换分支：git checkout 分支名</span><br><span class="line">合并指定分支到当前分支：git merge 指定分支</span><br><span class="line">重命名分支：git branch -m 旧分支名 新分支名</span><br><span class="line">删除分支：git branch -d 分支名</span><br></pre></td></tr></table></figure>
+
+<h1 id="7-远程仓库有关"><a href="#7-远程仓库有关" class="headerlink" title="7. 远程仓库有关"></a>7. 远程仓库有关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">推送至远程仓库：git push -u 远程版本库名 推送上去的分支名</span><br><span class="line">克隆项目：git <span class="built_in">clone</span> 项目链接</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>HTML</category>
+        <category>Git</category>
       </categories>
       <tags>
-        <tag>HTML</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
     <title>HTML和HTML5</title>
     <url>/HTML%E5%92%8CHTML5/</url>
-    <content><![CDATA[<h1>常用属性</h1>
-<h3>class</h3>
-<ul>
+    <content><![CDATA[<h1 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h1><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><ul>
 <li>作用：规定元素的一个或多个类名</li>
 <li>值：多个类名之间用空格分隔</li>
 <li>注意：类名不能以数字开头</li>
 </ul>
-<h3>id</h3>
-<ul>
+<h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
 <li>作用：规定元素的唯一标识</li>
 <li>注意：若浏览器中出现多个id名的情况，CSS样式对所有该id的元素都生效，但javascript脚本仅对第一个（最上面那个）出现该id的元素生效</li>
 </ul>
-<h3>title</h3>
-<ul>
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><ul>
 <li>作用：规定关于元素的额外信息，鼠标移到元素上时显示一段提示文本</li>
 </ul>
-<h3>lang</h3>
-<ul>
+<h3 id="lang"><a href="#lang" class="headerlink" title="lang"></a>lang</h3><ul>
 <li>作用：规定元素内容的语言</li>
 </ul>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure></p>
-<h3>tabindex</h3>
-<ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure>
+
+<h3 id="tabindex"><a href="#tabindex" class="headerlink" title="tabindex"></a>tabindex</h3><ul>
 <li>作用：规定元素的tab键次序</li>
 <li>值：number（1是第一个）</li>
 </ul>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.baidu.com"</span> tabindex=<span class="string">"3"</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.taobao.com"</span> tabindex=<span class="string">"2"</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.qq.com"</span> tabindex=<span class="string">"1"</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<h3>accesskey</h3>
-<ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.baidu.com"</span> tabindex=<span class="string">"3"</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.taobao.com"</span> tabindex=<span class="string">"2"</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.qq.com"</span> tabindex=<span class="string">"1"</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="accesskey"><a href="#accesskey" class="headerlink" title="accesskey"></a>accesskey</h3><ul>
 <li>作用：创建激活或聚焦元素的快捷键</li>
 <li>值：一个键盘字符如B</li>
 <li>范围：支付该属性的元素有<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 注意：使用该属性在新窗口打开链接时可能会被浏览器屏蔽</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&lt;!-- 快捷键(alt+b)可以跳转到百度；快捷键(alt+a)可以跳转到阿里；快捷键(alt+t)可以跳转到腾讯 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.baidu.com&quot; accesskey=&quot;b&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.taobao.com&quot; accesskey=&quot;a&quot;&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.qq.com&quot; accesskey=&quot;t&quot;&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3>draggable</h3>
-<ul>
+<h3 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h3><ul>
 <li>作用：用户是否可以拖元素</li>
 <li>值：true/false/auto</li>
 <li>注意：链接和图像默认是可拖动的</li>
 </ul>
-<h3>contenteditable</h3>
-<ul>
+<h3 id="contenteditable"><a href="#contenteditable" class="headerlink" title="contenteditable"></a>contenteditable</h3><ul>
 <li>作用：指定是否可以在浏览器里编辑内容</li>
 <li>值：true*false</li>
-<li>注意：设置document.designMode='on'时，页面的任意位置都可以编辑；使用contenteditable='true'则只对具体元素和其包含的元素起作用</li>
+<li>注意：设置document.designMode=’on’时，页面的任意位置都可以编辑；使用contenteditable=’true’则只对具体元素和其包含的元素起作用</li>
 <li>移动端：移动端ios5以及Android3之后才支持该属性</li>
 </ul>
-<h3>data-*</h3>
-<ul>
+<h3 id="data"><a href="#data" class="headerlink" title="data-*"></a>data-*</h3><ul>
 <li>作用：用于存储页面或者应用程序的私有定制数据</li>
-<li>注意：属性名不应该包含任意大写字母，且在前缀&quot;data-&quot;之后必须要有至少一个字符；属性值可以是任意字符串</li>
+<li>注意：属性名不应该包含任意大写字母，且在前缀”data-“之后必须要有至少一个字符；属性值可以是任意字符串</li>
 <li>使用：可以在所有浏览器中使用getAttribute方法来获取data-属性，也可以使用JavaScript中的dataset属性来访问data-属性的值，不过IE10-浏览器不支持dataset</li>
 </ul>
-<h1>未完待续....</h1>
-]]></content>
+<h1 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h1>]]></content>
       <categories>
         <category>HTML</category>
       </categories>
@@ -160,84 +146,384 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>JavaScript基础</title>
+    <url>/JavaScript%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="一-DOM常用API"><a href="#一-DOM常用API" class="headerlink" title="一 . DOM常用API"></a><a href="#one">一 . DOM常用API</a></h2><h2 id="二-null-和-undefined的区别"><a href="#二-null-和-undefined的区别" class="headerlink" title="二 . null 和 undefined的区别"></a><a href="#two">二 . null 和 undefined的区别</a></h2><h2 id="三-事件流"><a href="#三-事件流" class="headerlink" title="三 . 事件流"></a><a href="#three">三 . 事件流</a></h2><h2 id="四-typeof-和-instanceof-的区别"><a href="#四-typeof-和-instanceof-的区别" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a href="#four">四 . typeof 和 instanceof 的区别</a></h2><h2 id="五-一句话描述this"><a href="#五-一句话描述this" class="headerlink" title="五  . 一句话描述this"></a><a href="#five">五  . 一句话描述this</a></h2><h2 id="六-JS-的位置"><a href="#六-JS-的位置" class="headerlink" title="六 . JS 的位置"></a><a href="#six">六 . JS 的位置</a></h2><h2 id="七-JS-的拖拽"><a href="#七-JS-的拖拽" class="headerlink" title="七 . JS 的拖拽"></a><a href="#seven">七 . JS 的拖拽</a></h2><h2 id="八-setTimeout-实现-setInterval"><a href="#八-setTimeout-实现-setInterval" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a href="#eight">八 . setTimeout 实现 setInterval</a></h2><h2 id="九-实现Sleep"><a href="#九-实现Sleep" class="headerlink" title="九 . 实现Sleep"></a><a href="#nine">九 . 实现Sleep</a></h2><h2 id="十-执行上下文"><a href="#十-执行上下文" class="headerlink" title="十 . 执行上下文"></a><a href="#ten">十 . 执行上下文</a></h2><h2 id="十一-函数式编程"><a href="#十一-函数式编程" class="headerlink" title="十一 . 函数式编程"></a><a href="#eleven">十一 . 函数式编程</a></h2><h2 id="十二-渐进式网络应用（PWA）"><a href="#十二-渐进式网络应用（PWA）" class="headerlink" title="十二 . 渐进式网络应用（PWA）"></a><a href="#twelve">十二 . 渐进式网络应用（PWA）</a></h2><h2 id="十三-规范化"><a href="#十三-规范化" class="headerlink" title="十三 . 规范化"></a><a href="#thirteen">十三 . 规范化</a></h2><h2 id="十四-babel编译原理"><a href="#十四-babel编译原理" class="headerlink" title="十四 . babel编译原理"></a><a href="#fourteen">十四 . babel编译原理</a></h2><h2 id="十五-题集"><a href="#十五-题集" class="headerlink" title="十五 . 题集"></a><a href="#fiveteen">十五 . 题集</a></h2><h3 id="一-DOM常用API-1"><a href="#一-DOM常用API-1" class="headerlink" title="一 . DOM常用API"></a><a name="one">一 . DOM常用API</a></h3><h6 id="可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素"><a href="#可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素" class="headerlink" title="可以使用 document  或 window 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)"></a>可以使用 <strong>document</strong>  或 <strong>window</strong> 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</h6><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id);  <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="built_in">document</span>.getElementById(name);</span><br><span class="line">node.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(heading);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(heading);</span><br></pre></td></tr></table></figure>
+
+<h3 id="二-null-和-undefined-的区别"><a href="#二-null-和-undefined-的区别" class="headerlink" title="二 . null 和 undefined 的区别"></a><a name="two">二 . null 和 undefined 的区别</a></h3><h5 id="使用场景细分如下"><a href="#使用场景细分如下" class="headerlink" title="使用场景细分如下"></a>使用场景细分如下</h5><ul>
+<li><p>null</p>
+<ol>
+<li><span style="color: red">number (null)</span> 得到<span style="color: red"> 0 </span>。</li>
+<li>作为函数的参数，表示该函数的参数不是对象。</li>
+<li>作为对象原型链的终点。<span style="color: red">Object.prototype.<strong>proto</strong> === null</span>。</li>
+</ol>
+</li>
+<li><p>undefined</p>
+<ol>
+<li><span style="color: red">number (undefined)</span> 得到 <span style="color: red">NaN</span>。</li>
+<li>变量被声明但没有赋值，等于 <span style="color: red">undefined</span>。</li>
+<li>调用函数时，对应的参数没有提供，也是 <span style="color: red">undefined</span>。</li>
+<li>对象没有赋值，这个属性的值为 <span style="color: red">undefined</span>。</li>
+<li>函数没有返回值，默认返回 <span style="color: red">undefined</span>。</li>
+</ol>
+</li>
+</ul>
+<h3 id="三-事件流-1"><a href="#三-事件流-1" class="headerlink" title="三 . 事件流"></a><a name="three">三 . 事件流</a></h3><h5 id="什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。"><a href="#什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。" class="headerlink" title="什么是事件流: 事件流描述的是从页面中接受事件的顺序， DOM 2 级事件流包括下面几个阶段。"></a>什么是事件流: 事件流描述的是从页面中接受事件的顺序， <span style="color:red">DOM 2</span> 级事件流包括下面几个阶段。</h5><ul>
+<li>事件捕获阶段</li>
+<li>处于目标阶段</li>
+<li>事件冒泡阶段</li>
+</ul>
+<h6 id="如何让事件先冒泡后捕获"><a href="#如何让事件先冒泡后捕获" class="headerlink" title="如何让事件先冒泡后捕获:"></a>如何让事件先冒泡后捕获:</h6><p>在  <span style="color:red">DOM </span> 标准事件模型中，是先捕获后冒泡的。但是如果要实现先冒泡后捕获的效果，对于同一个事件，监听捕获和冒泡，分别对应相应的处理函数，监听到捕获事件，先暂缓执行，直到冒泡事件被捕获后再执行捕获之间</p>
+<h4 id="3-1-addEventListener"><a href="#3-1-addEventListener" class="headerlink" title="3.1 addEventListener"></a>3.1 addEventListener</h4><p><span style="color:red">addEventListener</span> 方法将指定的监听器注册到 <span style="color:red">EventTarget</span> 上，当该对象触发指定的事件时，指定的回调函数就会被执行。</p>
+<p><span style="color:red">addEventListener</span> 事件目标可以是文档上的元素 <span style="color:red">Element</span>、<span style="color:red">Document</span>、和 <span style="color:red">Window</span> 或者任何其他支持事件的对象 （例如<span style="color:red">XMLHttpRequest</span>）。</p>
+<p>[^参考文档]: <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener">EventTarget.addEventListener - MDN</a></p>
+<ul>
+<li>语法 <span style="color:red">target.addEventListener(type, listener, options/useCapture)</span><ol>
+<li><span style="color:red">type</span> : 表示监听事件类型的字符串。</li>
+<li><span style="color:red">listener</span> : 所监听的事件触发，会接受一个事件通知对象。</li>
+<li><span style="color:red">options</span> : 一个指定有关 <span style="color:red">listener</span> 属性的可选参数对象，可选值有<span style="color:red">capture</span> (事件捕获阶段传播到这里触发)、<span style="color:red">once</span>(在 <span style="color:red">listener</span> 添加之后最多只调用一次)、<span style="color:red">passive</span> (设置为<span style="color:red">true</span> 时表示 <span style="color:red">listener</span>  永远不会调用<span style="color:red">preventDefault()</span> ) 。</li>
+<li><span style="color:red">useCapture</span> : 在DOM树中，注册了 <span style="color:red">listener</span>  的元素，是否要先于它下面的 <span style="color:red">EventTarget</span>  时调用该 <span style="color:red">listener</span>  。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><span style="color:red">addEventListener</span> 的第三个参数涉及到冒泡和捕获，为 <span style="color:red">true</span> 时为捕获，为 <span style="color:red">false</span> 时为冒泡。 </p>
+<p>或者是一个对象  <span style="color:red">{passive : true}</span> ，针对的时 <span style="color:red">safari</span> 浏览器，禁止/开启使用滚动的时候要用到  </p>
+</blockquote>
+<ul>
+<li>示例</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>监听器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"outside"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t1"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t2"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 添加函数</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> modifyText = <span class="function">(<span class="params">text</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> t2 = <span class="built_in">document</span>.querySelector(<span class="string">'#t2'</span>);</span></span><br><span class="line">        if (t2.firstChild.nodeValue === text) &#123;</span><br><span class="line"><span class="javascript">          t2.firstChild.nodeValue = <span class="string">'two'</span>;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">          t2.firstChild.nodeValue = text;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="comment">// 给 Table 添加事件监听器</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> element = <span class="built_in">document</span>.querySelector(<span class="string">'#outside'</span>);</span></span><br><span class="line"><span class="javascript">      element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; modifyText(<span class="string">'four'</span>) &#125;, <span class="literal">false</span>);</span></span><br><span class="line">    &#125;)()</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如上，这个示例简单实现了点击 <span style="color:red">two</span> 切换到 <span style="color:red">four</span> ，点击 <span style="color:red">four</span> 再次切换到 <span style="color:red">two</span> 的效果。 </p>
+</blockquote>
+<h4 id="3-2-原理"><a href="#3-2-原理" class="headerlink" title="3.2 原理"></a>3.2 原理</h4><p>事件捕获和事件冒泡分别是 <strong>网景</strong>（Netscape）和 <strong>IE</strong> 对 <span style="color:red">DOM </span> 事件产生顺序的描述。</p>
+<p><strong>网景</strong> 认为 <span style="color:red">DOM </span> 接受的事件应该最先是 <span style="color:red">window</span> ，然后到 <span style="color:red">document</span> ，接着一层一层往下，最后才到具体的元素接受到事件，即 <strong>事件捕获</strong> 。</p>
+<p><strong>IE</strong> 则认为 <span style="color:red">DOM </span> 事件应该是具体元素先接受到，然后再一层层往上，接着到 <span style="color:red">document</span> ，最后才到 <span style="color:red">window</span>  即 <strong>事件冒泡</strong> 。</p>
+<p>最后 <strong>W3C</strong> 对这两种方案进行了统一，将 <span style="color:red">DOM</span> 事件分为了两个阶段，<strong>事件捕获</strong> 和 <strong>事件冒泡</strong> 阶段。</p>
+<p>当一个元素被点击，首先是事件捕获阶段，<span style="color:red">window</span>  最先接收事件，然后一层一层往下捕获，最后由具体元素接收；之后再由具体元素再一层一层往上冒泡，到<span style="color:red">window</span> 接收事件</p>
+<p>所以:</p>
+<ul>
+<li><strong>事件冒泡</strong> ：当给某个目标元素绑定了事件之后，这个事件会依次在它的父级元素中被触发（当然前提是这个父级元素也有这个同名的事件，比如子元素都绑定了 <span style="color:red">click</span> 事件就触发父元素的 <span style="color:red">click</span>  ）。</li>
+<li><strong>事件捕获</strong> ：和冒泡相反，会从上层传递到下层。</li>
+</ul>
+<h4 id="3-3-案例"><a href="#3-3-案例" class="headerlink" title="3.3 案例"></a>3.3 案例</h4><p>结合自定义事件耍个例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>自定义事件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"ul"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"li"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> myEvent = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span></span><br><span class="line"><span class="javascript">      myEvent.initEvent(<span class="string">'myEvent'</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'.btn'</span>);</span></span><br><span class="line"><span class="javascript">      btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> li = <span class="built_in">document</span>.querySelector(<span class="string">'.li'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'li'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'.ul'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'ul'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'document'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">window</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'window'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">        btn.dispatchEvent(myEvent);</span><br><span class="line">      &#125;, 2000);</span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Chrome 输出下顺序是：<code>button</code> -&gt; <code>li</code> -&gt; <code>ul</code> -&gt; <code>document</code> -&gt; <code>window</code></p>
+<p>如果是捕获的话，那么则相反。</p>
+</blockquote>
+<h4 id="3-4-阻止冒泡"><a href="#3-4-阻止冒泡" class="headerlink" title="3.4 阻止冒泡"></a>3.4 阻止冒泡</h4><ul>
+<li><span style="color:red">event.stopPropagation();</span> </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>通过阻止冒泡，程序只会输出 <span style="color:red">button</span> ，而不会继续输出 <span style="color:red">li</span> 等。</p>
+<h4 id="3-5-onmouseover-和-onmouseenter-区别"><a href="#3-5-onmouseover-和-onmouseenter-区别" class="headerlink" title="3.5 onmouseover 和 onmouseenter 区别"></a>3.5 onmouseover 和 onmouseenter 区别</h4><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image" alt="图文" style="zoom:60%;">
+
+<p>这两者都是移入的时候触发，但是 <span style="color:red">onmouseover</span> 会触发多次，而 <span style="color:red">onmouseenter</span> 只在进去的时候才触发。 </p>
+<h4 id="3-6-科普"><a href="#3-6-科普" class="headerlink" title="3.6 科普"></a>3.6 科普</h4><p>并不是所有的事件都有冒泡，例如：</p>
+<ul>
+<li><span style="color:red">onblur</span> </li>
+<li><span style="color:red">onfocus</span> </li>
+<li><font color="red">onmouseover</font></li>
+<li><font color="red">onmouseenter</font></li>
+</ul>
+<h3 id="四-typeof-和-instanceof-的区别-1"><a href="#四-typeof-和-instanceof-的区别-1" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a name="four">四 . typeof 和 instanceof 的区别</a></h3><ul>
+<li><p><font color="red">typeof</font> : 对某个变量类型的检测，基本类型除了 <font color="red">null</font> 之外，都能正常的显示为对应的类型，引用类型除了函数会显示为 <font color="red">function</font> 其他都会显示为 <font color="red"> object </font> 。</p>
+</li>
+<li><p><font color="red">instanceof </font> 主要用于检测某个构造函数的原型对象在不在某个对象的原型链上。</p>
+</li>
+</ul>
+<p><font color="red"> typeof </font> 会对 <font color="red"> null </font> 显示错误是个历史Bug，<font color="red"> typeof null</font> 输出的是 <font color="red"> object </font>, 因为 JavaScript 早期版本是32位系统，为了性能考虑使用低位存储变量的类型信息，<font color="red">000</font> 开头代表是对象然而 <font color="red"> null</font> 表示为全零，所以 <font color="red"> null</font>  被错误的判为了 <font color="red"> object </font>。</p>
+<p>详情可见：<a href="https://juejin.cn/post/6890357960040513550#heading-12" target="_blank" rel="noopener">JavaScript - 变量</a></p>
+<h3 id="五-一句话描述this-1"><a href="#五-一句话描述this-1" class="headerlink" title="五 . 一句话描述this"></a><a name="five">五 . 一句话描述this</a></h3><p>对于函数而言，指向最后调用函数的对象，是函数运行时内部自动产生的一个内部对象，只能在函数内部使用；对于全局而言，<font color="red">this</font> 是指向 <font color="red">window</font>。</p>
+<h3 id="六-JS-位置"><a href="#六-JS-位置" class="headerlink" title="六 . JS 位置"></a><a name="six">六 . JS 位置</a></h3><ul>
+<li><font color="red">clientHeiht</font> : 表示可视区域的高度，不包含 <font color="red">border</font> 和滚动条</li>
+<li><font color="red">offsetHeight</font> : 表示可视区域的高度，包含了 <font color="red">border</font> 和滚动条</li>
+<li><font color="red">scrollHeight</font> ：表示了所有区域的高度，包含了因为滚动条被隐藏的部分</li>
+<li><font color="red">clientTop</font> ：表示边框 <font color="red">border</font> 的厚度，在未指定的情况下一般为 <font color="red">0</font> </li>
+<li><font color="red">scrollTop</font> ：滚动后被隐藏的高度，获取对象相对于由 <font color="red">offsetParent</font> 属性指定的父坐标(CSS定位的元素或者 <font color="red">body</font> 元素)距离顶部的高度。  </li>
+</ul>
+<h3 id="七-JS-拖拽"><a href="#七-JS-拖拽" class="headerlink" title="七 . JS 拖拽"></a><a name="seven">七 . JS 拖拽</a></h3><ol>
+<li>通过 <font color="red">mousedown</font> 、<font color="red">mousemove</font> 、<font color="red">mouseup</font> 方法实现</li>
+<li>通过 HTMl5 <font color="red">Drag</font> 和 <font color="red">Drop</font> 实现</li>
+</ol>
+<h3 id="八-setTimeout-实现-setInterval-1"><a href="#八-setTimeout-实现-setInterval-1" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a name="eight">八 . setTimeout 实现 setInterval</a></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    setTimeout(say,<span class="number">200</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br></pre></td></tr></table></figure>
+
+<p>清除这个定时器:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> timeList = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="built_in">console</span>.log(i++);</span><br><span class="line">    timeList.push(setTimeout(say,<span class="number">200</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; timeList.lenght; i++) &#123;</span><br><span class="line">        clearTimeout(timeList[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="九-实现Sleep-1"><a href="#九-实现Sleep-1" class="headerlink" title="九 . 实现Sleep"></a><a name="nine">九 . 实现Sleep</a></h3><p>如下，实现 <font color="red">1000</font> 毫秒后执行其他内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sleep = <span class="function"><span class="params">time</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            resolve(time);</span><br><span class="line">        &#125;, time)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sleep(<span class="number">1000</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="十-执行上下文-1"><a href="#十-执行上下文-1" class="headerlink" title="十 . 执行上下文"></a><a name="ten">十 . 执行上下文</a></h3><h4 id="10-1-执行上下文类型"><a href="#10-1-执行上下文类型" class="headerlink" title="10.1 执行上下文类型"></a>10.1 执行上下文类型</h4><p>JavaScript 中有3中执行上下文类型：</p>
+<ul>
+<li><strong>全局执行上下文</strong>：这是默认或者说基础的上下文，任何不在函数内部的代码都在全局上下文中。它会执行两件事：创建一个全局的 <font color="red">window</font> 对象（在浏览器的情况下），并且设置 <font color="red"> this</font> 的值等于这个全局对象。一个程序中只会有一个全局执行上下文。</li>
+<li><strong>函数执行上下文</strong> ：每当一个函数被调用时，都会为该函数创建一个新的上下文。每个函数都有它自己的执行上下文，不过是在函数被调用时创建的。函数上下文可以有任意多个。每当一个新的执行上下文被创建，它会按定义的顺序执行一系列步骤。</li>
+<li><strong>Eval 函数执行上下文</strong> ：执行在 <font color="red">eval</font> 函数内部的代码也会有属于它自己的执行上下文，但由于JavaScript 开发者并不经常使用 <font color="red">eval</font> ，所以在这里不会讨论它。</li>
+</ul>
+<h4 id="10-2-执行栈"><a href="#10-2-执行栈" class="headerlink" title="10.2 执行栈"></a>10.2 执行栈</h4><p>执行栈，也就是在其他编程语言中所说的 “<font color="red">调用栈</font>”，是一种拥有 <font color="red">LIFO</font> (后进先出)数据结构的栈，被用来存储代码运行时创建的所有执行上下文。</p>
+<p>当 JavaScript 引擎第一次遇到你的脚本时，它会创建一个全局的执行上下文并且压入当前执行栈。每当引擎遇到一个函数调用，它会为该函数创建一个新的执行上下文并压入栈的顶部。</p>
+<p>引擎会执行那些执行上下文位于栈顶的函数，当该函数执行结束时，执行上下文从栈中弹出，控制流程到达当前栈中的下一个执行上下文。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'Hello World!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">first</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside first function'</span>);</span><br><span class="line">  second();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Again inside first function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">second</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside second function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">first();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Inside Global Execution Context'</span>);</span><br></pre></td></tr></table></figure>
+
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d9e8a01c9454a27acce6bef077e6793~tplv-k3u1fbpfcp-watermark.image">
+
+<h3 id="十一-函数式编程-1"><a href="#十一-函数式编程-1" class="headerlink" title="十一 .  函数式编程"></a><a name="eleven">十一 .  函数式编程</a></h3><p>函数式编程（Functional Programming， 简称FP）。</p>
+<p>函数式编程：通过对面向对象式编程代码的拆分，将各个功能独立出来，从而达到功能独立，易复用等目的。</p>
+<p>举例：代码转换</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>]</span><br><span class="line"><span class="comment">//转换成</span></span><br><span class="line">[&#123;<span class="attr">name</span>: <span class="string">'john-resese'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'harold-finch'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'sameen-shaw'</span>&#125;]</span><br></pre></td></tr></table></figure>
+
+<p>对上面的代码进行转换。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>];</span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; len=arr.lenght; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> name = arr[i];</span><br><span class="line">    <span class="keyword">let</span> names = name.split(<span class="string">'-'</span>);</span><br><span class="line">    <span class="keyword">let</span> newName = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; nameLen = names.lenght; j &lt; nameLen; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> nameItem = names[j][<span class="number">0</span>].toUpperCase() + names[j].slice[<span class="number">1</span>];</span><br><span class="line">        newName.push(nameItem);</span><br><span class="line">    &#125;</span><br><span class="line">  newArr.push(&#123;<span class="attr">name</span>: newName.join(<span class="string">''</span>)&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> newArr;</span><br></pre></td></tr></table></figure>
+
+<p>这份代码中，有两部分：</p>
+<ol>
+<li>拆分数组中的字符串，将字符串变成人名。<font color="red">john-reese -&gt; John Reese</font></li>
+<li>将数组转化为对象。<font color="red">[‘John Reese’] -&gt; [{ name: ‘John Reese’ }]</font></li>
+</ol>
+<p>所以我们直接可以改动：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>改变人名展示方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>type 支持不同格式的人名</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> changeName = <span class="function">(<span class="params">arr, type</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> item.split(type).map( <span class="function"><span class="params">name</span> =&gt;</span> name[<span class="number">0</span>].toUpperCase() + name.slice(<span class="number">1</span>)).join(<span class="string">''</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>数组改变成对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>key 对应变成什么字段</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;object&#125;</span> </span>返回改变后的对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> arrToObj = <span class="function">(<span class="params">arr,key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> (&#123;[key]:item&#125;));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = arrToObj(changeName([<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>],<span class="string">'-'</span>),<span class="string">'name'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="comment">// [ &#123; name: 'John Reese' &#125;, &#123; name: 'Harold Finch' &#125;, &#123; name: 'Sameen Shaw' &#125; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>嗨，这不就是对功能封装吗？一般来说工作中出现 2 次以上的代码才进行封装。</p>
+<p>函数式编程就是对可以抽离的功能都进行抽取封装。</p>
+<h4 id="11-1-函数式编程特点"><a href="#11-1-函数式编程特点" class="headerlink" title="11.1 函数式编程特点"></a>11.1 函数式编程特点</h4><ol>
+<li><strong><font color="black">函数是一等公民</font></strong> 可以利用这点让它支持抽取到外部。</li>
+<li><strong><font color="black">声明做某件事件</font></strong> 函数式编程大多数声明某个函数需要做什么，而不是他怎么做。</li>
+<li><strong><font color="black">便于垃圾回收</font></strong> 函数内部的变量方便垃圾回收，不会产生太多的变量，用户不需要大量的定义。</li>
+<li><strong><font color="black">数据不可变</font></strong> 函数式编程要求所有的数据都是不可变的，如果需要修改某个对象，应该新建后再修改，而不是污染原本的数据。</li>
+<li><strong><font color="black">无状态</font></strong> 不管什么时候运行，同一个函数对相同的输入返回相同的输出，而不依赖外部状态的变化。</li>
+<li><font color="black"> <strong>无副作用</strong></font> 功能A应该仅仅为了完成它的实现，而不会随着外部的改变而改变，这样当它执行完毕之后，就可以将其内部数据进行回收。并且它不会修改传入的参数。</li>
+</ol>
+<p>注重引用值（Object，Array）的传递，尽可能不要污染传入的数据。</p>
+<h4 id="11-2-纯函数"><a href="#11-2-纯函数" class="headerlink" title="11.2 纯函数"></a>11.2 纯函数</h4><p>纯函数的概念有2点:</p>
+<ol>
+<li><strong>不依赖外部的状态（无状态）</strong> ： 函数的运行结构不依赖全局变量，<font color="red">this</font> 指针，<font color="red">IO</font> 操作等。</li>
+<li><strong>无副作用（数据不变）</strong> ： 不修改全局变量，不修改入参。</li>
+</ol>
+<p>优点：</p>
+<ul>
+<li>便于测试和优化</li>
+<li>可缓存性</li>
+<li>自文档化</li>
+<li>更少的bug</li>
+</ul>
+<h3 id="十二-渐进性网络应用（PWA）"><a href="#十二-渐进性网络应用（PWA）" class="headerlink" title="十二 . 渐进性网络应用（PWA）"></a><a name="twelve">十二 . 渐进性网络应用（PWA）</a></h3><p>渐进式网络应用（PWA）是谷歌在2015年底提出的概念。基本上算是Web应用程序，但在外观和感觉上于原生App类似。支持PWA的网站可以提供脱机工作、推送通知和设备硬件访问等功能。</p>
+<h4 id="12-1-优点"><a href="#12-1-优点" class="headerlink" title="12.1 优点"></a>12.1 优点</h4><ul>
+<li><strong>更小更快</strong> ：渐进式的Web应用程序比原生应用程序小得多。他们甚至不用安装。他们没有浪费磁盘空间并且加载速度非常快。</li>
+<li><strong>响应式界面</strong> ： PWA支持的网页能够自动适应各种屏幕大小。它们可以是手机、平板、台式机或者笔记本。</li>
+<li><strong>无需更新</strong> ： 大多数移动应用程序需要每周定期更新。与普通网站一样，每当用户交互发生且不需要应用程序和游戏商店批准时，PWA总是加载最新更新版本</li>
+<li><strong>高性价比</strong> ：原生移动应用需要分别为Android和iOS设备开发，开发成本非常高。另一方面，PWA有着相同的功能，但只是先前价格的一部分，开发成本低。</li>
+<li><strong>SEO优势</strong> ： 搜索引擎可以发现PWA，并且加载速度非常快，就像其他网站一样，他们的链接也可以共享，提供良好的用户体检和结果，在SEO排名中提高。</li>
+<li><strong>脱机功能</strong> ：由于Service Worker API的支持，可以在脱机或者低Internet连接中访问PWAs。</li>
+<li><strong>安全性</strong> ： PWA通过HTTPS连接传递，并在每次交互保护用户数据。</li>
+<li><strong>推送通知</strong> ：通过推送通知的支持，PWA轻松地与用户进行交互，提供非常棒的用户体检。</li>
+<li><strong>绕过应用商店</strong> ：原生的App如果需要任何的更新，需要应用商店的审批，且有被拒绝或禁止的可能性，对于这方面来说，PWA有它的独特优势，不要App Store支持。更新版本可以直接从Web服务器加载，无需App Store批准。</li>
+<li><strong>零安装</strong> ： 在浏览的过程中，PWA会在手机和平板电脑上有自己的图标，就像移动应用程序一样，但不需要经过冗长的安装过程。</li>
+</ul>
+<h4 id="12-2-缺点"><a href="#12-2-缺点" class="headerlink" title="12.2 缺点"></a>12.2 缺点</h4><ul>
+<li><strong>对系统功能的访问权限较低</strong> ： 目前PWA对本机系统功能的访问权限比较原生App有限。而且所有的浏览器都不支持它的全部功能，但可能在不久的将来，它可能会成为新的开发标准</li>
+<li><strong>多数Android，少数iOS</strong> ：目前更多的支持来自Android。iOS系统只提供了部分。</li>
+<li><strong>没有审查标准</strong> ： PWA不需要任何适用于应用商店中本机应用的审查，这可能会加快进程，但缺乏从应用程序商店中获取推广效益。</li>
+</ul>
+<h3 id="十三-规范化-1"><a href="#十三-规范化-1" class="headerlink" title="十三 . 规范化"></a><a name="thirteen">十三 . 规范化</a></h3><p><font color="red">CommonJS</font> 规范、<font color="red">AMD</font> 规范、 <font color="red">CMD</font> 规范、<font color="red">ES6 Modules</font> 规范，这4者都是前端规范化的内容，那么他们之间区别是什么？</p>
+<p>在没有这些之前，我们通过：</p>
+<ul>
+<li>一个函数就是一个模块。<font color="red">function fn() {} </font> </li>
+<li>一个对象就是一个模块。<font color="red"> let obj = new Object({…})</font></li>
+<li>立即执行函数（IIFE）。 <font color="red">(function() {})()</font> </li>
+</ul>
+<h4 id="13-1-CommonJs规范"><a href="#13-1-CommonJs规范" class="headerlink" title="13.1 CommonJs规范"></a>13.1 CommonJs规范</h4><p>这之后，就有了<font color="red">CommonJS</font> 规范，其实 <font color="red">CommonJS</font>  我们见得不少，就是 <font color="red">Node</font> 的那套：</p>
+<ul>
+<li>导出：<font color="red">module.exports = {} 、exports.xxx = ‘xxx’</font> </li>
+<li>导入: <font color="red">require(…)</font> </li>
+<li>查找方式：查找当前目录是否具有文件，没有则查找当前目录的 <font color="red">node_modules</font> 文件。在没有，冒泡查询，一直往系统中的 <font color="red">npm</font> 目录查找</li>
+</ul>
+<p>它的特点：</p>
+<ol>
+<li>所有代码在模块作用域内运行，不会污染其他文件</li>
+<li><font color="red">require</font> 得到的值是值得拷贝，即你引用其他 JS 文件的变量，修改操作了也不会影响其他文件。</li>
+</ol>
+<p>它的缺点：</p>
+<ol>
+<li>应用层面，在 <font color="red">index.html</font> 中做 <font color="red">var index = require(‘./index.js’)</font> 操作报错，因为它最终是后台执行的，只能是 <font color="red">index.js</font> 引用 <font color="red">index2.js</font> 这种方式。</li>
+<li>同步加载问题。<font color="red">CommonJS</font> 规范中模块是同步加载的，即在 <font color="red">index.js</font> 中加载 <font color="red">index2.js</font>，如果 <font color="red">index2.js</font> 卡住了，那就要等很久了。</li>
+</ol>
+<h4 id="13-2-AMD规范"><a href="#13-2-AMD规范" class="headerlink" title="13.2 AMD规范"></a>13.2 AMD规范</h4><p>为什么有 <font color="red">AMD</font>  规范？</p>
+<p>答：因为 <font color="red">CommonJS</font>  规范不中用。</p>
+<ol>
+<li>适用客户端</li>
+<li>等待加载（同步加载问题）</li>
+</ol>
+<p>所以它做了什么？</p>
+<p>可以采用异步加载模块，<font color="red">AMD</font> 是 <font color="red">Asynchronous Module Definition</font>  的缩写，也就是“异步模块定义”，记住这个 <font color="red">async</font> 就知道它是异步的了 </p>
+<h4 id="13-3-CMD规范"><a href="#13-3-CMD规范" class="headerlink" title="13.3 CMD规范"></a>13.3 CMD规范</h4><p><font color="red">CMD</font> (Common Module Definition)，是seajs推崇的规范，<font color="red">CMD</font> 则是依赖就近，用的时候在 <font color="red">require</font> 。</p>
+<p><font color="red">AMD</font> 和 <font color="red">CMD</font> 最大的区别是对依赖模块执行时机的处理，注意不是加载的时机或者方式不同，二者皆为异步加载模块。</p>
+<h4 id="13-4-ES6-Modules规范"><a href="#13-4-ES6-Modules规范" class="headerlink" title="13.4 ES6 Modules规范"></a>13.4 ES6 Modules规范</h4><ul>
+<li>导出：</li>
+</ul>
+<ol>
+<li><font color="red"> export a </font></li>
+<li><font color="red">export {a} </font></li>
+<li><font color="red">export {a as sjh}</font></li>
+<li><font color="red">export defalut function () {} </font></li>
+</ol>
+<ul>
+<li>导入</li>
+</ul>
+<ol>
+<li><font color="red">import ‘./index’</font></li>
+<li><font color="red">import {a} from ‘/index.js’</font></li>
+<li><font color="red">import {a as sjh} from ‘./index.js’ </font></li>
+<li><font color="red"> import * as index from ‘./index.js’</font></li>
+</ol>
+<p>特点：</p>
+<ol>
+<li><font color="red"> export </font> 命令和 <font color="red"> import</font> 命令可以出现在模块的任何位置，只要处于模块顶层就可以，如果处于块级作用域中，就会报错，这是因为处于条件代码块之中，就没法做静态优化了，违背了ES6模块的设计初衷。</li>
+<li><font color="red"> import</font> 命令具有提升效果，会提升到整个模块的头部，首先执行。</li>
+</ol>
+<p>和 <font color="red">CommonJS</font>  的区别：</p>
+<ul>
+<li><font color="red">CommonJS</font>  模块是运行时加载，<font color="red">ES6 Modules</font> 是编译时输出接口</li>
+<li><font color="red">CommonJS</font>  输出是值的拷贝，<font color="red">ES6 Modules</font> 输出的是值的引用，被输出模块内部的改变会影响引用的改变</li>
+<li><font color="red">CommonJS</font>  导入的模块路径可以是一个表达式，因为它使用的是 <font color="red">require()</font> 方法； 而 <font color="red">ES6 Modules</font> 只能是字符串</li>
+<li><font color="red">CommonJS  this</font> 指向当前模块，<font color="red">ES6 Modules</font> 的 <font color="red">this</font> 指向 <font color="red">undefined</font></li>
+<li><font color="red">ES6 Modules</font> 中没有这些顶层变量：<font color="red">arguments</font> 、<font color="red">require</font> 、 <font color="red"><strong><strong>dirname</strong></strong></font>  、<font color="red">module</font> 、 <font color="red">exports</font> 、 <font color="red">filename</font> </li>
+</ul>
+<h3 id="十四-babel编译原理-1"><a href="#十四-babel编译原理-1" class="headerlink" title="十四 . babel编译原理"></a><a name="fourteen">十四 . babel编译原理</a></h3><ul>
+<li>babylon 将 ES6/ES7 代码解析成 AST</li>
+<li>babel-traverse 对 AST 进行遍历转译，得到新的 AST</li>
+<li>新 AST 通过babel-generator 转换成ES5</li>
+</ul>
+<p>这一块的话 <strong>jsliang</strong> 并没有过分深究，单纯理解的话还是容易理解的：</p>
+<ol>
+<li>黑白七巧板组成的形状，拆分出来得到零件（<code>ES6/ES7</code> 解析成 <code>AST</code>）</li>
+<li>将这些零件换成彩色的（<code>AST</code> 编译得到新 <code>AST</code>）</li>
+<li>将彩色零件拼装成新的形状（<code>AST</code> 转换为 <code>ES5</code>）</li>
+</ol>
+<h3 id="十五-题集-1"><a href="#十五-题集-1" class="headerlink" title="十五 . 题集"></a><a name="fiveteen">十五 . 题集</a></h3><h4 id="15-1-数组常见API"><a href="#15-1-数组常见API" class="headerlink" title="15.1 数组常见API"></a>15.1 数组常见API</h4><ul>
+<li><font color="red"> push</font> ：数组尾部添加元素</li>
+<li><font color="red">unshift</font> ：数组头部添加元素</li>
+<li><font color="red">pop</font> ： 数组尾部移除元素</li>
+<li><font color="red">shift</font> ：数组头部移除元素</li>
+<li><font color="red">splice</font> ：删除数组元素</li>
+<li><font color="red">slice</font> ：截取数组元素</li>
+<li><font color="red">indexOf</font> ： 查找某元素第一次出现的位置</li>
+<li><font color="red">lastIndexof</font> ：查找某元素最后一次出现的位置</li>
+<li><font color="red">findIndex</font> ：查找元素第一次出现的位置</li>
+<li><font color="red">forEach</font> ：遍历元素</li>
+<li><font color="red">map</font> ：遍历元素</li>
+<li><font color="red">filter</font> ：过滤元素</li>
+<li><font color="red">some</font> ：包含某元素</li>
+<li><font color="red">every</font> ：所有元素和某元素一致</li>
+<li><font color="red">includes</font> ：查看是否包含某元素</li>
+<li><font color="red">concat</font> ：合并元素</li>
+<li><font color="red">join</font> ：合并元素，变成字符串</li>
+<li><font color="red">toString</font> ：变成字符串</li>
+<li><font color="red">sort</font> ： 元素排序</li>
+</ul>
+<h4 id="15-2-常见-DOM-API"><a href="#15-2-常见-DOM-API" class="headerlink" title="15.2 常见 DOM API"></a>15.2 常见 DOM API</h4>]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
     <url>/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1>简言</h1>
-<blockquote>
-<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。
-📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
+    <content><![CDATA[<h1 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h1><blockquote>
+<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。<br>📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
 </blockquote>
 <hr>
-<h1>配置Hexo</h1>
-<blockquote>
-<p>✨💙在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
+<h1 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h1><blockquote>
+<p>✨&#x1F499;在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
 </blockquote>
-<h3>配置Hexo的_config文件(./_config.yml)</h3>
-<h5>1、克隆仓库到themes下</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
-<h5>2、在hexo中_config.yml中配置渲染参数</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
-<h5>3、配置基本信息</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure></p>
-<h5>4、重新预览</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
+<h3 id="配置Hexo的-config文件-config-yml"><a href="#配置Hexo的-config文件-config-yml" class="headerlink" title="配置Hexo的_config文件(./_config.yml)"></a>配置Hexo的_config文件(./_config.yml)</h3><h5 id="1、克隆仓库到themes下"><a href="#1、克隆仓库到themes下" class="headerlink" title="1、克隆仓库到themes下"></a>1、克隆仓库到themes下</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、在hexo中-config-yml中配置渲染参数"><a href="#2、在hexo中-config-yml中配置渲染参数" class="headerlink" title="2、在hexo中_config.yml中配置渲染参数"></a>2、在hexo中_config.yml中配置渲染参数</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、配置基本信息"><a href="#3、配置基本信息" class="headerlink" title="3、配置基本信息"></a>3、配置基本信息</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、重新预览"><a href="#4、重新预览" class="headerlink" title="4、重新预览"></a>4、重新预览</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
 <hr>
-<h4>更改主题Next的配置(./themes/next/_config.yml)</h4>
-<h5>1、菜单设置</h5>
-<blockquote>
-<p>菜单包括：首页、归档、分类、标签、关于等等
-刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
+<h4 id="更改主题Next的配置-themes-next-config-yml"><a href="#更改主题Next的配置-themes-next-config-yml" class="headerlink" title="更改主题Next的配置(./themes/next/_config.yml)"></a>更改主题Next的配置(./themes/next/_config.yml)</h4><h5 id="1、菜单设置"><a href="#1、菜单设置" class="headerlink" title="1、菜单设置"></a>1、菜单设置</h5><blockquote>
+<p>菜单包括：首页、归档、分类、标签、关于等等<br>刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
 </blockquote>
-<h6>1.1 创建命令</h6>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">'tags'</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<h6>1.2 Menu Setting</h6>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure></p>
-<h5>2 Next样式设置</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="1-1-创建命令"><a href="#1-1-创建命令" class="headerlink" title="1.1 创建命令"></a>1.1 创建命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">'tags'</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="1-2-Menu-Setting"><a href="#1-2-Menu-Setting" class="headerlink" title="1.2 Menu Setting"></a>1.2 Menu Setting</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-Next样式设置"><a href="#2-Next样式设置" class="headerlink" title="2 Next样式设置"></a>2 Next样式设置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+
 <p>这个你可以自己去一个一个的使用，看看那个是自己喜欢的</p>
-<h6>2.1 侧栏设置</h6>
-<blockquote>
-<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等
-打开 主题配置文件 找到sidebar字段</p>
+<h6 id="2-1-侧栏设置"><a href="#2-1-侧栏设置" class="headerlink" title="2.1 侧栏设置"></a>2.1 侧栏设置</h6><blockquote>
+<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等<br>打开 主题配置文件 找到sidebar字段</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure></p>
-<h6>2.2 头像设置</h6>
-<blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-2-头像设置"><a href="#2-2-头像设置" class="headerlink" title="2.2 头像设置"></a>2.2 头像设置</h6><blockquote>
 <p>打开 主题配置文件 找到Sidebar Avatar字段</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure></p>
-<h6>2.3 社交媒体设置</h6>
-<blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-3-社交媒体设置"><a href="#2-3-社交媒体设置" class="headerlink" title="2.3 社交媒体设置"></a>2.3 社交媒体设置</h6><blockquote>
 <p>打开 主题配置文件 找到Social Links字段</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure></p>
-<h5>2.4 安装设置RSS</h5>
-<blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-4-安装设置RSS"><a href="#2-4-安装设置RSS" class="headerlink" title="2.4 安装设置RSS"></a>2.4 安装设置RSS</h5><blockquote>
 <p>1、先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 插件</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>2、打开hexo配置文件</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>3、打开Next配置文件 找到rss，设置为</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure></p>
-<h5>2.5 安装设置本地搜索插件</h5>
-<blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-5-安装设置本地搜索插件"><a href="#2-5-安装设置本地搜索插件" class="headerlink" title="2.5 安装设置本地搜索插件"></a>2.5 安装设置本地搜索插件</h5><blockquote>
 <p>1、先安装 <a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>2、打开Hexo配置文件</p>
 </blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+
 <hr>
 <hr>
 <blockquote>
-<p>结语:
-✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
+<p>结语:<br>✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
 </blockquote>
 <blockquote>
 <p>⚡💥 整个过程最需要注意的便是在更改Next主题样式的格式问题，一定要按照原本的格式来！！有些参数前一定不能有空格！！如果出现<a href="https://github.com/iissnan/hexo-theme-next/issues/737" target="_blank" rel="noopener">在主题配置文件配置友链后，hexo g报错</a>错误，请参考这个Issues。</p>
@@ -252,24 +538,5 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2>Quick Start</h2>
-<h3>Create a new post</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3>Run server</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3>Generate static files</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3>Deploy to remote sites</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
 </search>

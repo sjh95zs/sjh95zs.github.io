@@ -29,11 +29,7 @@
       
         
         
-          &lt;h1&gt;小程序的基本配置&lt;/h1&gt;
-&lt;h2&gt;全局配置&lt;/h2&gt;
-&lt;p&gt;小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
-例如:
-&lt;figure class=&quot;highlight
+          &lt;h1 id=&quot;小程序的基本配置&quot;&gt;&lt;a href=&quot;#小程序的基本配置&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本配置&quot;&gt;&lt;/a&gt;小程序的基本配置&lt;/h1&gt;&lt;h2 id=&quot;全局配置&quot;&gt;&lt;a href=&quot;#全局配置&quot; class=&quot;headerlink&quot;
         
       
     
@@ -59,11 +55,8 @@
       
         
         
-          &lt;h1&gt;1. Help指令&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;帮助信息：git help&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;显示所有命令：git help -a&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;查看git的使用手册：git
+          &lt;h1 id=&quot;1-Help指令&quot;&gt;&lt;a href=&quot;#1-Help指令&quot; class=&quot;headerlink&quot; title=&quot;1. Help指令&quot;&gt;&lt;/a&gt;1. Help指令&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;帮助信息：git
         
       
     
@@ -89,10 +82,7 @@
       
         
         
-          &lt;h2&gt;HTML5中的Canvas元素&lt;/h2&gt;
-&lt;h3&gt;创建Canvas元素&lt;/h3&gt;
-&lt;p&gt;向HTML5页面添加canvas元素，规定元素的id、宽度和高度：&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+          &lt;h2 id=&quot;HTML5中的Canvas元素&quot;&gt;&lt;a href=&quot;#HTML5中的Canvas元素&quot; class=&quot;headerlink&quot; title=&quot;HTML5中的Canvas元素&quot;&gt;&lt;/a&gt;HTML5中的Canvas元素&lt;/h2&gt;&lt;h3
         
       
     
@@ -102,6 +92,32 @@
     
     
       <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础</title>
+    <link href="http://sjh95zs.github.io/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    <id>http://sjh95zs.github.io/JavaScript基础/</id>
+    <published>2019-09-10T16:00:00.000Z</published>
+    <updated>2021-01-05T13:46:00.791Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;h2 id=&quot;一-DOM常用API&quot;&gt;&lt;a href=&quot;#一-DOM常用API&quot; class=&quot;headerlink&quot; title=&quot;一 .
+        
+      
+    
+    </summary>
+    
+      <category term="JS" scheme="http://sjh95zs.github.io/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://sjh95zs.github.io/tags/JS/"/>
     
   </entry>
   
@@ -118,16 +134,7 @@
       
         
         
-          &lt;h1&gt;常用属性&lt;/h1&gt;
-&lt;h3&gt;class&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;作用：规定元素的一个或多个类名&lt;/li&gt;
-&lt;li&gt;值：多个类名之间用空格分隔&lt;/li&gt;
-&lt;li&gt;注意：类名不能以数字开头&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;id&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;作用：规定元素的唯
+          &lt;h1 id=&quot;常用属性&quot;&gt;&lt;a href=&quot;#常用属性&quot; class=&quot;headerlink&quot; title=&quot;常用属性&quot;&gt;&lt;/a&gt;常用属性&lt;/h1&gt;&lt;h3 id=&quot;class&quot;&gt;&lt;a href=&quot;#class&quot; class=&quot;headerlink&quot;
         
       
     
@@ -153,9 +160,7 @@
       
         
         
-          &lt;h1&gt;简言&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&amp;gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些
+          &lt;h1 id=&quot;简言&quot;&gt;&lt;a href=&quot;#简言&quot; class=&quot;headerlink&quot;
         
       
     

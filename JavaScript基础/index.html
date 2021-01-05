@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#9400D3">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/s.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/s.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/s.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/s.ico?v=5.1.4" color="#9400D3">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+
+
+  <meta name="keywords" content="JS,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="42's blog" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="目录一 . DOM常用API二 . null 和 undefined的区别三 . 事件流四 . typeof 和 instanceof 的区别五  . 一句话描述this六 . JS 的位置七 . JS 的拖拽八 . setTimeout 实现 setInterval九 . 实现Sleep十 . 执行上下文十一 . 函数式编程十二 . 渐进式网络应用（PWA）十三 . 规范化十四 . babel编">
+<meta name="keywords" content="JS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript基础">
+<meta property="og:url" content="http://sjh95zs.github.io/JavaScript基础/index.html">
+<meta property="og:site_name" content="42&#39;s blog">
+<meta property="og:description" content="目录一 . DOM常用API二 . null 和 undefined的区别三 . 事件流四 . typeof 和 instanceof 的区别五  . 一句话描述this六 . JS 的位置七 . JS 的拖拽八 . setTimeout 实现 setInterval九 . 实现Sleep十 . 执行上下文十一 . 函数式编程十二 . 渐进式网络应用（PWA）十三 . 规范化十四 . babel编">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image">
+<meta property="og:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d9e8a01c9454a27acce6bef077e6793~tplv-k3u1fbpfcp-watermark.image">
+<meta property="og:updated_time" content="2021-01-05T13:46:00.791Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript基础">
+<meta name="twitter:description" content="目录一 . DOM常用API二 . null 和 undefined的区别三 . 事件流四 . typeof 和 instanceof 的区别五  . 一句话描述this六 . JS 的位置七 . JS 的拖拽八 . setTimeout 实现 setInterval九 . 实现Sleep十 . 执行上下文十一 . 函数式编程十二 . 渐进式网络应用（PWA）十三 . 规范化十四 . babel编">
+<meta name="twitter:image" content="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"right","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideRightIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://sjh95zs.github.io/JavaScript基础/">
+
+
+
+
+
+  <title>JavaScript基础 | 42's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">42's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">life is Strange</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-首页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://sjh95zs.github.io/JavaScript基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="42:p">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/3001.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="42's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">JavaScript基础</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-11T00:00:00+08:00">
+                2019-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/JavaScript基础/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="JavaScript基础/" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </span></div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="一-DOM常用API"><a href="#一-DOM常用API" class="headerlink" title="一 . DOM常用API"></a><a href="#one">一 . DOM常用API</a></h2><h2 id="二-null-和-undefined的区别"><a href="#二-null-和-undefined的区别" class="headerlink" title="二 . null 和 undefined的区别"></a><a href="#two">二 . null 和 undefined的区别</a></h2><h2 id="三-事件流"><a href="#三-事件流" class="headerlink" title="三 . 事件流"></a><a href="#three">三 . 事件流</a></h2><h2 id="四-typeof-和-instanceof-的区别"><a href="#四-typeof-和-instanceof-的区别" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a href="#four">四 . typeof 和 instanceof 的区别</a></h2><h2 id="五-一句话描述this"><a href="#五-一句话描述this" class="headerlink" title="五  . 一句话描述this"></a><a href="#five">五  . 一句话描述this</a></h2><h2 id="六-JS-的位置"><a href="#六-JS-的位置" class="headerlink" title="六 . JS 的位置"></a><a href="#six">六 . JS 的位置</a></h2><h2 id="七-JS-的拖拽"><a href="#七-JS-的拖拽" class="headerlink" title="七 . JS 的拖拽"></a><a href="#seven">七 . JS 的拖拽</a></h2><h2 id="八-setTimeout-实现-setInterval"><a href="#八-setTimeout-实现-setInterval" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a href="#eight">八 . setTimeout 实现 setInterval</a></h2><h2 id="九-实现Sleep"><a href="#九-实现Sleep" class="headerlink" title="九 . 实现Sleep"></a><a href="#nine">九 . 实现Sleep</a></h2><h2 id="十-执行上下文"><a href="#十-执行上下文" class="headerlink" title="十 . 执行上下文"></a><a href="#ten">十 . 执行上下文</a></h2><h2 id="十一-函数式编程"><a href="#十一-函数式编程" class="headerlink" title="十一 . 函数式编程"></a><a href="#eleven">十一 . 函数式编程</a></h2><h2 id="十二-渐进式网络应用（PWA）"><a href="#十二-渐进式网络应用（PWA）" class="headerlink" title="十二 . 渐进式网络应用（PWA）"></a><a href="#twelve">十二 . 渐进式网络应用（PWA）</a></h2><h2 id="十三-规范化"><a href="#十三-规范化" class="headerlink" title="十三 . 规范化"></a><a href="#thirteen">十三 . 规范化</a></h2><h2 id="十四-babel编译原理"><a href="#十四-babel编译原理" class="headerlink" title="十四 . babel编译原理"></a><a href="#fourteen">十四 . babel编译原理</a></h2><h2 id="十五-题集"><a href="#十五-题集" class="headerlink" title="十五 . 题集"></a><a href="#fiveteen">十五 . 题集</a></h2><h3 id="一-DOM常用API-1"><a href="#一-DOM常用API-1" class="headerlink" title="一 . DOM常用API"></a><a name="one">一 . DOM常用API</a></h3><h6 id="可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素"><a href="#可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素" class="headerlink" title="可以使用 document  或 window 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)"></a>可以使用 <strong>document</strong>  或 <strong>window</strong> 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</h6><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id);  <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="built_in">document</span>.getElementById(name);</span><br><span class="line">node.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(heading);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(heading);</span><br></pre></td></tr></table></figure>
+
+<h3 id="二-null-和-undefined-的区别"><a href="#二-null-和-undefined-的区别" class="headerlink" title="二 . null 和 undefined 的区别"></a><a name="two">二 . null 和 undefined 的区别</a></h3><h5 id="使用场景细分如下"><a href="#使用场景细分如下" class="headerlink" title="使用场景细分如下"></a>使用场景细分如下</h5><ul>
+<li><p>null</p>
+<ol>
+<li><span style="color: red">number (null)</span> 得到<span style="color: red"> 0 </span>。</li>
+<li>作为函数的参数，表示该函数的参数不是对象。</li>
+<li>作为对象原型链的终点。<span style="color: red">Object.prototype.<strong>proto</strong> === null</span>。</li>
+</ol>
+</li>
+<li><p>undefined</p>
+<ol>
+<li><span style="color: red">number (undefined)</span> 得到 <span style="color: red">NaN</span>。</li>
+<li>变量被声明但没有赋值，等于 <span style="color: red">undefined</span>。</li>
+<li>调用函数时，对应的参数没有提供，也是 <span style="color: red">undefined</span>。</li>
+<li>对象没有赋值，这个属性的值为 <span style="color: red">undefined</span>。</li>
+<li>函数没有返回值，默认返回 <span style="color: red">undefined</span>。</li>
+</ol>
+</li>
+</ul>
+<h3 id="三-事件流-1"><a href="#三-事件流-1" class="headerlink" title="三 . 事件流"></a><a name="three">三 . 事件流</a></h3><h5 id="什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。"><a href="#什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。" class="headerlink" title="什么是事件流: 事件流描述的是从页面中接受事件的顺序， DOM 2 级事件流包括下面几个阶段。"></a>什么是事件流: 事件流描述的是从页面中接受事件的顺序， <span style="color:red">DOM 2</span> 级事件流包括下面几个阶段。</h5><ul>
+<li>事件捕获阶段</li>
+<li>处于目标阶段</li>
+<li>事件冒泡阶段</li>
+</ul>
+<h6 id="如何让事件先冒泡后捕获"><a href="#如何让事件先冒泡后捕获" class="headerlink" title="如何让事件先冒泡后捕获:"></a>如何让事件先冒泡后捕获:</h6><p>在  <span style="color:red">DOM </span> 标准事件模型中，是先捕获后冒泡的。但是如果要实现先冒泡后捕获的效果，对于同一个事件，监听捕获和冒泡，分别对应相应的处理函数，监听到捕获事件，先暂缓执行，直到冒泡事件被捕获后再执行捕获之间</p>
+<h4 id="3-1-addEventListener"><a href="#3-1-addEventListener" class="headerlink" title="3.1 addEventListener"></a>3.1 addEventListener</h4><p><span style="color:red">addEventListener</span> 方法将指定的监听器注册到 <span style="color:red">EventTarget</span> 上，当该对象触发指定的事件时，指定的回调函数就会被执行。</p>
+<p><span style="color:red">addEventListener</span> 事件目标可以是文档上的元素 <span style="color:red">Element</span>、<span style="color:red">Document</span>、和 <span style="color:red">Window</span> 或者任何其他支持事件的对象 （例如<span style="color:red">XMLHttpRequest</span>）。</p>
+<p>[^参考文档]: <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener" target="_blank" rel="noopener">EventTarget.addEventListener - MDN</a></p>
+<ul>
+<li>语法 <span style="color:red">target.addEventListener(type, listener, options/useCapture)</span><ol>
+<li><span style="color:red">type</span> : 表示监听事件类型的字符串。</li>
+<li><span style="color:red">listener</span> : 所监听的事件触发，会接受一个事件通知对象。</li>
+<li><span style="color:red">options</span> : 一个指定有关 <span style="color:red">listener</span> 属性的可选参数对象，可选值有<span style="color:red">capture</span> (事件捕获阶段传播到这里触发)、<span style="color:red">once</span>(在 <span style="color:red">listener</span> 添加之后最多只调用一次)、<span style="color:red">passive</span> (设置为<span style="color:red">true</span> 时表示 <span style="color:red">listener</span>  永远不会调用<span style="color:red">preventDefault()</span> ) 。</li>
+<li><span style="color:red">useCapture</span> : 在DOM树中，注册了 <span style="color:red">listener</span>  的元素，是否要先于它下面的 <span style="color:red">EventTarget</span>  时调用该 <span style="color:red">listener</span>  。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><span style="color:red">addEventListener</span> 的第三个参数涉及到冒泡和捕获，为 <span style="color:red">true</span> 时为捕获，为 <span style="color:red">false</span> 时为冒泡。 </p>
+<p>或者是一个对象  <span style="color:red">{passive : true}</span> ，针对的时 <span style="color:red">safari</span> 浏览器，禁止/开启使用滚动的时候要用到  </p>
+</blockquote>
+<ul>
+<li>示例</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>监听器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"outside"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t1"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t2"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 添加函数</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> modifyText = <span class="function">(<span class="params">text</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> t2 = <span class="built_in">document</span>.querySelector(<span class="string">'#t2'</span>);</span></span><br><span class="line">        if (t2.firstChild.nodeValue === text) &#123;</span><br><span class="line"><span class="javascript">          t2.firstChild.nodeValue = <span class="string">'two'</span>;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">          t2.firstChild.nodeValue = text;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="comment">// 给 Table 添加事件监听器</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> element = <span class="built_in">document</span>.querySelector(<span class="string">'#outside'</span>);</span></span><br><span class="line"><span class="javascript">      element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; modifyText(<span class="string">'four'</span>) &#125;, <span class="literal">false</span>);</span></span><br><span class="line">    &#125;)()</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如上，这个示例简单实现了点击 <span style="color:red">two</span> 切换到 <span style="color:red">four</span> ，点击 <span style="color:red">four</span> 再次切换到 <span style="color:red">two</span> 的效果。 </p>
+</blockquote>
+<h4 id="3-2-原理"><a href="#3-2-原理" class="headerlink" title="3.2 原理"></a>3.2 原理</h4><p>事件捕获和事件冒泡分别是 <strong>网景</strong>（Netscape）和 <strong>IE</strong> 对 <span style="color:red">DOM </span> 事件产生顺序的描述。</p>
+<p><strong>网景</strong> 认为 <span style="color:red">DOM </span> 接受的事件应该最先是 <span style="color:red">window</span> ，然后到 <span style="color:red">document</span> ，接着一层一层往下，最后才到具体的元素接受到事件，即 <strong>事件捕获</strong> 。</p>
+<p><strong>IE</strong> 则认为 <span style="color:red">DOM </span> 事件应该是具体元素先接受到，然后再一层层往上，接着到 <span style="color:red">document</span> ，最后才到 <span style="color:red">window</span>  即 <strong>事件冒泡</strong> 。</p>
+<p>最后 <strong>W3C</strong> 对这两种方案进行了统一，将 <span style="color:red">DOM</span> 事件分为了两个阶段，<strong>事件捕获</strong> 和 <strong>事件冒泡</strong> 阶段。</p>
+<p>当一个元素被点击，首先是事件捕获阶段，<span style="color:red">window</span>  最先接收事件，然后一层一层往下捕获，最后由具体元素接收；之后再由具体元素再一层一层往上冒泡，到<span style="color:red">window</span> 接收事件</p>
+<p>所以:</p>
+<ul>
+<li><strong>事件冒泡</strong> ：当给某个目标元素绑定了事件之后，这个事件会依次在它的父级元素中被触发（当然前提是这个父级元素也有这个同名的事件，比如子元素都绑定了 <span style="color:red">click</span> 事件就触发父元素的 <span style="color:red">click</span>  ）。</li>
+<li><strong>事件捕获</strong> ：和冒泡相反，会从上层传递到下层。</li>
+</ul>
+<h4 id="3-3-案例"><a href="#3-3-案例" class="headerlink" title="3.3 案例"></a>3.3 案例</h4><p>结合自定义事件耍个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>自定义事件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"ul"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"li"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> myEvent = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span></span><br><span class="line"><span class="javascript">      myEvent.initEvent(<span class="string">'myEvent'</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'.btn'</span>);</span></span><br><span class="line"><span class="javascript">      btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> li = <span class="built_in">document</span>.querySelector(<span class="string">'.li'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'li'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'.ul'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'ul'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'document'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">window</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'window'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">        btn.dispatchEvent(myEvent);</span><br><span class="line">      &#125;, 2000);</span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Chrome 输出下顺序是：<code>button</code> -&gt; <code>li</code> -&gt; <code>ul</code> -&gt; <code>document</code> -&gt; <code>window</code></p>
+<p>如果是捕获的话，那么则相反。</p>
+</blockquote>
+<h4 id="3-4-阻止冒泡"><a href="#3-4-阻止冒泡" class="headerlink" title="3.4 阻止冒泡"></a>3.4 阻止冒泡</h4><ul>
+<li><span style="color:red">event.stopPropagation();</span> </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>通过阻止冒泡，程序只会输出 <span style="color:red">button</span> ，而不会继续输出 <span style="color:red">li</span> 等。</p>
+<h4 id="3-5-onmouseover-和-onmouseenter-区别"><a href="#3-5-onmouseover-和-onmouseenter-区别" class="headerlink" title="3.5 onmouseover 和 onmouseenter 区别"></a>3.5 onmouseover 和 onmouseenter 区别</h4><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image" alt="图文" style="zoom:60%;">
+
+<p>这两者都是移入的时候触发，但是 <span style="color:red">onmouseover</span> 会触发多次，而 <span style="color:red">onmouseenter</span> 只在进去的时候才触发。 </p>
+<h4 id="3-6-科普"><a href="#3-6-科普" class="headerlink" title="3.6 科普"></a>3.6 科普</h4><p>并不是所有的事件都有冒泡，例如：</p>
+<ul>
+<li><span style="color:red">onblur</span> </li>
+<li><span style="color:red">onfocus</span> </li>
+<li><font color="red">onmouseover</font></li>
+<li><font color="red">onmouseenter</font></li>
+</ul>
+<h3 id="四-typeof-和-instanceof-的区别-1"><a href="#四-typeof-和-instanceof-的区别-1" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a name="four">四 . typeof 和 instanceof 的区别</a></h3><ul>
+<li><p><font color="red">typeof</font> : 对某个变量类型的检测，基本类型除了 <font color="red">null</font> 之外，都能正常的显示为对应的类型，引用类型除了函数会显示为 <font color="red">function</font> 其他都会显示为 <font color="red"> object </font> 。</p>
+</li>
+<li><p><font color="red">instanceof </font> 主要用于检测某个构造函数的原型对象在不在某个对象的原型链上。</p>
+</li>
+</ul>
+<p><font color="red"> typeof </font> 会对 <font color="red"> null </font> 显示错误是个历史Bug，<font color="red"> typeof null</font> 输出的是 <font color="red"> object </font>, 因为 JavaScript 早期版本是32位系统，为了性能考虑使用低位存储变量的类型信息，<font color="red">000</font> 开头代表是对象然而 <font color="red"> null</font> 表示为全零，所以 <font color="red"> null</font>  被错误的判为了 <font color="red"> object </font>。</p>
+<p>详情可见：<a href="https://juejin.cn/post/6890357960040513550#heading-12" target="_blank" rel="noopener">JavaScript - 变量</a></p>
+<h3 id="五-一句话描述this-1"><a href="#五-一句话描述this-1" class="headerlink" title="五 . 一句话描述this"></a><a name="five">五 . 一句话描述this</a></h3><p>对于函数而言，指向最后调用函数的对象，是函数运行时内部自动产生的一个内部对象，只能在函数内部使用；对于全局而言，<font color="red">this</font> 是指向 <font color="red">window</font>。</p>
+<h3 id="六-JS-位置"><a href="#六-JS-位置" class="headerlink" title="六 . JS 位置"></a><a name="six">六 . JS 位置</a></h3><ul>
+<li><font color="red">clientHeiht</font> : 表示可视区域的高度，不包含 <font color="red">border</font> 和滚动条</li>
+<li><font color="red">offsetHeight</font> : 表示可视区域的高度，包含了 <font color="red">border</font> 和滚动条</li>
+<li><font color="red">scrollHeight</font> ：表示了所有区域的高度，包含了因为滚动条被隐藏的部分</li>
+<li><font color="red">clientTop</font> ：表示边框 <font color="red">border</font> 的厚度，在未指定的情况下一般为 <font color="red">0</font> </li>
+<li><font color="red">scrollTop</font> ：滚动后被隐藏的高度，获取对象相对于由 <font color="red">offsetParent</font> 属性指定的父坐标(CSS定位的元素或者 <font color="red">body</font> 元素)距离顶部的高度。  </li>
+</ul>
+<h3 id="七-JS-拖拽"><a href="#七-JS-拖拽" class="headerlink" title="七 . JS 拖拽"></a><a name="seven">七 . JS 拖拽</a></h3><ol>
+<li>通过 <font color="red">mousedown</font> 、<font color="red">mousemove</font> 、<font color="red">mouseup</font> 方法实现</li>
+<li>通过 HTMl5 <font color="red">Drag</font> 和 <font color="red">Drop</font> 实现</li>
+</ol>
+<h3 id="八-setTimeout-实现-setInterval-1"><a href="#八-setTimeout-实现-setInterval-1" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a name="eight">八 . setTimeout 实现 setInterval</a></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    setTimeout(say,<span class="number">200</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br></pre></td></tr></table></figure>
+
+<p>清除这个定时器:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> timeList = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="built_in">console</span>.log(i++);</span><br><span class="line">    timeList.push(setTimeout(say,<span class="number">200</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; timeList.lenght; i++) &#123;</span><br><span class="line">        clearTimeout(timeList[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="九-实现Sleep-1"><a href="#九-实现Sleep-1" class="headerlink" title="九 . 实现Sleep"></a><a name="nine">九 . 实现Sleep</a></h3><p>如下，实现 <font color="red">1000</font> 毫秒后执行其他内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sleep = <span class="function"><span class="params">time</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            resolve(time);</span><br><span class="line">        &#125;, time)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sleep(<span class="number">1000</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="十-执行上下文-1"><a href="#十-执行上下文-1" class="headerlink" title="十 . 执行上下文"></a><a name="ten">十 . 执行上下文</a></h3><h4 id="10-1-执行上下文类型"><a href="#10-1-执行上下文类型" class="headerlink" title="10.1 执行上下文类型"></a>10.1 执行上下文类型</h4><p>JavaScript 中有3中执行上下文类型：</p>
+<ul>
+<li><strong>全局执行上下文</strong>：这是默认或者说基础的上下文，任何不在函数内部的代码都在全局上下文中。它会执行两件事：创建一个全局的 <font color="red">window</font> 对象（在浏览器的情况下），并且设置 <font color="red"> this</font> 的值等于这个全局对象。一个程序中只会有一个全局执行上下文。</li>
+<li><strong>函数执行上下文</strong> ：每当一个函数被调用时，都会为该函数创建一个新的上下文。每个函数都有它自己的执行上下文，不过是在函数被调用时创建的。函数上下文可以有任意多个。每当一个新的执行上下文被创建，它会按定义的顺序执行一系列步骤。</li>
+<li><strong>Eval 函数执行上下文</strong> ：执行在 <font color="red">eval</font> 函数内部的代码也会有属于它自己的执行上下文，但由于JavaScript 开发者并不经常使用 <font color="red">eval</font> ，所以在这里不会讨论它。</li>
+</ul>
+<h4 id="10-2-执行栈"><a href="#10-2-执行栈" class="headerlink" title="10.2 执行栈"></a>10.2 执行栈</h4><p>执行栈，也就是在其他编程语言中所说的 “<font color="red">调用栈</font>”，是一种拥有 <font color="red">LIFO</font> (后进先出)数据结构的栈，被用来存储代码运行时创建的所有执行上下文。</p>
+<p>当 JavaScript 引擎第一次遇到你的脚本时，它会创建一个全局的执行上下文并且压入当前执行栈。每当引擎遇到一个函数调用，它会为该函数创建一个新的执行上下文并压入栈的顶部。</p>
+<p>引擎会执行那些执行上下文位于栈顶的函数，当该函数执行结束时，执行上下文从栈中弹出，控制流程到达当前栈中的下一个执行上下文。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'Hello World!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">first</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside first function'</span>);</span><br><span class="line">  second();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Again inside first function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">second</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside second function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">first();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Inside Global Execution Context'</span>);</span><br></pre></td></tr></table></figure>
+
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d9e8a01c9454a27acce6bef077e6793~tplv-k3u1fbpfcp-watermark.image">
+
+<h3 id="十一-函数式编程-1"><a href="#十一-函数式编程-1" class="headerlink" title="十一 .  函数式编程"></a><a name="eleven">十一 .  函数式编程</a></h3><p>函数式编程（Functional Programming， 简称FP）。</p>
+<p>函数式编程：通过对面向对象式编程代码的拆分，将各个功能独立出来，从而达到功能独立，易复用等目的。</p>
+<p>举例：代码转换</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>]</span><br><span class="line"><span class="comment">//转换成</span></span><br><span class="line">[&#123;<span class="attr">name</span>: <span class="string">'john-resese'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'harold-finch'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'sameen-shaw'</span>&#125;]</span><br></pre></td></tr></table></figure>
+
+<p>对上面的代码进行转换。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>];</span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; len=arr.lenght; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> name = arr[i];</span><br><span class="line">    <span class="keyword">let</span> names = name.split(<span class="string">'-'</span>);</span><br><span class="line">    <span class="keyword">let</span> newName = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; nameLen = names.lenght; j &lt; nameLen; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> nameItem = names[j][<span class="number">0</span>].toUpperCase() + names[j].slice[<span class="number">1</span>];</span><br><span class="line">        newName.push(nameItem);</span><br><span class="line">    &#125;</span><br><span class="line">  newArr.push(&#123;<span class="attr">name</span>: newName.join(<span class="string">''</span>)&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> newArr;</span><br></pre></td></tr></table></figure>
+
+<p>这份代码中，有两部分：</p>
+<ol>
+<li>拆分数组中的字符串，将字符串变成人名。<font color="red">john-reese -&gt; John Reese</font></li>
+<li>将数组转化为对象。<font color="red">[‘John Reese’] -&gt; [{ name: ‘John Reese’ }]</font></li>
+</ol>
+<p>所以我们直接可以改动：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>改变人名展示方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>type 支持不同格式的人名</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> changeName = <span class="function">(<span class="params">arr, type</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> item.split(type).map( <span class="function"><span class="params">name</span> =&gt;</span> name[<span class="number">0</span>].toUpperCase() + name.slice(<span class="number">1</span>)).join(<span class="string">''</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>数组改变成对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>key 对应变成什么字段</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;object&#125;</span> </span>返回改变后的对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> arrToObj = <span class="function">(<span class="params">arr,key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> (&#123;[key]:item&#125;));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = arrToObj(changeName([<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>],<span class="string">'-'</span>),<span class="string">'name'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="comment">// [ &#123; name: 'John Reese' &#125;, &#123; name: 'Harold Finch' &#125;, &#123; name: 'Sameen Shaw' &#125; ]</span></span><br></pre></td></tr></table></figure>
+
+<p>嗨，这不就是对功能封装吗？一般来说工作中出现 2 次以上的代码才进行封装。</p>
+<p>函数式编程就是对可以抽离的功能都进行抽取封装。</p>
+<h4 id="11-1-函数式编程特点"><a href="#11-1-函数式编程特点" class="headerlink" title="11.1 函数式编程特点"></a>11.1 函数式编程特点</h4><ol>
+<li><strong><font color="black">函数是一等公民</font></strong> 可以利用这点让它支持抽取到外部。</li>
+<li><strong><font color="black">声明做某件事件</font></strong> 函数式编程大多数声明某个函数需要做什么，而不是他怎么做。</li>
+<li><strong><font color="black">便于垃圾回收</font></strong> 函数内部的变量方便垃圾回收，不会产生太多的变量，用户不需要大量的定义。</li>
+<li><strong><font color="black">数据不可变</font></strong> 函数式编程要求所有的数据都是不可变的，如果需要修改某个对象，应该新建后再修改，而不是污染原本的数据。</li>
+<li><strong><font color="black">无状态</font></strong> 不管什么时候运行，同一个函数对相同的输入返回相同的输出，而不依赖外部状态的变化。</li>
+<li><font color="black"> <strong>无副作用</strong></font> 功能A应该仅仅为了完成它的实现，而不会随着外部的改变而改变，这样当它执行完毕之后，就可以将其内部数据进行回收。并且它不会修改传入的参数。</li>
+</ol>
+<p>注重引用值（Object，Array）的传递，尽可能不要污染传入的数据。</p>
+<h4 id="11-2-纯函数"><a href="#11-2-纯函数" class="headerlink" title="11.2 纯函数"></a>11.2 纯函数</h4><p>纯函数的概念有2点:</p>
+<ol>
+<li><strong>不依赖外部的状态（无状态）</strong> ： 函数的运行结构不依赖全局变量，<font color="red">this</font> 指针，<font color="red">IO</font> 操作等。</li>
+<li><strong>无副作用（数据不变）</strong> ： 不修改全局变量，不修改入参。</li>
+</ol>
+<p>优点：</p>
+<ul>
+<li>便于测试和优化</li>
+<li>可缓存性</li>
+<li>自文档化</li>
+<li>更少的bug</li>
+</ul>
+<h3 id="十二-渐进性网络应用（PWA）"><a href="#十二-渐进性网络应用（PWA）" class="headerlink" title="十二 . 渐进性网络应用（PWA）"></a><a name="twelve">十二 . 渐进性网络应用（PWA）</a></h3><p>渐进式网络应用（PWA）是谷歌在2015年底提出的概念。基本上算是Web应用程序，但在外观和感觉上于原生App类似。支持PWA的网站可以提供脱机工作、推送通知和设备硬件访问等功能。</p>
+<h4 id="12-1-优点"><a href="#12-1-优点" class="headerlink" title="12.1 优点"></a>12.1 优点</h4><ul>
+<li><strong>更小更快</strong> ：渐进式的Web应用程序比原生应用程序小得多。他们甚至不用安装。他们没有浪费磁盘空间并且加载速度非常快。</li>
+<li><strong>响应式界面</strong> ： PWA支持的网页能够自动适应各种屏幕大小。它们可以是手机、平板、台式机或者笔记本。</li>
+<li><strong>无需更新</strong> ： 大多数移动应用程序需要每周定期更新。与普通网站一样，每当用户交互发生且不需要应用程序和游戏商店批准时，PWA总是加载最新更新版本</li>
+<li><strong>高性价比</strong> ：原生移动应用需要分别为Android和iOS设备开发，开发成本非常高。另一方面，PWA有着相同的功能，但只是先前价格的一部分，开发成本低。</li>
+<li><strong>SEO优势</strong> ： 搜索引擎可以发现PWA，并且加载速度非常快，就像其他网站一样，他们的链接也可以共享，提供良好的用户体检和结果，在SEO排名中提高。</li>
+<li><strong>脱机功能</strong> ：由于Service Worker API的支持，可以在脱机或者低Internet连接中访问PWAs。</li>
+<li><strong>安全性</strong> ： PWA通过HTTPS连接传递，并在每次交互保护用户数据。</li>
+<li><strong>推送通知</strong> ：通过推送通知的支持，PWA轻松地与用户进行交互，提供非常棒的用户体检。</li>
+<li><strong>绕过应用商店</strong> ：原生的App如果需要任何的更新，需要应用商店的审批，且有被拒绝或禁止的可能性，对于这方面来说，PWA有它的独特优势，不要App Store支持。更新版本可以直接从Web服务器加载，无需App Store批准。</li>
+<li><strong>零安装</strong> ： 在浏览的过程中，PWA会在手机和平板电脑上有自己的图标，就像移动应用程序一样，但不需要经过冗长的安装过程。</li>
+</ul>
+<h4 id="12-2-缺点"><a href="#12-2-缺点" class="headerlink" title="12.2 缺点"></a>12.2 缺点</h4><ul>
+<li><strong>对系统功能的访问权限较低</strong> ： 目前PWA对本机系统功能的访问权限比较原生App有限。而且所有的浏览器都不支持它的全部功能，但可能在不久的将来，它可能会成为新的开发标准</li>
+<li><strong>多数Android，少数iOS</strong> ：目前更多的支持来自Android。iOS系统只提供了部分。</li>
+<li><strong>没有审查标准</strong> ： PWA不需要任何适用于应用商店中本机应用的审查，这可能会加快进程，但缺乏从应用程序商店中获取推广效益。</li>
+</ul>
+<h3 id="十三-规范化-1"><a href="#十三-规范化-1" class="headerlink" title="十三 . 规范化"></a><a name="thirteen">十三 . 规范化</a></h3><p><font color="red">CommonJS</font> 规范、<font color="red">AMD</font> 规范、 <font color="red">CMD</font> 规范、<font color="red">ES6 Modules</font> 规范，这4者都是前端规范化的内容，那么他们之间区别是什么？</p>
+<p>在没有这些之前，我们通过：</p>
+<ul>
+<li>一个函数就是一个模块。<font color="red">function fn() {} </font> </li>
+<li>一个对象就是一个模块。<font color="red"> let obj = new Object({…})</font></li>
+<li>立即执行函数（IIFE）。 <font color="red">(function() {})()</font> </li>
+</ul>
+<h4 id="13-1-CommonJs规范"><a href="#13-1-CommonJs规范" class="headerlink" title="13.1 CommonJs规范"></a>13.1 CommonJs规范</h4><p>这之后，就有了<font color="red">CommonJS</font> 规范，其实 <font color="red">CommonJS</font>  我们见得不少，就是 <font color="red">Node</font> 的那套：</p>
+<ul>
+<li>导出：<font color="red">module.exports = {} 、exports.xxx = ‘xxx’</font> </li>
+<li>导入: <font color="red">require(…)</font> </li>
+<li>查找方式：查找当前目录是否具有文件，没有则查找当前目录的 <font color="red">node_modules</font> 文件。在没有，冒泡查询，一直往系统中的 <font color="red">npm</font> 目录查找</li>
+</ul>
+<p>它的特点：</p>
+<ol>
+<li>所有代码在模块作用域内运行，不会污染其他文件</li>
+<li><font color="red">require</font> 得到的值是值得拷贝，即你引用其他 JS 文件的变量，修改操作了也不会影响其他文件。</li>
+</ol>
+<p>它的缺点：</p>
+<ol>
+<li>应用层面，在 <font color="red">index.html</font> 中做 <font color="red">var index = require(‘./index.js’)</font> 操作报错，因为它最终是后台执行的，只能是 <font color="red">index.js</font> 引用 <font color="red">index2.js</font> 这种方式。</li>
+<li>同步加载问题。<font color="red">CommonJS</font> 规范中模块是同步加载的，即在 <font color="red">index.js</font> 中加载 <font color="red">index2.js</font>，如果 <font color="red">index2.js</font> 卡住了，那就要等很久了。</li>
+</ol>
+<h4 id="13-2-AMD规范"><a href="#13-2-AMD规范" class="headerlink" title="13.2 AMD规范"></a>13.2 AMD规范</h4><p>为什么有 <font color="red">AMD</font>  规范？</p>
+<p>答：因为 <font color="red">CommonJS</font>  规范不中用。</p>
+<ol>
+<li>适用客户端</li>
+<li>等待加载（同步加载问题）</li>
+</ol>
+<p>所以它做了什么？</p>
+<p>可以采用异步加载模块，<font color="red">AMD</font> 是 <font color="red">Asynchronous Module Definition</font>  的缩写，也就是“异步模块定义”，记住这个 <font color="red">async</font> 就知道它是异步的了 </p>
+<h4 id="13-3-CMD规范"><a href="#13-3-CMD规范" class="headerlink" title="13.3 CMD规范"></a>13.3 CMD规范</h4><p><font color="red">CMD</font> (Common Module Definition)，是seajs推崇的规范，<font color="red">CMD</font> 则是依赖就近，用的时候在 <font color="red">require</font> 。</p>
+<p><font color="red">AMD</font> 和 <font color="red">CMD</font> 最大的区别是对依赖模块执行时机的处理，注意不是加载的时机或者方式不同，二者皆为异步加载模块。</p>
+<h4 id="13-4-ES6-Modules规范"><a href="#13-4-ES6-Modules规范" class="headerlink" title="13.4 ES6 Modules规范"></a>13.4 ES6 Modules规范</h4><ul>
+<li>导出：</li>
+</ul>
+<ol>
+<li><font color="red"> export a </font></li>
+<li><font color="red">export {a} </font></li>
+<li><font color="red">export {a as sjh}</font></li>
+<li><font color="red">export defalut function () {} </font></li>
+</ol>
+<ul>
+<li>导入</li>
+</ul>
+<ol>
+<li><font color="red">import ‘./index’</font></li>
+<li><font color="red">import {a} from ‘/index.js’</font></li>
+<li><font color="red">import {a as sjh} from ‘./index.js’ </font></li>
+<li><font color="red"> import * as index from ‘./index.js’</font></li>
+</ol>
+<p>特点：</p>
+<ol>
+<li><font color="red"> export </font> 命令和 <font color="red"> import</font> 命令可以出现在模块的任何位置，只要处于模块顶层就可以，如果处于块级作用域中，就会报错，这是因为处于条件代码块之中，就没法做静态优化了，违背了ES6模块的设计初衷。</li>
+<li><font color="red"> import</font> 命令具有提升效果，会提升到整个模块的头部，首先执行。</li>
+</ol>
+<p>和 <font color="red">CommonJS</font>  的区别：</p>
+<ul>
+<li><font color="red">CommonJS</font>  模块是运行时加载，<font color="red">ES6 Modules</font> 是编译时输出接口</li>
+<li><font color="red">CommonJS</font>  输出是值的拷贝，<font color="red">ES6 Modules</font> 输出的是值的引用，被输出模块内部的改变会影响引用的改变</li>
+<li><font color="red">CommonJS</font>  导入的模块路径可以是一个表达式，因为它使用的是 <font color="red">require()</font> 方法； 而 <font color="red">ES6 Modules</font> 只能是字符串</li>
+<li><font color="red">CommonJS  this</font> 指向当前模块，<font color="red">ES6 Modules</font> 的 <font color="red">this</font> 指向 <font color="red">undefined</font></li>
+<li><font color="red">ES6 Modules</font> 中没有这些顶层变量：<font color="red">arguments</font> 、<font color="red">require</font> 、 <font color="red"><strong><strong>dirname</strong></strong></font>  、<font color="red">module</font> 、 <font color="red">exports</font> 、 <font color="red">filename</font> </li>
+</ul>
+<h3 id="十四-babel编译原理-1"><a href="#十四-babel编译原理-1" class="headerlink" title="十四 . babel编译原理"></a><a name="fourteen">十四 . babel编译原理</a></h3><ul>
+<li>babylon 将 ES6/ES7 代码解析成 AST</li>
+<li>babel-traverse 对 AST 进行遍历转译，得到新的 AST</li>
+<li>新 AST 通过babel-generator 转换成ES5</li>
+</ul>
+<p>这一块的话 <strong>jsliang</strong> 并没有过分深究，单纯理解的话还是容易理解的：</p>
+<ol>
+<li>黑白七巧板组成的形状，拆分出来得到零件（<code>ES6/ES7</code> 解析成 <code>AST</code>）</li>
+<li>将这些零件换成彩色的（<code>AST</code> 编译得到新 <code>AST</code>）</li>
+<li>将彩色零件拼装成新的形状（<code>AST</code> 转换为 <code>ES5</code>）</li>
+</ol>
+<h3 id="十五-题集-1"><a href="#十五-题集-1" class="headerlink" title="十五 . 题集"></a><a name="fiveteen">十五 . 题集</a></h3><h4 id="15-1-数组常见API"><a href="#15-1-数组常见API" class="headerlink" title="15.1 数组常见API"></a>15.1 数组常见API</h4><ul>
+<li><font color="red"> push</font> ：数组尾部添加元素</li>
+<li><font color="red">unshift</font> ：数组头部添加元素</li>
+<li><font color="red">pop</font> ： 数组尾部移除元素</li>
+<li><font color="red">shift</font> ：数组头部移除元素</li>
+<li><font color="red">splice</font> ：删除数组元素</li>
+<li><font color="red">slice</font> ：截取数组元素</li>
+<li><font color="red">indexOf</font> ： 查找某元素第一次出现的位置</li>
+<li><font color="red">lastIndexof</font> ：查找某元素最后一次出现的位置</li>
+<li><font color="red">findIndex</font> ：查找元素第一次出现的位置</li>
+<li><font color="red">forEach</font> ：遍历元素</li>
+<li><font color="red">map</font> ：遍历元素</li>
+<li><font color="red">filter</font> ：过滤元素</li>
+<li><font color="red">some</font> ：包含某元素</li>
+<li><font color="red">every</font> ：所有元素和某元素一致</li>
+<li><font color="red">includes</font> ：查看是否包含某元素</li>
+<li><font color="red">concat</font> ：合并元素</li>
+<li><font color="red">join</font> ：合并元素，变成字符串</li>
+<li><font color="red">toString</font> ：变成字符串</li>
+<li><font color="red">sort</font> ： 元素排序</li>
+</ul>
+<h4 id="15-2-常见-DOM-API"><a href="#15-2-常见-DOM-API" class="headerlink" title="15.2 常见 DOM API"></a>15.2 常见 DOM API</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JS/" rel="tag"># JS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/HTML和HTML5/" rel="next" title="HTML和HTML5">
+                <i class="fa fa-chevron-left"></i> HTML和HTML5
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/HTML5中的Canvas元素/" rel="prev" title="HTML5中的Canvas元素">
+                HTML5中的Canvas元素 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/3001.jpg" alt="42:p">
+            
+              <p class="site-author-name" itemprop="name">42:p</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/sjh95zs" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://weibo.com/happyisunhappy" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/jasheng" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/guguga16" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰的网站" target="_blank">廖雪峰的网站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://es6.ruanyifeng.com/" title="阮一峰的网站" target="_blank">阮一峰的网站</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-DOM常用API"><span class="nav-number">1.1.</span> <span class="nav-text">一 . DOM常用API</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-null-和-undefined的区别"><span class="nav-number">1.2.</span> <span class="nav-text">二 . null 和 undefined的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-事件流"><span class="nav-number">1.3.</span> <span class="nav-text">三 . 事件流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-typeof-和-instanceof-的区别"><span class="nav-number">1.4.</span> <span class="nav-text">四 . typeof 和 instanceof 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-一句话描述this"><span class="nav-number">1.5.</span> <span class="nav-text">五  . 一句话描述this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-JS-的位置"><span class="nav-number">1.6.</span> <span class="nav-text">六 . JS 的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-JS-的拖拽"><span class="nav-number">1.7.</span> <span class="nav-text">七 . JS 的拖拽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-setTimeout-实现-setInterval"><span class="nav-number">1.8.</span> <span class="nav-text">八 . setTimeout 实现 setInterval</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九-实现Sleep"><span class="nav-number">1.9.</span> <span class="nav-text">九 . 实现Sleep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十-执行上下文"><span class="nav-number">1.10.</span> <span class="nav-text">十 . 执行上下文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一-函数式编程"><span class="nav-number">1.11.</span> <span class="nav-text">十一 . 函数式编程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十二-渐进式网络应用（PWA）"><span class="nav-number">1.12.</span> <span class="nav-text">十二 . 渐进式网络应用（PWA）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十三-规范化"><span class="nav-number">1.13.</span> <span class="nav-text">十三 . 规范化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十四-babel编译原理"><span class="nav-number">1.14.</span> <span class="nav-text">十四 . babel编译原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十五-题集"><span class="nav-number">1.15.</span> <span class="nav-text">十五 . 题集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-DOM常用API-1"><span class="nav-number">1.15.1.</span> <span class="nav-text">一 . DOM常用API</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素"><span class="nav-number">1.15.1.0.0.1.</span> <span class="nav-text">可以使用 document  或 window 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-null-和-undefined-的区别"><span class="nav-number">1.15.2.</span> <span class="nav-text">二 . null 和 undefined 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用场景细分如下"><span class="nav-number">1.15.2.0.1.</span> <span class="nav-text">使用场景细分如下</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#三-事件流-1"><span class="nav-number">1.15.3.</span> <span class="nav-text">三 . 事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。"><span class="nav-number">1.15.3.0.1.</span> <span class="nav-text">什么是事件流: 事件流描述的是从页面中接受事件的顺序， DOM 2 级事件流包括下面几个阶段。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#如何让事件先冒泡后捕获"><span class="nav-number">1.15.3.0.1.1.</span> <span class="nav-text">如何让事件先冒泡后捕获:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-addEventListener"><span class="nav-number">1.15.3.1.</span> <span class="nav-text">3.1 addEventListener</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-原理"><span class="nav-number">1.15.3.2.</span> <span class="nav-text">3.2 原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-案例"><span class="nav-number">1.15.3.3.</span> <span class="nav-text">3.3 案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-阻止冒泡"><span class="nav-number">1.15.3.4.</span> <span class="nav-text">3.4 阻止冒泡</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-5-onmouseover-和-onmouseenter-区别"><span class="nav-number">1.15.3.5.</span> <span class="nav-text">3.5 onmouseover 和 onmouseenter 区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-6-科普"><span class="nav-number">1.15.3.6.</span> <span class="nav-text">3.6 科普</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四-typeof-和-instanceof-的区别-1"><span class="nav-number">1.15.4.</span> <span class="nav-text">四 . typeof 和 instanceof 的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五-一句话描述this-1"><span class="nav-number">1.15.5.</span> <span class="nav-text">五 . 一句话描述this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六-JS-位置"><span class="nav-number">1.15.6.</span> <span class="nav-text">六 . JS 位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#七-JS-拖拽"><span class="nav-number">1.15.7.</span> <span class="nav-text">七 . JS 拖拽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#八-setTimeout-实现-setInterval-1"><span class="nav-number">1.15.8.</span> <span class="nav-text">八 . setTimeout 实现 setInterval</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#九-实现Sleep-1"><span class="nav-number">1.15.9.</span> <span class="nav-text">九 . 实现Sleep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十-执行上下文-1"><span class="nav-number">1.15.10.</span> <span class="nav-text">十 . 执行上下文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10-1-执行上下文类型"><span class="nav-number">1.15.10.1.</span> <span class="nav-text">10.1 执行上下文类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-2-执行栈"><span class="nav-number">1.15.10.2.</span> <span class="nav-text">10.2 执行栈</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十一-函数式编程-1"><span class="nav-number">1.15.11.</span> <span class="nav-text">十一 .  函数式编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-1-函数式编程特点"><span class="nav-number">1.15.11.1.</span> <span class="nav-text">11.1 函数式编程特点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-2-纯函数"><span class="nav-number">1.15.11.2.</span> <span class="nav-text">11.2 纯函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十二-渐进性网络应用（PWA）"><span class="nav-number">1.15.12.</span> <span class="nav-text">十二 . 渐进性网络应用（PWA）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-1-优点"><span class="nav-number">1.15.12.1.</span> <span class="nav-text">12.1 优点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-2-缺点"><span class="nav-number">1.15.12.2.</span> <span class="nav-text">12.2 缺点</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十三-规范化-1"><span class="nav-number">1.15.13.</span> <span class="nav-text">十三 . 规范化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#13-1-CommonJs规范"><span class="nav-number">1.15.13.1.</span> <span class="nav-text">13.1 CommonJs规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-2-AMD规范"><span class="nav-number">1.15.13.2.</span> <span class="nav-text">13.2 AMD规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-3-CMD规范"><span class="nav-number">1.15.13.3.</span> <span class="nav-text">13.3 CMD规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-4-ES6-Modules规范"><span class="nav-number">1.15.13.4.</span> <span class="nav-text">13.4 ES6 Modules规范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十四-babel编译原理-1"><span class="nav-number">1.15.14.</span> <span class="nav-text">十四 . babel编译原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#十五-题集-1"><span class="nav-number">1.15.15.</span> <span class="nav-text">十五 . 题集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#15-1-数组常见API"><span class="nav-number">1.15.15.1.</span> <span class="nav-text">15.1 数组常见API</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-2-常见-DOM-API"><span class="nav-number">1.15.15.2.</span> <span class="nav-text">15.2 常见 DOM API</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">42:p</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://sjh95zs.github.io">GitHub Pages</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cyumKOfUW';
+      var conf = '014524196b6650bc6b1f4b7b9e6d0f0e';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
