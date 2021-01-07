@@ -3,218 +3,187 @@
   <title>42&#39;s blog</title>
   
   <subtitle>life is Strange</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://sjh95zs.github.io/atom.xml" rel="self"/>
   
-  <link href="http://sjh95zs.github.io/"/>
+  <link href="https://sjh95zs.github.io/"/>
   <updated>2021-01-07T13:42:14.808Z</updated>
-  <id>http://sjh95zs.github.io/</id>
+  <id>https://sjh95zs.github.io/</id>
   
   <author>
     <name>42:p</name>
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>JavaScript基础</title>
-    <link href="http://sjh95zs.github.io/JavaScript%E5%9F%BA%E7%A1%80/"/>
-    <id>http://sjh95zs.github.io/JavaScript基础/</id>
+    <link href="https://sjh95zs.github.io/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    <id>https://sjh95zs.github.io/JavaScript%E5%9F%BA%E7%A1%80/</id>
     <published>2021-01-04T16:00:00.000Z</published>
     <updated>2021-01-07T13:42:14.808Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1&gt;目录&lt;/h1&gt;
-&lt;h2&gt;&lt;a href=&quot;#one&quot;&gt;一 . DOM常用API&lt;/a&gt;&lt;/h2&gt;
-&lt;h2&gt;&lt;a href=&quot;#two&quot;&gt;二 . null 和 undefined的区别&lt;/a&gt;&lt;/h2&gt;
-&lt;h2&gt;&lt;a href=&quot;#three&quot;&gt;三 .
+    <summary type="html">&lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;h2 id=&quot;一-DOM常用API&quot;&gt;&lt;a href=&quot;#一-DOM常用API&quot; class=&quot;headerlink&quot; title=&quot;一 .</summary>
         
       
     
-    </summary>
-    
-      <category term="JS" scheme="http://sjh95zs.github.io/categories/JS/"/>
     
     
-      <category term="JS" scheme="http://sjh95zs.github.io/tags/JS/"/>
+    <category term="JS" scheme="https://sjh95zs.github.io/categories/JS/"/>
+    
+    
+    <category term="JS" scheme="https://sjh95zs.github.io/tags/JS/"/>
     
   </entry>
   
   <entry>
     <title>微信小程序的学习之路(1)</title>
-    <link href="http://sjh95zs.github.io/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://sjh95zs.github.io/微信小程序的学习/</id>
+    <link href="https://sjh95zs.github.io/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <id>https://sjh95zs.github.io/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</id>
     <published>2020-08-05T16:00:00.000Z</published>
     <updated>2020-08-06T10:50:42.403Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1&gt;小程序的基本配置&lt;/h1&gt;
-&lt;h2&gt;全局配置&lt;/h2&gt;
-&lt;p&gt;小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
-例如:
-&lt;figure class=&quot;highlight
+    <summary type="html">&lt;h1 id=&quot;小程序的基本配置&quot;&gt;&lt;a href=&quot;#小程序的基本配置&quot; class=&quot;headerlink&quot; title=&quot;小程序的基本配置&quot;&gt;&lt;/a&gt;小程序的基本配置&lt;/h1&gt;&lt;h2 id=&quot;全局配置&quot;&gt;&lt;a href=&quot;#全局配置&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="web" scheme="http://sjh95zs.github.io/categories/web/"/>
     
     
-      <category term="小程序" scheme="http://sjh95zs.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <category term="web" scheme="https://sjh95zs.github.io/categories/web/"/>
+    
+    
+    <category term="小程序" scheme="https://sjh95zs.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>Git — 分布式版本控制系统</title>
-    <link href="http://sjh95zs.github.io/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://sjh95zs.github.io/Git — 分布式版本控制系统/</id>
+    <link href="https://sjh95zs.github.io/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/"/>
+    <id>https://sjh95zs.github.io/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</id>
     <published>2020-01-05T16:00:00.000Z</published>
     <updated>2020-08-08T08:12:59.463Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1&gt;1. Help指令&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;帮助信息：git help&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;显示所有命令：git help -a&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;查看git的使用手册：git
+    <summary type="html">&lt;h1 id=&quot;1-Help指令&quot;&gt;&lt;a href=&quot;#1-Help指令&quot; class=&quot;headerlink&quot; title=&quot;1. Help指令&quot;&gt;&lt;/a&gt;1. Help指令&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;帮助信息：git</summary>
         
       
     
-    </summary>
-    
-      <category term="Git" scheme="http://sjh95zs.github.io/categories/Git/"/>
     
     
-      <category term="Git" scheme="http://sjh95zs.github.io/tags/Git/"/>
+    <category term="Git" scheme="https://sjh95zs.github.io/categories/Git/"/>
+    
+    
+    <category term="Git" scheme="https://sjh95zs.github.io/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>HTML5中的Canvas元素</title>
-    <link href="http://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/"/>
-    <id>http://sjh95zs.github.io/HTML5中的Canvas元素/</id>
+    <link href="https://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/"/>
+    <id>https://sjh95zs.github.io/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</id>
     <published>2019-09-10T16:00:00.000Z</published>
     <updated>2020-09-12T09:17:55.698Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h2&gt;HTML5中的Canvas元素&lt;/h2&gt;
-&lt;h3&gt;创建Canvas元素&lt;/h3&gt;
-&lt;p&gt;向HTML5页面添加canvas元素，规定元素的id、宽度和高度：&lt;/p&gt;
-&lt;p&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+    <summary type="html">&lt;h2 id=&quot;HTML5中的Canvas元素&quot;&gt;&lt;a href=&quot;#HTML5中的Canvas元素&quot; class=&quot;headerlink&quot; title=&quot;HTML5中的Canvas元素&quot;&gt;&lt;/a&gt;HTML5中的Canvas元素&lt;/h2&gt;&lt;h3</summary>
         
       
     
-    </summary>
-    
-      <category term="HTML" scheme="http://sjh95zs.github.io/categories/HTML/"/>
     
     
-      <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
+    <category term="HTML" scheme="https://sjh95zs.github.io/categories/HTML/"/>
+    
+    
+    <category term="HTML" scheme="https://sjh95zs.github.io/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>HTML和HTML5</title>
-    <link href="http://sjh95zs.github.io/HTML%E5%92%8CHTML5/"/>
-    <id>http://sjh95zs.github.io/HTML和HTML5/</id>
+    <link href="https://sjh95zs.github.io/HTML%E5%92%8CHTML5/"/>
+    <id>https://sjh95zs.github.io/HTML%E5%92%8CHTML5/</id>
     <published>2019-08-09T16:00:00.000Z</published>
     <updated>2020-08-08T09:50:59.948Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1&gt;常用属性&lt;/h1&gt;
-&lt;h3&gt;class&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;作用：规定元素的一个或多个类名&lt;/li&gt;
-&lt;li&gt;值：多个类名之间用空格分隔&lt;/li&gt;
-&lt;li&gt;注意：类名不能以数字开头&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;id&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;作用：规定元素的唯
+    <summary type="html">&lt;h1 id=&quot;常用属性&quot;&gt;&lt;a href=&quot;#常用属性&quot; class=&quot;headerlink&quot; title=&quot;常用属性&quot;&gt;&lt;/a&gt;常用属性&lt;/h1&gt;&lt;h3 id=&quot;class&quot;&gt;&lt;a href=&quot;#class&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="HTML" scheme="http://sjh95zs.github.io/categories/HTML/"/>
     
     
-      <category term="HTML" scheme="http://sjh95zs.github.io/tags/HTML/"/>
+    <category term="HTML" scheme="https://sjh95zs.github.io/categories/HTML/"/>
+    
+    
+    <category term="HTML" scheme="https://sjh95zs.github.io/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
-    <link href="http://sjh95zs.github.io/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
-    <id>http://sjh95zs.github.io/我的第一篇博客文章/</id>
+    <link href="https://sjh95zs.github.io/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/"/>
+    <id>https://sjh95zs.github.io/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</id>
     <published>2019-08-04T02:26:11.000Z</published>
     <updated>2019-08-04T07:30:43.627Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h1&gt;简言&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&amp;gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些
+    <summary type="html">&lt;h1 id=&quot;简言&quot;&gt;&lt;a href=&quot;#简言&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="Hexo杂谈" scheme="http://sjh95zs.github.io/categories/Hexo%E6%9D%82%E8%B0%88/"/>
     
     
-      <category term="Hexo" scheme="http://sjh95zs.github.io/tags/Hexo/"/>
+    <category term="Hexo杂谈" scheme="https://sjh95zs.github.io/categories/Hexo%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Hexo" scheme="https://sjh95zs.github.io/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://sjh95zs.github.io/hello-world/"/>
-    <id>http://sjh95zs.github.io/hello-world/</id>
+    <link href="https://sjh95zs.github.io/hello-world/"/>
+    <id>https://sjh95zs.github.io/hello-world/</id>
     <published>2019-08-04T01:03:17.023Z</published>
     <updated>2019-08-04T01:03:17.023Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
-    </summary>
+    
     
     
   </entry>

@@ -3,15 +3,13 @@
   <entry>
     <title>Git — 分布式版本控制系统</title>
     <url>/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h1>1. Help指令</h1>
-<ul>
+    <content><![CDATA[<h1 id="1-Help指令"><a href="#1-Help指令" class="headerlink" title="1. Help指令"></a>1. Help指令</h1><ul>
 <li><strong>帮助信息：git help</strong></li>
 <li><strong>显示所有命令：git help -a</strong></li>
 <li><strong>查看git的使用手册：git help -g</strong></li>
 <li><strong>查看更详细的内容：git help 命令名称/手册名称，如git help push</strong></li>
 </ul>
-<h1>2. 配置</h1>
-<blockquote>
+<h1 id="2-配置"><a href="#2-配置" class="headerlink" title="2. 配置"></a>2. 配置</h1><blockquote>
 <p>git的配置有三个范围</p>
 </blockquote>
 <ul>
@@ -19,21 +17,15 @@
 <li><strong>global-全局范围，在这个范围上去配置git，不同用户可以拥有自己的配置</strong></li>
 <li><strong>local-项目配置，针对单个项目</strong></li>
 </ul>
-<h2>全局配置用户信息</h2>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加用户： git config --global user.name  //输入自己的用户名</span><br><span class="line">添加邮箱： git config --global user.email //输入自己的邮箱</span><br><span class="line">查看配置信息： git config --list </span><br><span class="line">删除用户配置： git config --<span class="built_in">unset</span> --global user.name</span><br><span class="line">删除用户邮箱： git config --<span class="built_in">unset</span> --global user.email</span><br></pre></td></tr></table></figure></p>
+<h2 id="全局配置用户信息"><a href="#全局配置用户信息" class="headerlink" title="全局配置用户信息"></a>全局配置用户信息</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加用户： git config --global user.name  //输入自己的用户名</span><br><span class="line">添加邮箱： git config --global user.email //输入自己的邮箱</span><br><span class="line">查看配置信息： git config --list </span><br><span class="line">删除用户配置： git config --<span class="built_in">unset</span> --global user.name</span><br><span class="line">删除用户邮箱： git config --<span class="built_in">unset</span> --global user.email </span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>cat ~/.gitconfig — 全局范围里做的这些配置，会保存在一个叫 .gitconfig 的文件里面。这个文件会放在当前用户的主目录下面，波浪号就表示当前用户的主目录，我们可以使用 cat 命令查看一下这个文件里的东西</p>
 </blockquote>
-<h1>3. 初始化</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">初始化当前目录： git init</span><br><span class="line">进入.git目录（默认是隐藏模式）：cd.git</span><br><span class="line">查看目录下的文件: ls</span><br></pre></td></tr></table></figure></p>
-<h1>4. 提交</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加指定文件至暂存区：git add 文件名</span><br><span class="line">添加所有文件至暂存区：git add .</span><br><span class="line">提交： git commit -m <span class="string">"该次提交的描述"</span></span><br><span class="line">查看当前状态：git status</span><br><span class="line">查看以往提交的记录：git <span class="built_in">log</span></span><br></pre></td></tr></table></figure></p>
-<h1>5. 区别对比</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">显示修改前的对比： git diff</span><br></pre></td></tr></table></figure></p>
-<h1>6. 分支</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">列出所有本地分支：git branch</span><br><span class="line">列出所有远程分支：git branch -r</span><br><span class="line">列出所有本地分支和远程分支：git branch -a</span><br><span class="line">创建一个分支：git branch 分支名</span><br><span class="line">切换分支：git checkout 分支名</span><br><span class="line">合并指定分支到当前分支：git merge 指定分支</span><br><span class="line">重命名分支：git branch -m 旧分支名 新分支名</span><br><span class="line">删除分支：git branch -d 分支名</span><br></pre></td></tr></table></figure></p>
-<h1>7. 远程仓库有关</h1>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">推送至远程仓库：git push -u 远程版本库名 推送上去的分支名</span><br><span class="line">克隆项目：git <span class="built_in">clone</span> 项目链接</span><br></pre></td></tr></table></figure></p>
+<h1 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. 初始化</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">初始化当前目录： git init</span><br><span class="line">进入.git目录（默认是隐藏模式）：cd.git</span><br><span class="line">查看目录下的文件: ls</span><br></pre></td></tr></table></figure>
+<h1 id="4-提交"><a href="#4-提交" class="headerlink" title="4. 提交"></a>4. 提交</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">添加指定文件至暂存区：git add 文件名</span><br><span class="line">添加所有文件至暂存区：git add .</span><br><span class="line">提交： git commit -m <span class="string">&quot;该次提交的描述&quot;</span></span><br><span class="line">查看当前状态：git status</span><br><span class="line">查看以往提交的记录：git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+<h1 id="5-区别对比"><a href="#5-区别对比" class="headerlink" title="5. 区别对比"></a>5. 区别对比</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">显示修改前的对比： git diff</span><br></pre></td></tr></table></figure>
+<h1 id="6-分支"><a href="#6-分支" class="headerlink" title="6. 分支"></a>6. 分支</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">列出所有本地分支：git branch</span><br><span class="line">列出所有远程分支：git branch -r</span><br><span class="line">列出所有本地分支和远程分支：git branch -a</span><br><span class="line">创建一个分支：git branch 分支名</span><br><span class="line">切换分支：git checkout 分支名</span><br><span class="line">合并指定分支到当前分支：git merge 指定分支</span><br><span class="line">重命名分支：git branch -m 旧分支名 新分支名</span><br><span class="line">删除分支：git branch -d 分支名</span><br></pre></td></tr></table></figure>
+<h1 id="7-远程仓库有关"><a href="#7-远程仓库有关" class="headerlink" title="7. 远程仓库有关"></a>7. 远程仓库有关</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">推送至远程仓库：git push -u 远程版本库名 推送上去的分支名</span><br><span class="line">克隆项目：git <span class="built_in">clone</span> 项目链接</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Git</category>
@@ -43,62 +35,20 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML和HTML5</title>
-    <url>/HTML%E5%92%8CHTML5/</url>
-    <content><![CDATA[<h1>常用属性</h1>
-<h3>class</h3>
-<ul>
-<li>作用：规定元素的一个或多个类名</li>
-<li>值：多个类名之间用空格分隔</li>
-<li>注意：类名不能以数字开头</li>
-</ul>
-<h3>id</h3>
-<ul>
-<li>作用：规定元素的唯一标识</li>
-<li>注意：若浏览器中出现多个id名的情况，CSS样式对所有该id的元素都生效，但javascript脚本仅对第一个（最上面那个）出现该id的元素生效</li>
-</ul>
-<h3>title</h3>
-<ul>
-<li>作用：规定关于元素的额外信息，鼠标移到元素上时显示一段提示文本</li>
-</ul>
-<h3>lang</h3>
-<ul>
-<li>作用：规定元素内容的语言</li>
-</ul>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure></p>
-<h3>tabindex</h3>
-<ul>
-<li>作用：规定元素的tab键次序</li>
-<li>值：number（1是第一个）</li>
-</ul>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.baidu.com"</span> tabindex=<span class="string">"3"</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.taobao.com"</span> tabindex=<span class="string">"2"</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.qq.com"</span> tabindex=<span class="string">"1"</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
-<h3>accesskey</h3>
-<ul>
-<li>作用：创建激活或聚焦元素的快捷键</li>
-<li>值：一个键盘字符如B</li>
-<li>范围：支付该属性的元素有<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 注意：使用该属性在新窗口打开链接时可能会被浏览器屏蔽</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&lt;!-- 快捷键(alt+b)可以跳转到百度；快捷键(alt+a)可以跳转到阿里；快捷键(alt+t)可以跳转到腾讯 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.baidu.com&quot; accesskey=&quot;b&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.taobao.com&quot; accesskey=&quot;a&quot;&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.qq.com&quot; accesskey=&quot;t&quot;&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3>draggable</h3>
-<ul>
-<li>作用：用户是否可以拖元素</li>
-<li>值：true/false/auto</li>
-<li>注意：链接和图像默认是可拖动的</li>
-</ul>
-<h3>contenteditable</h3>
-<ul>
-<li>作用：指定是否可以在浏览器里编辑内容</li>
-<li>值：true*false</li>
-<li>注意：设置document.designMode='on'时，页面的任意位置都可以编辑；使用contenteditable='true'则只对具体元素和其包含的元素起作用</li>
-<li>移动端：移动端ios5以及Android3之后才支持该属性</li>
-</ul>
-<h3>data-*</h3>
-<ul>
-<li>作用：用于存储页面或者应用程序的私有定制数据</li>
-<li>注意：属性名不应该包含任意大写字母，且在前缀&quot;data-&quot;之后必须要有至少一个字符；属性值可以是任意字符串</li>
-<li>使用：可以在所有浏览器中使用getAttribute方法来获取data-属性，也可以使用JavaScript中的dataset属性来访问data-属性的值，不过IE10-浏览器不支持dataset</li>
-</ul>
-<h1>未完待续....</h1>
-]]></content>
+    <title>HTML5中的Canvas元素</title>
+    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<h2 id="HTML5中的Canvas元素"><a href="#HTML5中的Canvas元素" class="headerlink" title="HTML5中的Canvas元素"></a>HTML5中的Canvas元素</h2><h3 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h3><p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">&quot;myCanvas&quot;</span> width=<span class="string">&quot;200&quot;</span> height=<span class="string">&quot;100&quot;</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h3><p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">&#x27;myCanvas&#x27;</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">&quot;#fff&quot;</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>JavaScript使用id来寻找canvas元素：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">&#x27;myCanvas&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>然后，创建context对象:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">&#x27;2d&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>getContext(‘2d’)对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">&quot;#fff&quot;</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure>
+<h3 id="理解坐标"><a href="#理解坐标" class="headerlink" title="理解坐标"></a>理解坐标</h3><p>上面的fillRect方法用于参数(0,0,175,70)。<br>意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
+<h2 id="未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp"><a href="#未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp" class="headerlink" title="未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp"></a>未完待续，更多实例请观看：<a href="https://www.w3school.com.cn/html5/html_5_canvas.asp">https://www.w3school.com.cn/html5/html_5_canvas.asp</a></h2>]]></content>
       <categories>
         <category>HTML</category>
       </categories>
@@ -107,222 +57,313 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML5中的Canvas元素</title>
-    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<h2>HTML5中的Canvas元素</h2>
-<h3>创建Canvas元素</h3>
-<p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure></p>
-<h3>通过JavaScript来绘制</h3>
-<p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">"#fff"</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>JavaScript使用id来寻找canvas元素：</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>然后，创建context对象:</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>getContext('2d')对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">"#fff"</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure></p>
-<h3>理解坐标</h3>
-<p>上面的fillRect方法用于参数(0,0,175,70)。
-意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
-<h2>未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp</h2>
-]]></content>
+    <title>HTML和HTML5</title>
+    <url>/HTML%E5%92%8CHTML5/</url>
+    <content><![CDATA[<h1 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h1><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><ul>
+<li>作用：规定元素的一个或多个类名</li>
+<li>值：多个类名之间用空格分隔</li>
+<li>注意：类名不能以数字开头</li>
+</ul>
+<h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
+<li>作用：规定元素的唯一标识</li>
+<li>注意：若浏览器中出现多个id名的情况，CSS样式对所有该id的元素都生效，但javascript脚本仅对第一个（最上面那个）出现该id的元素生效</li>
+</ul>
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><ul>
+<li>作用：规定关于元素的额外信息，鼠标移到元素上时显示一段提示文本</li>
+</ul>
+<h3 id="lang"><a href="#lang" class="headerlink" title="lang"></a>lang</h3><ul>
+<li>作用：规定元素内容的语言</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure>
+<h3 id="tabindex"><a href="#tabindex" class="headerlink" title="tabindex"></a>tabindex</h3><ul>
+<li>作用：规定元素的tab键次序</li>
+<li>值：number（1是第一个）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.baidu.com&quot;</span> tabindex=<span class="string">&quot;3&quot;</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.taobao.com&quot;</span> tabindex=<span class="string">&quot;2&quot;</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.qq.com&quot;</span> tabindex=<span class="string">&quot;1&quot;</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="accesskey"><a href="#accesskey" class="headerlink" title="accesskey"></a>accesskey</h3><ul>
+<li>作用：创建激活或聚焦元素的快捷键</li>
+<li>值：一个键盘字符如B</li>
+<li>范围：支付该属性的元素有<code>&lt;a&gt;、&lt;area&gt;、&lt;button&gt;、&lt;input&gt;、&lt;label&gt;、&lt;legend&gt;、&lt;textarea&gt;</code></li>
+<li>注意：使用该属性在新窗口打开链接时可能会被浏览器屏蔽</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!-- 快捷键(alt+b)可以跳转到百度；快捷键(alt+a)可以跳转到阿里；快捷键(alt+t)可以跳转到腾讯 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.baidu.com&quot;</span> accesskey=<span class="string">&quot;b&quot;</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.taobao.com&quot;</span> accesskey=<span class="string">&quot;a&quot;</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">&quot;https://www.qq.com&quot;</span> accesskey=<span class="string">&quot;t&quot;</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h3><ul>
+<li>作用：用户是否可以拖元素</li>
+<li>值：true/false/auto</li>
+<li>注意：链接和图像默认是可拖动的</li>
+</ul>
+<h3 id="contenteditable"><a href="#contenteditable" class="headerlink" title="contenteditable"></a>contenteditable</h3><ul>
+<li>作用：指定是否可以在浏览器里编辑内容</li>
+<li>值：true*false</li>
+<li>注意：设置document.designMode=’on’时，页面的任意位置都可以编辑；使用contenteditable=’true’则只对具体元素和其包含的元素起作用</li>
+<li>移动端：移动端ios5以及Android3之后才支持该属性</li>
+</ul>
+<h3 id="data"><a href="#data" class="headerlink" title="data-*"></a>data-*</h3><ul>
+<li>作用：用于存储页面或者应用程序的私有定制数据</li>
+<li>注意：属性名不应该包含任意大写字母，且在前缀”data-“之后必须要有至少一个字符；属性值可以是任意字符串</li>
+<li>使用：可以在所有浏览器中使用getAttribute方法来获取data-属性，也可以使用JavaScript中的dataset属性来访问data-属性的值，不过IE10-浏览器不支持dataset</li>
+</ul>
+<h1 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h1>]]></content>
       <categories>
         <category>HTML</category>
       </categories>
       <tags>
         <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>微信小程序的学习之路(1)</title>
+    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;pages&quot;</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">&quot;pages/index/index&quot;</span>,</span><br><span class="line">    <span class="string">&quot;pages/logs/index&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;window&quot;</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">&quot;navigationBarTitleText&quot;</span>: <span class="string">&quot;Demo&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;tabBar&quot;</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">&quot;list&quot;</span>: [&#123;</span><br><span class="line">      <span class="string">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/index/index&quot;</span>,</span><br><span class="line">      <span class="string">&quot;text&quot;</span>: <span class="string">&quot;首页&quot;</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">&quot;pagePath&quot;</span>: <span class="string">&quot;pages/logs/index&quot;</span>,</span><br><span class="line">      <span class="string">&quot;text&quot;</span>: <span class="string">&quot;日志&quot;</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;networkTimeout&quot;</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">&quot;request&quot;</span>: 10000,</span><br><span class="line">    <span class="string">&quot;downloadFile&quot;</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;debug&quot;</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">&quot;navigateToMiniProgramAppIdList&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;wxe5f52902cf4de896&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;entryPagePath&quot;</span>: <span class="string">&quot;pages/index/index&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
+<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;pages&quot;</span>: [<span class="string">&quot;pages/index/index&quot;</span>, <span class="string">&quot;pages/logs/logs&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
+    <url>/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h1><blockquote>
+<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。<br>📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
+</blockquote>
+<hr>
+<h1 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h1><blockquote>
+<p>✨&#x1F499;在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
+</blockquote>
+<h3 id="配置Hexo的-config文件-config-yml"><a href="#配置Hexo的-config文件-config-yml" class="headerlink" title="配置Hexo的_config文件(./_config.yml)"></a>配置Hexo的_config文件(./_config.yml)</h3><h5 id="1、克隆仓库到themes下"><a href="#1、克隆仓库到themes下" class="headerlink" title="1、克隆仓库到themes下"></a>1、克隆仓库到themes下</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="2、在hexo中-config-yml中配置渲染参数"><a href="#2、在hexo中-config-yml中配置渲染参数" class="headerlink" title="2、在hexo中_config.yml中配置渲染参数"></a>2、在hexo中_config.yml中配置渲染参数</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<h5 id="3、配置基本信息"><a href="#3、配置基本信息" class="headerlink" title="3、配置基本信息"></a>3、配置基本信息</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure>
+<h5 id="4、重新预览"><a href="#4、重新预览" class="headerlink" title="4、重新预览"></a>4、重新预览</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="更改主题Next的配置-themes-next-config-yml"><a href="#更改主题Next的配置-themes-next-config-yml" class="headerlink" title="更改主题Next的配置(./themes/next/_config.yml)"></a>更改主题Next的配置(./themes/next/_config.yml)</h4><h5 id="1、菜单设置"><a href="#1、菜单设置" class="headerlink" title="1、菜单设置"></a>1、菜单设置</h5><blockquote>
+<p>菜单包括：首页、归档、分类、标签、关于等等<br>刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
+</blockquote>
+<h6 id="1-1-创建命令"><a href="#1-1-创建命令" class="headerlink" title="1.1 创建命令"></a>1.1 创建命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">&#x27;tags&#x27;</span>&gt;</span><br></pre></td></tr></table></figure>
+<h6 id="1-2-Menu-Setting"><a href="#1-2-Menu-Setting" class="headerlink" title="1.2 Menu Setting"></a>1.2 Menu Setting</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-Next样式设置"><a href="#2-Next样式设置" class="headerlink" title="2 Next样式设置"></a>2 Next样式设置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<p>这个你可以自己去一个一个的使用，看看那个是自己喜欢的</p>
+<h6 id="2-1-侧栏设置"><a href="#2-1-侧栏设置" class="headerlink" title="2.1 侧栏设置"></a>2.1 侧栏设置</h6><blockquote>
+<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等<br>打开 主题配置文件 找到sidebar字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-头像设置"><a href="#2-2-头像设置" class="headerlink" title="2.2 头像设置"></a>2.2 头像设置</h6><blockquote>
+<p>打开 主题配置文件 找到Sidebar Avatar字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure>
+<h6 id="2-3-社交媒体设置"><a href="#2-3-社交媒体设置" class="headerlink" title="2.3 社交媒体设置"></a>2.3 社交媒体设置</h6><blockquote>
+<p>打开 主题配置文件 找到Social Links字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-4-安装设置RSS"><a href="#2-4-安装设置RSS" class="headerlink" title="2.4 安装设置RSS"></a>2.4 安装设置RSS</h5><blockquote>
+<p>1、先安装 <a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2、打开hexo配置文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3、打开Next配置文件 找到rss，设置为</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+<h5 id="2-5-安装设置本地搜索插件"><a href="#2-5-安装设置本地搜索插件" class="headerlink" title="2.5 安装设置本地搜索插件"></a>2.5 安装设置本地搜索插件</h5><blockquote>
+<p>1、先安装 <a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2、打开Hexo配置文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+<hr>
+<hr>
+<blockquote>
+<p>结语:<br>✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
+</blockquote>
+<blockquote>
+<p>⚡💥 整个过程最需要注意的便是在更改Next主题样式的格式问题，一定要按照原本的格式来！！有些参数前一定不能有空格！！如果出现<a href="https://github.com/iissnan/hexo-theme-next/issues/737">在主题配置文件配置友链后，hexo g报错</a>错误，请参考这个Issues。</p>
+</blockquote>
+<blockquote>
+<p>👍👍 也特别感谢<a href="https://www.jianshu.com/p/3a05351a37dc">my_杨哥</a>，我在配置过程中大量参考了他的文章，十分感谢！！！更多<a href="http://theme-next.iissnan.com/theme-settings.html">主题配置</a>请参考此文章！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo杂谈</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
     <title>JavaScript基础</title>
     <url>/JavaScript%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h1>目录</h1>
-<h2><a href="#one">一 . DOM常用API</a></h2>
-<h2><a href="#two">二 . null 和 undefined的区别</a></h2>
-<h2><a href="#three">三 . 事件流</a></h2>
-<h2><a href="#four">四 . typeof 和 instanceof 的区别</a></h2>
-<h2><a href="#five">五  . 一句话描述this</a></h2>
-<h2><a href="#six">六 . JS 的位置</a></h2>
-<h2><a href="#seven">七 . JS 的拖拽</a></h2>
-<h2><a href="#eight">八 . setTimeout 实现 setInterval</a></h2>
-<h2><a href="#nine">九 . 实现Sleep</a></h2>
-<h2><a href="#ten">十 . 执行上下文</a></h2>
-<h2><a href="#eleven">十一 . 函数式编程</a></h2>
-<h2><a href="#twelve">十二 . 渐进式网络应用（PWA）</a></h2>
-<h2><a href="#thirteen">十三 . 规范化</a></h2>
-<h2><a href="#fourteen">十四 . babel编译原理</a></h2>
-<h2><a href="#fiveteen">十五 . 题集</a></h2>
-<h3>&lt;a name=&quot;one&quot;&gt;一 . DOM常用API&lt;/a&gt;</h3>
-<h6>可以使用 <strong>document</strong>  或 <strong>window</strong> 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</h6>
-<p><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id);  <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="built_in">document</span>.getElementById(name);</span><br><span class="line">node.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(heading);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(heading);</span><br></pre></td></tr></table></figure></p>
-<h3>&lt;a name=&quot;two&quot;&gt;二 . null 和 undefined 的区别&lt;/a&gt;</h3>
-<h5>使用场景细分如下</h5>
-<ul>
-<li>
-<p>null</p>
+    <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="一-DOM常用API"><a href="#一-DOM常用API" class="headerlink" title="一 . DOM常用API"></a><a href="#one">一 . DOM常用API</a></h2><h2 id="二-null-和-undefined的区别"><a href="#二-null-和-undefined的区别" class="headerlink" title="二 . null 和 undefined的区别"></a><a href="#two">二 . null 和 undefined的区别</a></h2><h2 id="三-事件流"><a href="#三-事件流" class="headerlink" title="三 . 事件流"></a><a href="#three">三 . 事件流</a></h2><h2 id="四-typeof-和-instanceof-的区别"><a href="#四-typeof-和-instanceof-的区别" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a href="#four">四 . typeof 和 instanceof 的区别</a></h2><h2 id="五-一句话描述this"><a href="#五-一句话描述this" class="headerlink" title="五  . 一句话描述this"></a><a href="#five">五  . 一句话描述this</a></h2><h2 id="六-JS-的位置"><a href="#六-JS-的位置" class="headerlink" title="六 . JS 的位置"></a><a href="#six">六 . JS 的位置</a></h2><h2 id="七-JS-的拖拽"><a href="#七-JS-的拖拽" class="headerlink" title="七 . JS 的拖拽"></a><a href="#seven">七 . JS 的拖拽</a></h2><h2 id="八-setTimeout-实现-setInterval"><a href="#八-setTimeout-实现-setInterval" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a href="#eight">八 . setTimeout 实现 setInterval</a></h2><h2 id="九-实现Sleep"><a href="#九-实现Sleep" class="headerlink" title="九 . 实现Sleep"></a><a href="#nine">九 . 实现Sleep</a></h2><h2 id="十-执行上下文"><a href="#十-执行上下文" class="headerlink" title="十 . 执行上下文"></a><a href="#ten">十 . 执行上下文</a></h2><h2 id="十一-函数式编程"><a href="#十一-函数式编程" class="headerlink" title="十一 . 函数式编程"></a><a href="#eleven">十一 . 函数式编程</a></h2><h2 id="十二-渐进式网络应用（PWA）"><a href="#十二-渐进式网络应用（PWA）" class="headerlink" title="十二 . 渐进式网络应用（PWA）"></a><a href="#twelve">十二 . 渐进式网络应用（PWA）</a></h2><h2 id="十三-规范化"><a href="#十三-规范化" class="headerlink" title="十三 . 规范化"></a><a href="#thirteen">十三 . 规范化</a></h2><h2 id="十四-babel编译原理"><a href="#十四-babel编译原理" class="headerlink" title="十四 . babel编译原理"></a><a href="#fourteen">十四 . babel编译原理</a></h2><h2 id="十五-题集"><a href="#十五-题集" class="headerlink" title="十五 . 题集"></a><a href="#fiveteen">十五 . 题集</a></h2><h3 id="一-DOM常用API-1"><a href="#一-DOM常用API-1" class="headerlink" title="一 . DOM常用API"></a><a name="one">一 . DOM常用API</a></h3><h6 id="可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素"><a href="#可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素" class="headerlink" title="可以使用 document  或 window 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)"></a>可以使用 <strong>document</strong>  或 <strong>window</strong> 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</h6><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id);  <span class="comment">// 或者querySelector(&quot;.class/#id/name&quot;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="built_in">document</span>.getElementById(name);</span><br><span class="line">node.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(heading);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(heading);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="二-null-和-undefined-的区别"><a href="#二-null-和-undefined-的区别" class="headerlink" title="二 . null 和 undefined 的区别"></a><a name="two">二 . null 和 undefined 的区别</a></h3><h5 id="使用场景细分如下"><a href="#使用场景细分如下" class="headerlink" title="使用场景细分如下"></a>使用场景细分如下</h5><ul>
+<li><p>null</p>
 <ol>
-<li>&lt;span style='color: red'&gt;number (null)&lt;/span&gt; 得到&lt;span style='color: red'&gt; 0 &lt;/span&gt;。</li>
+<li><span style='color: red'>number (null)</span> 得到<span style='color: red'> 0 </span>。</li>
 <li>作为函数的参数，表示该函数的参数不是对象。</li>
-<li>作为对象原型链的终点。&lt;span style='color: red'&gt;Object.prototype.<strong>proto</strong> === null&lt;/span&gt;。</li>
+<li>作为对象原型链的终点。<span style='color: red'>Object.prototype.<strong>proto</strong> === null</span>。</li>
 </ol>
 </li>
-<li>
-<p>undefined</p>
+<li><p>undefined</p>
 <ol>
-<li>&lt;span style='color: red'&gt;number (undefined)&lt;/span&gt; 得到 &lt;span style='color: red'&gt;NaN&lt;/span&gt;。</li>
-<li>变量被声明但没有赋值，等于 &lt;span style='color: red'&gt;undefined&lt;/span&gt;。</li>
-<li>调用函数时，对应的参数没有提供，也是 &lt;span style='color: red'&gt;undefined&lt;/span&gt;。</li>
-<li>对象没有赋值，这个属性的值为 &lt;span style='color: red'&gt;undefined&lt;/span&gt;。</li>
-<li>函数没有返回值，默认返回 &lt;span style='color: red'&gt;undefined&lt;/span&gt;。</li>
+<li> <span style='color: red'>number (undefined)</span> 得到 <span style='color: red'>NaN</span>。</li>
+<li>变量被声明但没有赋值，等于 <span style='color: red'>undefined</span>。</li>
+<li>调用函数时，对应的参数没有提供，也是 <span style='color: red'>undefined</span>。</li>
+<li>对象没有赋值，这个属性的值为 <span style='color: red'>undefined</span>。</li>
+<li>函数没有返回值，默认返回 <span style='color: red'>undefined</span>。</li>
 </ol>
 </li>
 </ul>
-<h3>&lt;a name=&quot;three&quot;&gt;三 . 事件流&lt;/a&gt;</h3>
-<h5>什么是事件流: 事件流描述的是从页面中接受事件的顺序， &lt;span style='color:red'&gt;DOM 2&lt;/span&gt; 级事件流包括下面几个阶段。</h5>
-<ul>
+<h3 id="三-事件流-1"><a href="#三-事件流-1" class="headerlink" title="三 . 事件流"></a><a name="three">三 . 事件流</a></h3><h5 id="什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。"><a href="#什么是事件流-事件流描述的是从页面中接受事件的顺序，-DOM-2-级事件流包括下面几个阶段。" class="headerlink" title="什么是事件流: 事件流描述的是从页面中接受事件的顺序， DOM 2 级事件流包括下面几个阶段。"></a>什么是事件流: 事件流描述的是从页面中接受事件的顺序， <span style='color:red'>DOM 2</span> 级事件流包括下面几个阶段。</h5><ul>
 <li>事件捕获阶段</li>
 <li>处于目标阶段</li>
 <li>事件冒泡阶段</li>
 </ul>
-<h6>如何让事件先冒泡后捕获:</h6>
-<p>在  &lt;span style='color:red'&gt;DOM &lt;/span&gt; 标准事件模型中，是先捕获后冒泡的。但是如果要实现先冒泡后捕获的效果，对于同一个事件，监听捕获和冒泡，分别对应相应的处理函数，监听到捕获事件，先暂缓执行，直到冒泡事件被捕获后再执行捕获之间</p>
-<h4>3.1 addEventListener</h4>
-<p>&lt;span style='color:red'&gt;addEventListener&lt;/span&gt; 方法将指定的监听器注册到 &lt;span style='color:red'&gt;EventTarget&lt;/span&gt; 上，当该对象触发指定的事件时，指定的回调函数就会被执行。</p>
-<p>&lt;span style='color:red'&gt;addEventListener&lt;/span&gt; 事件目标可以是文档上的元素 &lt;span style='color:red'&gt;Element&lt;/span&gt;、&lt;span style='color:red'&gt;Document&lt;/span&gt;、和 &lt;span style='color:red'&gt;Window&lt;/span&gt; 或者任何其他支持事件的对象 （例如&lt;span style='color:red'&gt;XMLHttpRequest&lt;/span&gt;）。</p>
+<h6 id="如何让事件先冒泡后捕获"><a href="#如何让事件先冒泡后捕获" class="headerlink" title="如何让事件先冒泡后捕获:"></a>如何让事件先冒泡后捕获:</h6><p>在  <span style='color:red'>DOM </span> 标准事件模型中，是先捕获后冒泡的。但是如果要实现先冒泡后捕获的效果，对于同一个事件，监听捕获和冒泡，分别对应相应的处理函数，监听到捕获事件，先暂缓执行，直到冒泡事件被捕获后再执行捕获之间</p>
+<h4 id="3-1-addEventListener"><a href="#3-1-addEventListener" class="headerlink" title="3.1 addEventListener"></a>3.1 addEventListener</h4><p><span style='color:red'>addEventListener</span> 方法将指定的监听器注册到 <span style='color:red'>EventTarget</span> 上，当该对象触发指定的事件时，指定的回调函数就会被执行。</p>
+<p><span style='color:red'>addEventListener</span> 事件目标可以是文档上的元素 <span style='color:red'>Element</span>、<span style='color:red'>Document</span>、和 <span style='color:red'>Window</span> 或者任何其他支持事件的对象 （例如<span style='color:red'>XMLHttpRequest</span>）。</p>
+<p>[^参考文档]: <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener">EventTarget.addEventListener - MDN</a></p>
 <ul>
-<li>语法 &lt;span style='color:red'&gt;target.addEventListener(type, listener, options/useCapture)&lt;/span&gt;
-<ol>
-<li>&lt;span style='color:red'&gt;type&lt;/span&gt; : 表示监听事件类型的字符串。</li>
-<li>&lt;span style='color:red'&gt;listener&lt;/span&gt; : 所监听的事件触发，会接受一个事件通知对象。</li>
-<li>&lt;span style='color:red'&gt;options&lt;/span&gt; : 一个指定有关 &lt;span style='color:red'&gt;listener&lt;/span&gt; 属性的可选参数对象，可选值有&lt;span style='color:red'&gt;capture&lt;/span&gt; (事件捕获阶段传播到这里触发)、&lt;span style='color:red'&gt;once&lt;/span&gt;(在 &lt;span style='color:red'&gt;listener&lt;/span&gt; 添加之后最多只调用一次)、&lt;span style='color:red'&gt;passive&lt;/span&gt; (设置为&lt;span style='color:red'&gt;true&lt;/span&gt; 时表示 &lt;span style='color:red'&gt;listener&lt;/span&gt;  永远不会调用&lt;span style='color:red'&gt;preventDefault()&lt;/span&gt; ) 。</li>
-<li>&lt;span style='color:red'&gt;useCapture&lt;/span&gt; : 在DOM树中，注册了 &lt;span style='color:red'&gt;listener&lt;/span&gt;  的元素，是否要先于它下面的 &lt;span style='color:red'&gt;EventTarget&lt;/span&gt;  时调用该 &lt;span style='color:red'&gt;listener&lt;/span&gt;  。</li>
+<li>语法 <span style='color:red'>target.addEventListener(type, listener, options/useCapture)</span><ol>
+<li><span style='color:red'>type</span> : 表示监听事件类型的字符串。</li>
+<li><span style='color:red'>listener</span> : 所监听的事件触发，会接受一个事件通知对象。</li>
+<li><span style='color:red'>options</span> : 一个指定有关 <span style='color:red'>listener</span> 属性的可选参数对象，可选值有<span style='color:red'>capture</span> (事件捕获阶段传播到这里触发)、<span style='color:red'>once</span>(在 <span style='color:red'>listener</span> 添加之后最多只调用一次)、<span style='color:red'>passive</span> (设置为<span style='color:red'>true</span> 时表示 <span style='color:red'>listener</span>  永远不会调用<span style='color:red'>preventDefault()</span> ) 。</li>
+<li><span style='color:red'>useCapture</span> : 在DOM树中，注册了 <span style='color:red'>listener</span>  的元素，是否要先于它下面的 <span style='color:red'>EventTarget</span>  时调用该 <span style='color:red'>listener</span>  。</li>
 </ol>
 </li>
 </ul>
 <blockquote>
-<p>&lt;span style='color:red'&gt;addEventListener&lt;/span&gt; 的第三个参数涉及到冒泡和捕获，为 &lt;span style='color:red'&gt;true&lt;/span&gt; 时为捕获，为 &lt;span style='color:red'&gt;false&lt;/span&gt; 时为冒泡。</p>
-<p>或者是一个对象  &lt;span style='color:red'&gt;{passive : true}&lt;/span&gt; ，针对的时 &lt;span style='color:red'&gt;safari&lt;/span&gt; 浏览器，禁止/开启使用滚动的时候要用到</p>
+<p><span style='color:red'>addEventListener</span> 的第三个参数涉及到冒泡和捕获，为 <span style='color:red'>true</span> 时为捕获，为 <span style='color:red'>false</span> 时为冒泡。 </p>
+<p>或者是一个对象  <span style='color:red'>{passive : true}</span> ，针对的时 <span style='color:red'>safari</span> 浏览器，禁止/开启使用滚动的时候要用到  </p>
 </blockquote>
 <ul>
 <li>示例</li>
 </ul>
-<p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>监听器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">"outside"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t1"</span>&gt;</span>one<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">"t2"</span>&gt;</span>two<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 添加函数</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> modifyText = <span class="function">(<span class="params">text</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> t2 = <span class="built_in">document</span>.querySelector(<span class="string">'#t2'</span>);</span></span><br><span class="line">        if (t2.firstChild.nodeValue === text) &#123;</span><br><span class="line"><span class="javascript">          t2.firstChild.nodeValue = <span class="string">'two'</span>;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">          t2.firstChild.nodeValue = text;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="comment">// 给 Table 添加事件监听器</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> element = <span class="built_in">document</span>.querySelector(<span class="string">'#outside'</span>);</span></span><br><span class="line"><span class="javascript">      element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; modifyText(<span class="string">'four'</span>) &#125;, <span class="literal">false</span>);</span></span><br><span class="line">    &#125;)()</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>监听器<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">table</span> <span class="attr">id</span>=<span class="string">&quot;outside&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">&quot;t1&quot;</span>&gt;</span>one<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span> <span class="attr">id</span>=<span class="string">&quot;t2&quot;</span>&gt;</span>two<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 添加函数</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> modifyText = <span class="function">(<span class="params">text</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">const</span> t2 = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#t2&#x27;</span>);</span></span><br><span class="line"><span class="javascript">        <span class="keyword">if</span> (t2.firstChild.nodeValue === text) &#123;</span></span><br><span class="line"><span class="javascript">          t2.firstChild.nodeValue = <span class="string">&#x27;two&#x27;</span>;</span></span><br><span class="line"><span class="javascript">        &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line">          t2.firstChild.nodeValue = text;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="comment">// 给 Table 添加事件监听器</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> element = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#outside&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      element.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; modifyText(<span class="string">&#x27;four&#x27;</span>) &#125;, <span class="literal">false</span>);</span></span><br><span class="line">    &#125;)()</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>如上，这个示例简单实现了点击 &lt;span style='color:red'&gt;two&lt;/span&gt; 切换到 &lt;span style='color:red'&gt;four&lt;/span&gt; ，点击 &lt;span style='color:red'&gt;four&lt;/span&gt; 再次切换到 &lt;span style='color:red'&gt;two&lt;/span&gt; 的效果。</p>
+<p>如上，这个示例简单实现了点击 <span style='color:red'>two</span> 切换到 <span style='color:red'>four</span> ，点击 <span style='color:red'>four</span> 再次切换到 <span style='color:red'>two</span> 的效果。 </p>
 </blockquote>
-<h4>3.2 原理</h4>
-<p>事件捕获和事件冒泡分别是 <strong>网景</strong>（Netscape）和 <strong>IE</strong> 对 &lt;span style='color:red'&gt;DOM &lt;/span&gt; 事件产生顺序的描述。</p>
-<p><strong>网景</strong> 认为 &lt;span style='color:red'&gt;DOM &lt;/span&gt; 接受的事件应该最先是 &lt;span style='color:red'&gt;window&lt;/span&gt; ，然后到 &lt;span style='color:red'&gt;document&lt;/span&gt; ，接着一层一层往下，最后才到具体的元素接受到事件，即 <strong>事件捕获</strong> 。</p>
-<p><strong>IE</strong> 则认为 &lt;span style='color:red'&gt;DOM &lt;/span&gt; 事件应该是具体元素先接受到，然后再一层层往上，接着到 &lt;span style='color:red'&gt;document&lt;/span&gt; ，最后才到 &lt;span style='color:red'&gt;window&lt;/span&gt;  即 <strong>事件冒泡</strong> 。</p>
-<p>最后 <strong>W3C</strong> 对这两种方案进行了统一，将 &lt;span style='color:red'&gt;DOM&lt;/span&gt; 事件分为了两个阶段，<strong>事件捕获</strong> 和 <strong>事件冒泡</strong> 阶段。</p>
-<p>当一个元素被点击，首先是事件捕获阶段，&lt;span style='color:red'&gt;window&lt;/span&gt;  最先接收事件，然后一层一层往下捕获，最后由具体元素接收；之后再由具体元素再一层一层往上冒泡，到&lt;span style='color:red'&gt;window&lt;/span&gt; 接收事件</p>
+<h4 id="3-2-原理"><a href="#3-2-原理" class="headerlink" title="3.2 原理"></a>3.2 原理</h4><p>事件捕获和事件冒泡分别是 <strong>网景</strong>（Netscape）和 <strong>IE</strong> 对 <span style='color:red'>DOM </span> 事件产生顺序的描述。</p>
+<p><strong>网景</strong> 认为 <span style='color:red'>DOM </span> 接受的事件应该最先是 <span style='color:red'>window</span> ，然后到 <span style='color:red'>document</span> ，接着一层一层往下，最后才到具体的元素接受到事件，即 <strong>事件捕获</strong> 。</p>
+<p><strong>IE</strong> 则认为 <span style='color:red'>DOM </span> 事件应该是具体元素先接受到，然后再一层层往上，接着到 <span style='color:red'>document</span> ，最后才到 <span style='color:red'>window</span>  即 <strong>事件冒泡</strong> 。</p>
+<p>最后 <strong>W3C</strong> 对这两种方案进行了统一，将 <span style='color:red'>DOM</span> 事件分为了两个阶段，<strong>事件捕获</strong> 和 <strong>事件冒泡</strong> 阶段。</p>
+<p>当一个元素被点击，首先是事件捕获阶段，<span style='color:red'>window</span>  最先接收事件，然后一层一层往下捕获，最后由具体元素接收；之后再由具体元素再一层一层往上冒泡，到<span style='color:red'>window</span> 接收事件</p>
 <p>所以:</p>
 <ul>
-<li><strong>事件冒泡</strong> ：当给某个目标元素绑定了事件之后，这个事件会依次在它的父级元素中被触发（当然前提是这个父级元素也有这个同名的事件，比如子元素都绑定了 &lt;span style='color:red'&gt;click&lt;/span&gt; 事件就触发父元素的 &lt;span style='color:red'&gt;click&lt;/span&gt;  ）。</li>
+<li><strong>事件冒泡</strong> ：当给某个目标元素绑定了事件之后，这个事件会依次在它的父级元素中被触发（当然前提是这个父级元素也有这个同名的事件，比如子元素都绑定了 <span style='color:red'>click</span> 事件就触发父元素的 <span style='color:red'>click</span>  ）。</li>
 <li><strong>事件捕获</strong> ：和冒泡相反，会从上层传递到下层。</li>
 </ul>
-<h4>3.3 案例</h4>
-<p>结合自定义事件耍个例子：</p>
-<p><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>自定义事件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"ul"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"li"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> myEvent = <span class="built_in">document</span>.createEvent(<span class="string">'CustomEvent'</span>);</span></span><br><span class="line"><span class="javascript">      myEvent.initEvent(<span class="string">'myEvent'</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'.btn'</span>);</span></span><br><span class="line"><span class="javascript">      btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> li = <span class="built_in">document</span>.querySelector(<span class="string">'.li'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'li'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'.ul'</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'ul'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'document'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">window</span>.addEventListener(<span class="string">'myEvent'</span>, (e) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">'window'</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">        btn.dispatchEvent(myEvent);</span><br><span class="line">      &#125;, 2000);</span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-3-案例"><a href="#3-3-案例" class="headerlink" title="3.3 案例"></a>3.3 案例</h4><p>结合自定义事件耍个例子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;ie=edge&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>自定义事件<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;ul&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;li&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>&gt;</span>点我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> myEvent = <span class="built_in">document</span>.createEvent(<span class="string">&#x27;CustomEvent&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      myEvent.initEvent(<span class="string">&#x27;myEvent&#x27;</span>, <span class="literal">true</span>, <span class="literal">true</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.btn&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      btn.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;button&#x27;</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> li = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.li&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;li&#x27;</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.ul&#x27;</span>);</span></span><br><span class="line"><span class="javascript">      li.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;ul&#x27;</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">document</span>.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;document&#x27;</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&#x27;window&#x27;</span>);</span></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line"><span class="javascript">      <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span></span><br><span class="line">        btn.dispatchEvent(myEvent);</span><br><span class="line">      &#125;, 2000);</span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https://juejin.cn/post/6890357960040513550</span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>Chrome 输出下顺序是：<code>button</code> -&gt; <code>li</code> -&gt; <code>ul</code> -&gt; <code>document</code> -&gt; <code>window</code></p>
 <p>如果是捕获的话，那么则相反。</p>
 </blockquote>
-<h4>3.4 阻止冒泡</h4>
-<ul>
-<li>&lt;span style=&quot;color:red&quot;&gt;event.stopPropagation();&lt;/span&gt;</li>
+<h4 id="3-4-阻止冒泡"><a href="#3-4-阻止冒泡" class="headerlink" title="3.4 阻止冒泡"></a>3.4 阻止冒泡</h4><ul>
+<li><span style="color:red">event.stopPropagation();</span> </li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">'myEvent'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'button'</span>);</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>通过阻止冒泡，程序只会输出 &lt;span style=&quot;color:red&quot;&gt;button&lt;/span&gt; ，而不会继续输出 &lt;span style=&quot;color:red&quot;&gt;li&lt;/span&gt; 等。</p>
-<h4>3.5 onmouseover 和 onmouseenter 区别</h4>
-<p>&lt;img src=&quot;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image&quot; alt=&quot;图文&quot; style=&quot;zoom:60%;&quot; /&gt;</p>
-<p>这两者都是移入的时候触发，但是 &lt;span style=&quot;color:red&quot;&gt;onmouseover&lt;/span&gt; 会触发多次，而 &lt;span style=&quot;color:red&quot;&gt;onmouseenter&lt;/span&gt; 只在进去的时候才触发。</p>
-<h4>3.6 科普</h4>
-<p>并不是所有的事件都有冒泡，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">&#x27;myEvent&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;button&#x27;</span>);</span><br><span class="line">    event.stopPropagation();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>通过阻止冒泡，程序只会输出 <span style="color:red">button</span> ，而不会继续输出 <span style="color:red">li</span> 等。</p>
+<h4 id="3-5-onmouseover-和-onmouseenter-区别"><a href="#3-5-onmouseover-和-onmouseenter-区别" class="headerlink" title="3.5 onmouseover 和 onmouseenter 区别"></a>3.5 onmouseover 和 onmouseenter 区别</h4><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1af3fe25bf694f0fa07bef17d5d147d5~tplv-k3u1fbpfcp-watermark.image" alt="图文" style="zoom:60%;" />
+
+<p>这两者都是移入的时候触发，但是 <span style="color:red">onmouseover</span> 会触发多次，而 <span style="color:red">onmouseenter</span> 只在进去的时候才触发。 </p>
+<h4 id="3-6-科普"><a href="#3-6-科普" class="headerlink" title="3.6 科普"></a>3.6 科普</h4><p>并不是所有的事件都有冒泡，例如：</p>
 <ul>
-<li>&lt;span style=&quot;color:red&quot;&gt;onblur&lt;/span&gt;</li>
-<li>&lt;span style=&quot;color:red&quot;&gt;onfocus&lt;/span&gt;</li>
-<li>&lt;font color=red&gt;onmouseover&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;onmouseenter&lt;/font&gt;</li>
+<li><span style="color:red">onblur</span> </li>
+<li><span style="color:red">onfocus</span> </li>
+<li><font color=red>onmouseover</font></li>
+<li><font color=red>onmouseenter</font></li>
 </ul>
-<h3>&lt;a name=&quot;four&quot;&gt;四 . typeof 和 instanceof 的区别&lt;/a&gt;</h3>
-<ul>
-<li>
-<p>&lt;font color=red&gt;typeof&lt;/font&gt; : 对某个变量类型的检测，基本类型除了 &lt;font color=red&gt;null&lt;/font&gt; 之外，都能正常的显示为对应的类型，引用类型除了函数会显示为 &lt;font color=red&gt;function&lt;/font&gt; 其他都会显示为 &lt;font color=red&gt; object &lt;/font&gt; 。</p>
+<h3 id="四-typeof-和-instanceof-的区别-1"><a href="#四-typeof-和-instanceof-的区别-1" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a name="four">四 . typeof 和 instanceof 的区别</a></h3><ul>
+<li><p><font color=red>typeof</font> : 对某个变量类型的检测，基本类型除了 <font color=red>null</font> 之外，都能正常的显示为对应的类型，引用类型除了函数会显示为 <font color=red>function</font> 其他都会显示为 <font color=red> object </font> 。</p>
 </li>
-<li>
-<p>&lt;font color=red&gt;instanceof &lt;/font&gt; 主要用于检测某个构造函数的原型对象在不在某个对象的原型链上。</p>
+<li><p><font color=red>instanceof </font> 主要用于检测某个构造函数的原型对象在不在某个对象的原型链上。</p>
 </li>
 </ul>
-<p>&lt;font color=red&gt; typeof &lt;/font&gt; 会对 &lt;font color=red&gt; null &lt;/font&gt; 显示错误是个历史Bug，&lt;font color=red&gt; typeof null&lt;/font&gt; 输出的是 &lt;font color=red&gt; object &lt;/font&gt;, 因为 JavaScript 早期版本是32位系统，为了性能考虑使用低位存储变量的类型信息，&lt;font color=red&gt;000&lt;/font&gt; 开头代表是对象然而 &lt;font color=red&gt; null&lt;/font&gt; 表示为全零，所以 &lt;font color=red&gt; null&lt;/font&gt;  被错误的判为了 &lt;font color=red&gt; object &lt;/font&gt;。</p>
-<p>详情可见：<a href="https://juejin.cn/post/6890357960040513550#heading-12" target="_blank" rel="noopener">JavaScript - 变量</a></p>
-<h3>&lt;a name=&quot;five&quot;&gt;五 . 一句话描述this&lt;/a&gt;</h3>
-<p>对于函数而言，指向最后调用函数的对象，是函数运行时内部自动产生的一个内部对象，只能在函数内部使用；对于全局而言，&lt;font color=red&gt;this&lt;/font&gt; 是指向 &lt;font color=red&gt;window&lt;/font&gt;。</p>
-<h3>&lt;a name=&quot;six&quot;&gt;六 . JS 位置&lt;/a&gt;</h3>
-<ul>
-<li>&lt;font color =red&gt;clientHeiht&lt;/font&gt; : 表示可视区域的高度，不包含 &lt;font color =red&gt;border&lt;/font&gt; 和滚动条</li>
-<li>&lt;font color =red&gt;offsetHeight&lt;/font&gt; : 表示可视区域的高度，包含了 &lt;font color =red&gt;border&lt;/font&gt; 和滚动条</li>
-<li>&lt;font color =red&gt;scrollHeight&lt;/font&gt; ：表示了所有区域的高度，包含了因为滚动条被隐藏的部分</li>
-<li>&lt;font color =red&gt;clientTop&lt;/font&gt; ：表示边框 &lt;font color =red&gt;border&lt;/font&gt; 的厚度，在未指定的情况下一般为 &lt;font color =red&gt;0&lt;/font&gt;</li>
-<li>&lt;font color =red&gt;scrollTop&lt;/font&gt; ：滚动后被隐藏的高度，获取对象相对于由 &lt;font color =red&gt;offsetParent&lt;/font&gt; 属性指定的父坐标(CSS定位的元素或者 &lt;font color=red&gt;body&lt;/font&gt; 元素)距离顶部的高度。</li>
+<p><font color=red> typeof </font> 会对 <font color=red> null </font> 显示错误是个历史Bug，<font color=red> typeof null</font> 输出的是 <font color=red> object </font>, 因为 JavaScript 早期版本是32位系统，为了性能考虑使用低位存储变量的类型信息，<font color=red>000</font> 开头代表是对象然而 <font color=red> null</font> 表示为全零，所以 <font color=red> null</font>  被错误的判为了 <font color=red> object </font>。</p>
+<p>详情可见：<a href="https://juejin.cn/post/6890357960040513550#heading-12">JavaScript - 变量</a></p>
+<h3 id="五-一句话描述this-1"><a href="#五-一句话描述this-1" class="headerlink" title="五 . 一句话描述this"></a><a name="five">五 . 一句话描述this</a></h3><p>对于函数而言，指向最后调用函数的对象，是函数运行时内部自动产生的一个内部对象，只能在函数内部使用；对于全局而言，<font color=red>this</font> 是指向 <font color=red>window</font>。</p>
+<h3 id="六-JS-位置"><a href="#六-JS-位置" class="headerlink" title="六 . JS 位置"></a><a name="six">六 . JS 位置</a></h3><ul>
+<li><font color =red>clientHeiht</font> : 表示可视区域的高度，不包含 <font color =red>border</font> 和滚动条</li>
+<li><font color =red>offsetHeight</font> : 表示可视区域的高度，包含了 <font color =red>border</font> 和滚动条</li>
+<li><font color =red>scrollHeight</font> ：表示了所有区域的高度，包含了因为滚动条被隐藏的部分</li>
+<li><font color =red>clientTop</font> ：表示边框 <font color =red>border</font> 的厚度，在未指定的情况下一般为 <font color =red>0</font> </li>
+<li><font color =red>scrollTop</font> ：滚动后被隐藏的高度，获取对象相对于由 <font color =red>offsetParent</font> 属性指定的父坐标(CSS定位的元素或者 <font color=red>body</font> 元素)距离顶部的高度。  </li>
 </ul>
-<h3>&lt;a name=&quot;seven&quot;&gt;七 . JS 拖拽&lt;/a&gt;</h3>
-<ol>
-<li>通过 &lt;font color =red&gt;mousedown&lt;/font&gt; 、&lt;font color=red&gt;mousemove&lt;/font&gt; 、&lt;font color=red&gt;mouseup&lt;/font&gt; 方法实现</li>
-<li>通过 HTMl5 &lt;font color=red&gt;Drag&lt;/font&gt; 和 &lt;font color=red&gt;Drop&lt;/font&gt; 实现</li>
+<h3 id="七-JS-拖拽"><a href="#七-JS-拖拽" class="headerlink" title="七 . JS 拖拽"></a><a name="seven">七 . JS 拖拽</a></h3><ol>
+<li>通过 <font color =red>mousedown</font> 、<font color=red>mousemove</font> 、<font color=red>mouseup</font> 方法实现</li>
+<li>通过 HTMl5 <font color=red>Drag</font> 和 <font color=red>Drop</font> 实现</li>
 </ol>
-<h3>&lt;a name=&quot;eight&quot;&gt;八 . setTimeout 实现 setInterval&lt;/a&gt;</h3>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    setTimeout(say,<span class="number">200</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="八-setTimeout-实现-setInterval-1"><a href="#八-setTimeout-实现-setInterval-1" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a name="eight">八 . setTimeout 实现 setInterval</a></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> say = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="built_in">setTimeout</span>(say,<span class="number">200</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(say,<span class="number">200</span>);</span><br></pre></td></tr></table></figure>
 <p>清除这个定时器:</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> timeList = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> say = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="built_in">console</span>.log(i++);</span><br><span class="line">    timeList.push(setTimeout(say,<span class="number">200</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">setTimeout(say,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; timeList.lenght; i++) &#123;</span><br><span class="line">        clearTimeout(timeList[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure></p>
-<h3>&lt;a name=&quot;nine&quot;&gt;九 . 实现Sleep&lt;/a&gt;</h3>
-<p>如下，实现 &lt;font color=red&gt;1000&lt;/font&gt; 毫秒后执行其他内容：</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sleep = <span class="function"><span class="params">time</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">            resolve(time);</span><br><span class="line">        &#125;, time)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sleep(<span class="number">1000</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h3>&lt;a name=&quot;ten&quot;&gt;十 . 执行上下文&lt;/a&gt;</h3>
-<h4>10.1 执行上下文类型</h4>
-<p>JavaScript 中有3中执行上下文类型：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> timeList = [];</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> say = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="built_in">console</span>.log(i++);</span><br><span class="line">    timeList.push(<span class="built_in">setTimeout</span>(say,<span class="number">200</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(say,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; timeList.lenght; i++) &#123;</span><br><span class="line">        <span class="built_in">clearTimeout</span>(timeList[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,<span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="九-实现Sleep-1"><a href="#九-实现Sleep-1" class="headerlink" title="九 . 实现Sleep"></a><a name="nine">九 . 实现Sleep</a></h3><p>如下，实现 <font color=red>1000</font> 毫秒后执行其他内容：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> sleep = <span class="function"><span class="params">time</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            resolve(time);</span><br><span class="line">        &#125;, time)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sleep(<span class="number">1000</span>).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="十-执行上下文-1"><a href="#十-执行上下文-1" class="headerlink" title="十 . 执行上下文"></a><a name="ten">十 . 执行上下文</a></h3><h4 id="10-1-执行上下文类型"><a href="#10-1-执行上下文类型" class="headerlink" title="10.1 执行上下文类型"></a>10.1 执行上下文类型</h4><p>JavaScript 中有3中执行上下文类型：</p>
 <ul>
-<li><strong>全局执行上下文</strong>：这是默认或者说基础的上下文，任何不在函数内部的代码都在全局上下文中。它会执行两件事：创建一个全局的 &lt;font color=red&gt;window&lt;/font&gt; 对象（在浏览器的情况下），并且设置 &lt;font color=red&gt; this&lt;/font&gt; 的值等于这个全局对象。一个程序中只会有一个全局执行上下文。</li>
+<li><strong>全局执行上下文</strong>：这是默认或者说基础的上下文，任何不在函数内部的代码都在全局上下文中。它会执行两件事：创建一个全局的 <font color=red>window</font> 对象（在浏览器的情况下），并且设置 <font color=red> this</font> 的值等于这个全局对象。一个程序中只会有一个全局执行上下文。</li>
 <li><strong>函数执行上下文</strong> ：每当一个函数被调用时，都会为该函数创建一个新的上下文。每个函数都有它自己的执行上下文，不过是在函数被调用时创建的。函数上下文可以有任意多个。每当一个新的执行上下文被创建，它会按定义的顺序执行一系列步骤。</li>
-<li><strong>Eval 函数执行上下文</strong> ：执行在 &lt;font color=red&gt;eval&lt;/font&gt; 函数内部的代码也会有属于它自己的执行上下文，但由于JavaScript 开发者并不经常使用 &lt;font color=red&gt;eval&lt;/font&gt; ，所以在这里不会讨论它。</li>
+<li><strong>Eval 函数执行上下文</strong> ：执行在 <font color=red>eval</font> 函数内部的代码也会有属于它自己的执行上下文，但由于JavaScript 开发者并不经常使用 <font color=red>eval</font> ，所以在这里不会讨论它。</li>
 </ul>
-<h4>10.2 执行栈</h4>
-<p>执行栈，也就是在其他编程语言中所说的 “&lt;font color=red&gt;调用栈&lt;/font&gt;”，是一种拥有 &lt;font color=red&gt;LIFO&lt;/font&gt; (后进先出)数据结构的栈，被用来存储代码运行时创建的所有执行上下文。</p>
+<h4 id="10-2-执行栈"><a href="#10-2-执行栈" class="headerlink" title="10.2 执行栈"></a>10.2 执行栈</h4><p>执行栈，也就是在其他编程语言中所说的 “<font color=red>调用栈</font>”，是一种拥有 <font color=red>LIFO</font> (后进先出)数据结构的栈，被用来存储代码运行时创建的所有执行上下文。</p>
 <p>当 JavaScript 引擎第一次遇到你的脚本时，它会创建一个全局的执行上下文并且压入当前执行栈。每当引擎遇到一个函数调用，它会为该函数创建一个新的执行上下文并压入栈的顶部。</p>
 <p>引擎会执行那些执行上下文位于栈顶的函数，当该函数执行结束时，执行上下文从栈中弹出，控制流程到达当前栈中的下一个执行上下文。</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">'Hello World!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">first</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside first function'</span>);</span><br><span class="line">  second();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Again inside first function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">second</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Inside second function'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">first();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Inside Global Execution Context'</span>);</span><br></pre></td></tr></table></figure></p>
-<p>&lt;img src=&quot;https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d9e8a01c9454a27acce6bef077e6793~tplv-k3u1fbpfcp-watermark.image&quot;/&gt;</p>
-<h3>&lt;a name=&quot;eleven&quot;&gt;十一 .  函数式编程&lt;/a&gt;</h3>
-<p>函数式编程（Functional Programming， 简称FP）。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="string">&#x27;Hello World!&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">first</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Inside first function&#x27;</span>);</span><br><span class="line">  second();</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Again inside first function&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">second</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;Inside second function&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">first();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;Inside Global Execution Context&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d9e8a01c9454a27acce6bef077e6793~tplv-k3u1fbpfcp-watermark.image"/>
+
+<h3 id="十一-函数式编程-1"><a href="#十一-函数式编程-1" class="headerlink" title="十一 .  函数式编程"></a><a name="eleven">十一 .  函数式编程</a></h3><p>函数式编程（Functional Programming， 简称FP）。</p>
 <p>函数式编程：通过对面向对象式编程代码的拆分，将各个功能独立出来，从而达到功能独立，易复用等目的。</p>
 <p>举例：代码转换</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>]</span><br><span class="line"><span class="comment">//转换成</span></span><br><span class="line">[&#123;<span class="attr">name</span>: <span class="string">'john-resese'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'harold-finch'</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">'sameen-shaw'</span>&#125;]</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[<span class="string">&#x27;john-resese&#x27;</span>,<span class="string">&#x27;harold-finch&#x27;</span>,<span class="string">&#x27;sameen-shaw&#x27;</span>]</span><br><span class="line"><span class="comment">//转换成</span></span><br><span class="line">[&#123;<span class="attr">name</span>: <span class="string">&#x27;john-resese&#x27;</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">&#x27;harold-finch&#x27;</span>&#125;,&#123;<span class="attr">name</span>: <span class="string">&#x27;sameen-shaw&#x27;</span>&#125;]</span><br></pre></td></tr></table></figure>
 <p>对上面的代码进行转换。</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>];</span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; len=arr.lenght; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> name = arr[i];</span><br><span class="line">    <span class="keyword">let</span> names = name.split(<span class="string">'-'</span>);</span><br><span class="line">    <span class="keyword">let</span> newName = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; nameLen = names.lenght; j &lt; nameLen; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> nameItem = names[j][<span class="number">0</span>].toUpperCase() + names[j].slice[<span class="number">1</span>];</span><br><span class="line">        newName.push(nameItem);</span><br><span class="line">    &#125;</span><br><span class="line">  newArr.push(&#123;<span class="attr">name</span>: newName.join(<span class="string">''</span>)&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> newArr;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="string">&#x27;john-resese&#x27;</span>,<span class="string">&#x27;harold-finch&#x27;</span>,<span class="string">&#x27;sameen-shaw&#x27;</span>];</span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; len=arr.lenght; i &lt; len; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> name = arr[i];</span><br><span class="line">    <span class="keyword">let</span> names = name.split(<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">    <span class="keyword">let</span> newName = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; nameLen = names.lenght; j &lt; nameLen; j++) &#123;</span><br><span class="line">        <span class="keyword">let</span> nameItem = names[j][<span class="number">0</span>].toUpperCase() + names[j].slice[<span class="number">1</span>];</span><br><span class="line">        newName.push(nameItem);</span><br><span class="line">    &#125;</span><br><span class="line">  newArr.push(&#123;<span class="attr">name</span>: newName.join(<span class="string">&#x27;&#x27;</span>)&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> newArr;</span><br></pre></td></tr></table></figure>
 <p>这份代码中，有两部分：</p>
 <ol>
-<li>拆分数组中的字符串，将字符串变成人名。&lt;font color=red&gt;john-reese -&gt; John Reese&lt;/font&gt;</li>
-<li>将数组转化为对象。&lt;font color=red&gt;['John Reese'] -&gt; [{ name: 'John Reese' }]&lt;/font&gt;</li>
+<li>拆分数组中的字符串，将字符串变成人名。<font color=red>john-reese -&gt; John Reese</font></li>
+<li>将数组转化为对象。<font color=red>[‘John Reese’] -&gt; [{ name: ‘John Reese’ }]</font></li>
 </ol>
 <p>所以我们直接可以改动：</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>改变人名展示方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>type 支持不同格式的人名</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> changeName = <span class="function">(<span class="params">arr, type</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> item.split(type).map( <span class="function"><span class="params">name</span> =&gt;</span> name[<span class="number">0</span>].toUpperCase() + name.slice(<span class="number">1</span>)).join(<span class="string">''</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>数组改变成对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>key 对应变成什么字段</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;object&#125;</span> </span>返回改变后的对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> arrToObj = <span class="function">(<span class="params">arr,key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> (&#123;[key]:item&#125;));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = arrToObj(changeName([<span class="string">'john-resese'</span>,<span class="string">'harold-finch'</span>,<span class="string">'sameen-shaw'</span>],<span class="string">'-'</span>),<span class="string">'name'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="comment">// [ &#123; name: 'John Reese' &#125;, &#123; name: 'Harold Finch' &#125;, &#123; name: 'Sameen Shaw' &#125; ]</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>改变人名展示方式</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>type 支持不同格式的人名</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> changeName = <span class="function">(<span class="params">arr, type</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> item.split(type).map( <span class="function"><span class="params">name</span> =&gt;</span> name[<span class="number">0</span>].toUpperCase() + name.slice(<span class="number">1</span>)).join(<span class="string">&#x27;&#x27;</span>));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@name </span>数组改变成对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;array&#125;</span> </span>arr 需要改变的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;string&#125;</span> </span>key 对应变成什么字段</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;object&#125;</span> </span>返回改变后的对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> arrToObj = <span class="function">(<span class="params">arr,key</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> arr.map( <span class="function"><span class="params">item</span> =&gt;</span> (&#123;[key]:item&#125;));</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result = arrToObj(changeName([<span class="string">&#x27;john-resese&#x27;</span>,<span class="string">&#x27;harold-finch&#x27;</span>,<span class="string">&#x27;sameen-shaw&#x27;</span>],<span class="string">&#x27;-&#x27;</span>),<span class="string">&#x27;name&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="comment">// [ &#123; name: &#x27;John Reese&#x27; &#125;, &#123; name: &#x27;Harold Finch&#x27; &#125;, &#123; name: &#x27;Sameen Shaw&#x27; &#125; ]</span></span><br></pre></td></tr></table></figure>
 <p>嗨，这不就是对功能封装吗？一般来说工作中出现 2 次以上的代码才进行封装。</p>
 <p>函数式编程就是对可以抽离的功能都进行抽取封装。</p>
-<h4>11.1 函数式编程特点</h4>
-<ol>
-<li><strong>&lt;font color=black&gt;函数是一等公民&lt;/font&gt;</strong> 可以利用这点让它支持抽取到外部。</li>
-<li><strong>&lt;font color=black&gt;声明做某件事件&lt;/font&gt;</strong> 函数式编程大多数声明某个函数需要做什么，而不是他怎么做。</li>
-<li><strong>&lt;font color=black&gt;便于垃圾回收&lt;/font&gt;</strong> 函数内部的变量方便垃圾回收，不会产生太多的变量，用户不需要大量的定义。</li>
-<li><strong>&lt;font color=black&gt;数据不可变&lt;/font&gt;</strong> 函数式编程要求所有的数据都是不可变的，如果需要修改某个对象，应该新建后再修改，而不是污染原本的数据。</li>
-<li><strong>&lt;font color=black&gt;无状态&lt;/font&gt;</strong> 不管什么时候运行，同一个函数对相同的输入返回相同的输出，而不依赖外部状态的变化。</li>
-<li>&lt;font color=black&gt; <strong>无副作用</strong>&lt;/font&gt; 功能A应该仅仅为了完成它的实现，而不会随着外部的改变而改变，这样当它执行完毕之后，就可以将其内部数据进行回收。并且它不会修改传入的参数。</li>
+<h4 id="11-1-函数式编程特点"><a href="#11-1-函数式编程特点" class="headerlink" title="11.1 函数式编程特点"></a>11.1 函数式编程特点</h4><ol>
+<li><strong><font color=black>函数是一等公民</font></strong> 可以利用这点让它支持抽取到外部。</li>
+<li><strong><font color=black>声明做某件事件</font></strong> 函数式编程大多数声明某个函数需要做什么，而不是他怎么做。</li>
+<li><strong><font color=black>便于垃圾回收</font></strong> 函数内部的变量方便垃圾回收，不会产生太多的变量，用户不需要大量的定义。</li>
+<li><strong><font color=black>数据不可变</font></strong> 函数式编程要求所有的数据都是不可变的，如果需要修改某个对象，应该新建后再修改，而不是污染原本的数据。</li>
+<li><strong><font color=black>无状态</font></strong> 不管什么时候运行，同一个函数对相同的输入返回相同的输出，而不依赖外部状态的变化。</li>
+<li><font color=black> <strong>无副作用</strong></font> 功能A应该仅仅为了完成它的实现，而不会随着外部的改变而改变，这样当它执行完毕之后，就可以将其内部数据进行回收。并且它不会修改传入的参数。</li>
 </ol>
 <p>注重引用值（Object，Array）的传递，尽可能不要污染传入的数据。</p>
-<h4>11.2 纯函数</h4>
-<p>纯函数的概念有2点:</p>
+<h4 id="11-2-纯函数"><a href="#11-2-纯函数" class="headerlink" title="11.2 纯函数"></a>11.2 纯函数</h4><p>纯函数的概念有2点:</p>
 <ol>
-<li><strong>不依赖外部的状态（无状态）</strong> ： 函数的运行结构不依赖全局变量，&lt;font color=red&gt;this&lt;/font&gt; 指针，&lt;font color=red&gt;IO&lt;/font&gt; 操作等。</li>
+<li><strong>不依赖外部的状态（无状态）</strong> ： 函数的运行结构不依赖全局变量，<font color=red>this</font> 指针，<font color=red>IO</font> 操作等。</li>
 <li><strong>无副作用（数据不变）</strong> ： 不修改全局变量，不修改入参。</li>
 </ol>
 <p>优点：</p>
@@ -332,10 +373,8 @@
 <li>自文档化</li>
 <li>更少的bug</li>
 </ul>
-<h3>&lt;a name=&quot;twelve&quot;&gt;十二 . 渐进性网络应用（PWA）&lt;/a&gt;</h3>
-<p>渐进式网络应用（PWA）是谷歌在2015年底提出的概念。基本上算是Web应用程序，但在外观和感觉上于原生App类似。支持PWA的网站可以提供脱机工作、推送通知和设备硬件访问等功能。</p>
-<h4>12.1 优点</h4>
-<ul>
+<h3 id="十二-渐进性网络应用（PWA）"><a href="#十二-渐进性网络应用（PWA）" class="headerlink" title="十二 . 渐进性网络应用（PWA）"></a><a name="twelve">十二 . 渐进性网络应用（PWA）</a></h3><p>渐进式网络应用（PWA）是谷歌在2015年底提出的概念。基本上算是Web应用程序，但在外观和感觉上于原生App类似。支持PWA的网站可以提供脱机工作、推送通知和设备硬件访问等功能。</p>
+<h4 id="12-1-优点"><a href="#12-1-优点" class="headerlink" title="12.1 优点"></a>12.1 优点</h4><ul>
 <li><strong>更小更快</strong> ：渐进式的Web应用程序比原生应用程序小得多。他们甚至不用安装。他们没有浪费磁盘空间并且加载速度非常快。</li>
 <li><strong>响应式界面</strong> ： PWA支持的网页能够自动适应各种屏幕大小。它们可以是手机、平板、台式机或者笔记本。</li>
 <li><strong>无需更新</strong> ： 大多数移动应用程序需要每周定期更新。与普通网站一样，每当用户交互发生且不需要应用程序和游戏商店批准时，PWA总是加载最新更新版本</li>
@@ -347,83 +386,76 @@
 <li><strong>绕过应用商店</strong> ：原生的App如果需要任何的更新，需要应用商店的审批，且有被拒绝或禁止的可能性，对于这方面来说，PWA有它的独特优势，不要App Store支持。更新版本可以直接从Web服务器加载，无需App Store批准。</li>
 <li><strong>零安装</strong> ： 在浏览的过程中，PWA会在手机和平板电脑上有自己的图标，就像移动应用程序一样，但不需要经过冗长的安装过程。</li>
 </ul>
-<h4>12.2 缺点</h4>
-<ul>
+<h4 id="12-2-缺点"><a href="#12-2-缺点" class="headerlink" title="12.2 缺点"></a>12.2 缺点</h4><ul>
 <li><strong>对系统功能的访问权限较低</strong> ： 目前PWA对本机系统功能的访问权限比较原生App有限。而且所有的浏览器都不支持它的全部功能，但可能在不久的将来，它可能会成为新的开发标准</li>
 <li><strong>多数Android，少数iOS</strong> ：目前更多的支持来自Android。iOS系统只提供了部分。</li>
 <li><strong>没有审查标准</strong> ： PWA不需要任何适用于应用商店中本机应用的审查，这可能会加快进程，但缺乏从应用程序商店中获取推广效益。</li>
 </ul>
-<h3>&lt;a name=&quot;thirteen&quot;&gt;十三 . 规范化&lt;/a&gt;</h3>
-<p>&lt;font color=red&gt;CommonJS&lt;/font&gt; 规范、&lt;font color=red&gt;AMD&lt;/font&gt; 规范、 &lt;font color=red&gt;CMD&lt;/font&gt; 规范、&lt;font color=red&gt;ES6 Modules&lt;/font&gt; 规范，这4者都是前端规范化的内容，那么他们之间区别是什么？</p>
+<h3 id="十三-规范化-1"><a href="#十三-规范化-1" class="headerlink" title="十三 . 规范化"></a><a name="thirteen">十三 . 规范化</a></h3><p><font color=red>CommonJS</font> 规范、<font color=red>AMD</font> 规范、 <font color=red>CMD</font> 规范、<font color=red>ES6 Modules</font> 规范，这4者都是前端规范化的内容，那么他们之间区别是什么？</p>
 <p>在没有这些之前，我们通过：</p>
 <ul>
-<li>一个函数就是一个模块。&lt;font color=red&gt;function fn() {} &lt;/font&gt;</li>
-<li>一个对象就是一个模块。&lt;font color=red&gt; let obj = new Object({...})&lt;/font&gt;</li>
-<li>立即执行函数（IIFE）。 &lt;font color=red&gt;(function() {})()&lt;/font&gt;</li>
+<li>一个函数就是一个模块。<font color=red>function fn() {} </font> </li>
+<li>一个对象就是一个模块。<font color=red> let obj = new Object({…})</font></li>
+<li>立即执行函数（IIFE）。 <font color=red>(function() {})()</font> </li>
 </ul>
-<h4>13.1 CommonJs规范</h4>
-<p>这之后，就有了&lt;font color=red&gt;CommonJS&lt;/font&gt; 规范，其实 &lt;font color=red&gt;CommonJS&lt;/font&gt;  我们见得不少，就是 &lt;font color=red&gt;Node&lt;/font&gt; 的那套：</p>
+<h4 id="13-1-CommonJs规范"><a href="#13-1-CommonJs规范" class="headerlink" title="13.1 CommonJs规范"></a>13.1 CommonJs规范</h4><p>这之后，就有了<font color=red>CommonJS</font> 规范，其实 <font color=red>CommonJS</font>  我们见得不少，就是 <font color=red>Node</font> 的那套：</p>
 <ul>
-<li>导出：&lt;font color=red&gt;module.exports = {} 、exports.xxx = 'xxx'&lt;/font&gt;</li>
-<li>导入: &lt;font color=red&gt;require(...)&lt;/font&gt;</li>
-<li>查找方式：查找当前目录是否具有文件，没有则查找当前目录的 &lt;font color=red&gt;node_modules&lt;/font&gt; 文件。在没有，冒泡查询，一直往系统中的 &lt;font color=red&gt;npm&lt;/font&gt; 目录查找</li>
+<li>导出：<font color=red>module.exports = {} 、exports.xxx = ‘xxx’</font> </li>
+<li>导入: <font color=red>require(…)</font> </li>
+<li>查找方式：查找当前目录是否具有文件，没有则查找当前目录的 <font color=red>node_modules</font> 文件。在没有，冒泡查询，一直往系统中的 <font color=red>npm</font> 目录查找</li>
 </ul>
 <p>它的特点：</p>
 <ol>
 <li>所有代码在模块作用域内运行，不会污染其他文件</li>
-<li>&lt;font color=red&gt;require&lt;/font&gt; 得到的值是值得拷贝，即你引用其他 JS 文件的变量，修改操作了也不会影响其他文件。</li>
+<li><font color=red>require</font> 得到的值是值得拷贝，即你引用其他 JS 文件的变量，修改操作了也不会影响其他文件。</li>
 </ol>
 <p>它的缺点：</p>
 <ol>
-<li>应用层面，在 &lt;font color=red&gt;index.html&lt;/font&gt; 中做 &lt;font color=red&gt;var index = require('./index.js')&lt;/font&gt; 操作报错，因为它最终是后台执行的，只能是 &lt;font color=red&gt;index.js&lt;/font&gt; 引用 &lt;font color=red&gt;index2.js&lt;/font&gt; 这种方式。</li>
-<li>同步加载问题。&lt;font color=red&gt;CommonJS&lt;/font&gt; 规范中模块是同步加载的，即在 &lt;font color=red&gt;index.js&lt;/font&gt; 中加载 &lt;font color=red&gt;index2.js&lt;/font&gt;，如果 &lt;font color=red&gt;index2.js&lt;/font&gt; 卡住了，那就要等很久了。</li>
+<li>应用层面，在 <font color=red>index.html</font> 中做 <font color=red>var index = require(‘./index.js’)</font> 操作报错，因为它最终是后台执行的，只能是 <font color=red>index.js</font> 引用 <font color=red>index2.js</font> 这种方式。</li>
+<li>同步加载问题。<font color=red>CommonJS</font> 规范中模块是同步加载的，即在 <font color=red>index.js</font> 中加载 <font color=red>index2.js</font>，如果 <font color=red>index2.js</font> 卡住了，那就要等很久了。</li>
 </ol>
-<h4>13.2 AMD规范</h4>
-<p>为什么有 &lt;font color=red&gt;AMD&lt;/font&gt;  规范？</p>
-<p>答：因为 &lt;font color=red&gt;CommonJS&lt;/font&gt;  规范不中用。</p>
+<h4 id="13-2-AMD规范"><a href="#13-2-AMD规范" class="headerlink" title="13.2 AMD规范"></a>13.2 AMD规范</h4><p>为什么有 <font color=red>AMD</font>  规范？</p>
+<p>答：因为 <font color=red>CommonJS</font>  规范不中用。</p>
 <ol>
 <li>适用客户端</li>
 <li>等待加载（同步加载问题）</li>
 </ol>
 <p>所以它做了什么？</p>
-<p>可以采用异步加载模块，&lt;font color=red&gt;AMD&lt;/font&gt; 是 &lt;font color=red&gt;Asynchronous Module Definition&lt;/font&gt;  的缩写，也就是“异步模块定义”，记住这个 &lt;font color=red&gt;async&lt;/font&gt; 就知道它是异步的了</p>
-<h4>13.3 CMD规范</h4>
-<p>&lt;font color=red&gt;CMD&lt;/font&gt; (Common Module Definition)，是seajs推崇的规范，&lt;font color=red&gt;CMD&lt;/font&gt; 则是依赖就近，用的时候在 &lt;font color=red&gt;require&lt;/font&gt; 。</p>
-<p>&lt;font color=red&gt;AMD&lt;/font&gt; 和 &lt;font color=red&gt;CMD&lt;/font&gt; 最大的区别是对依赖模块执行时机的处理，注意不是加载的时机或者方式不同，二者皆为异步加载模块。</p>
-<h4>13.4 ES6 Modules规范</h4>
-<ul>
+<p>可以采用异步加载模块，<font color=red>AMD</font> 是 <font color=red>Asynchronous Module Definition</font>  的缩写，也就是“异步模块定义”，记住这个 <font color=red>async</font> 就知道它是异步的了 </p>
+<h4 id="13-3-CMD规范"><a href="#13-3-CMD规范" class="headerlink" title="13.3 CMD规范"></a>13.3 CMD规范</h4><p><font color=red>CMD</font> (Common Module Definition)，是seajs推崇的规范，<font color=red>CMD</font> 则是依赖就近，用的时候在 <font color=red>require</font> 。</p>
+<p><font color=red>AMD</font> 和 <font color=red>CMD</font> 最大的区别是对依赖模块执行时机的处理，注意不是加载的时机或者方式不同，二者皆为异步加载模块。</p>
+<h4 id="13-4-ES6-Modules规范"><a href="#13-4-ES6-Modules规范" class="headerlink" title="13.4 ES6 Modules规范"></a>13.4 ES6 Modules规范</h4><ul>
 <li>导出：</li>
 </ul>
 <ol>
-<li>&lt;font color=red&gt; export a &lt;/font&gt;</li>
-<li>&lt;font color=red&gt;export {a} &lt;/font&gt;</li>
-<li>&lt;font color=red&gt;export {a as sjh}&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;export defalut function () {} &lt;/font&gt;</li>
+<li><font color=red> export a </font></li>
+<li><font color=red>export {a} </font></li>
+<li><font color=red>export {a as sjh}</font></li>
+<li><font color=red>export defalut function () {} </font></li>
 </ol>
 <ul>
 <li>导入</li>
 </ul>
 <ol>
-<li>&lt;font color=red&gt;import './index'&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;import {a} from '/index.js'&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;import {a as sjh} from './index.js' &lt;/font&gt;</li>
-<li>&lt;font color=red&gt; import * as index from './index.js'&lt;/font&gt;</li>
+<li><font color=red>import ‘./index’</font></li>
+<li><font color=red>import {a} from ‘/index.js’</font></li>
+<li><font color=red>import {a as sjh} from ‘./index.js’ </font></li>
+<li><font color=red> import * as index from ‘./index.js’</font></li>
 </ol>
 <p>特点：</p>
 <ol>
-<li>&lt;font color=red&gt; export &lt;/font&gt; 命令和 &lt;font color=red&gt; import&lt;/font&gt; 命令可以出现在模块的任何位置，只要处于模块顶层就可以，如果处于块级作用域中，就会报错，这是因为处于条件代码块之中，就没法做静态优化了，违背了ES6模块的设计初衷。</li>
-<li>&lt;font color=red&gt; import&lt;/font&gt; 命令具有提升效果，会提升到整个模块的头部，首先执行。</li>
+<li><font color=red> export </font> 命令和 <font color=red> import</font> 命令可以出现在模块的任何位置，只要处于模块顶层就可以，如果处于块级作用域中，就会报错，这是因为处于条件代码块之中，就没法做静态优化了，违背了ES6模块的设计初衷。</li>
+<li><font color=red> import</font> 命令具有提升效果，会提升到整个模块的头部，首先执行。</li>
 </ol>
-<p>和 &lt;font color=red&gt;CommonJS&lt;/font&gt;  的区别：</p>
+<p>和 <font color=red>CommonJS</font>  的区别：</p>
 <ul>
-<li>&lt;font color=red&gt;CommonJS&lt;/font&gt;  模块是运行时加载，&lt;font color=red&gt;ES6 Modules&lt;/font&gt; 是编译时输出接口</li>
-<li>&lt;font color=red&gt;CommonJS&lt;/font&gt;  输出是值的拷贝，&lt;font color=red&gt;ES6 Modules&lt;/font&gt; 输出的是值的引用，被输出模块内部的改变会影响引用的改变</li>
-<li>&lt;font color=red&gt;CommonJS&lt;/font&gt;  导入的模块路径可以是一个表达式，因为它使用的是 &lt;font color=red&gt;require()&lt;/font&gt; 方法； 而 &lt;font color=red&gt;ES6 Modules&lt;/font&gt; 只能是字符串</li>
-<li>&lt;font color=red&gt;CommonJS  this&lt;/font&gt; 指向当前模块，&lt;font color=red&gt;ES6 Modules&lt;/font&gt; 的 &lt;font color=red&gt;this&lt;/font&gt; 指向 &lt;font color=red&gt;undefined&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;ES6 Modules&lt;/font&gt; 中没有这些顶层变量：&lt;font color=red&gt;arguments&lt;/font&gt; 、&lt;font color=red&gt;require&lt;/font&gt; 、 &lt;font color=red&gt;____dirname&lt;/font&gt;  、&lt;font color=red&gt;module&lt;/font&gt; 、 &lt;font color=red&gt;exports&lt;/font&gt; 、 &lt;font color=red&gt;____filename&lt;/font&gt;</li>
+<li><font color=red>CommonJS</font>  模块是运行时加载，<font color=red>ES6 Modules</font> 是编译时输出接口</li>
+<li><font color=red>CommonJS</font>  输出是值的拷贝，<font color=red>ES6 Modules</font> 输出的是值的引用，被输出模块内部的改变会影响引用的改变</li>
+<li><font color=red>CommonJS</font>  导入的模块路径可以是一个表达式，因为它使用的是 <font color=red>require()</font> 方法； 而 <font color=red>ES6 Modules</font> 只能是字符串</li>
+<li><font color=red>CommonJS  this</font> 指向当前模块，<font color=red>ES6 Modules</font> 的 <font color=red>this</font> 指向 <font color=red>undefined</font></li>
+<li><font color=red>ES6 Modules</font> 中没有这些顶层变量：<font color=red>arguments</font> 、<font color=red>require</font> 、 <font color=red>____dirname</font>  、<font color=red>module</font> 、 <font color=red>exports</font> 、 <font color=red>____filename</font> </li>
 </ul>
-<h3>&lt;a name=&quot;fourteen&quot;&gt;十四 . babel编译原理&lt;/a&gt;</h3>
-<ul>
+<h3 id="十四-babel编译原理-1"><a href="#十四-babel编译原理-1" class="headerlink" title="十四 . babel编译原理"></a><a name="fourteen">十四 . babel编译原理</a></h3><ul>
 <li>babylon 将 ES6/ES7 代码解析成 AST</li>
 <li>babel-traverse 对 AST 进行遍历转译，得到新的 AST</li>
 <li>新 AST 通过babel-generator 转换成ES5</li>
@@ -434,62 +466,64 @@
 <li>将这些零件换成彩色的（<code>AST</code> 编译得到新 <code>AST</code>）</li>
 <li>将彩色零件拼装成新的形状（<code>AST</code> 转换为 <code>ES5</code>）</li>
 </ol>
-<h3>&lt;a name=&quot;fiveteen&quot;&gt;十五 . 题集&lt;/a&gt;</h3>
-<h4>15.1 数组常见API</h4>
-<ul>
-<li>&lt;font color=red&gt; push&lt;/font&gt; ：数组尾部添加元素</li>
-<li>&lt;font color=red&gt;unshift&lt;/font&gt; ：数组头部添加元素</li>
-<li>&lt;font color=red&gt;pop&lt;/font&gt; ： 数组尾部移除元素</li>
-<li>&lt;font color=red&gt;shift&lt;/font&gt; ：数组头部移除元素</li>
-<li>&lt;font color=red&gt;splice&lt;/font&gt; ：删除数组元素</li>
-<li>&lt;font color=red&gt;slice&lt;/font&gt; ：截取数组元素</li>
-<li>&lt;font color=red&gt;indexOf&lt;/font&gt; ： 查找某元素第一次出现的位置</li>
-<li>&lt;font color=red&gt;lastIndexof&lt;/font&gt; ：查找某元素最后一次出现的位置</li>
-<li>&lt;font color=red&gt;findIndex&lt;/font&gt; ：查找元素第一次出现的位置</li>
-<li>&lt;font color=red&gt;forEach&lt;/font&gt; ：遍历元素</li>
-<li>&lt;font color=red&gt;map&lt;/font&gt; ：遍历元素</li>
-<li>&lt;font color=red&gt;filter&lt;/font&gt; ：过滤元素</li>
-<li>&lt;font color=red&gt;some&lt;/font&gt; ：包含某元素</li>
-<li>&lt;font color=red&gt;every&lt;/font&gt; ：所有元素和某元素一致</li>
-<li>&lt;font color=red&gt;includes&lt;/font&gt; ：查看是否包含某元素</li>
-<li>&lt;font color=red&gt;concat&lt;/font&gt; ：合并元素</li>
-<li>&lt;font color=red&gt;join&lt;/font&gt; ：合并元素，变成字符串</li>
-<li>&lt;font color=red&gt;toString&lt;/font&gt; ：变成字符串</li>
-<li>&lt;font color=red&gt;sort&lt;/font&gt; ： 元素排序</li>
+<h3 id="十五-题集-1"><a href="#十五-题集-1" class="headerlink" title="十五 . 题集"></a><a name="fiveteen">十五 . 题集</a></h3><h4 id="15-1-数组常见API"><a href="#15-1-数组常见API" class="headerlink" title="15.1 数组常见API"></a>15.1 数组常见API</h4><ul>
+<li><font color=red> push</font> ：数组尾部添加元素</li>
+<li><font color=red>unshift</font> ：数组头部添加元素</li>
+<li><font color=red>pop</font> ： 数组尾部移除元素</li>
+<li><font color=red>shift</font> ：数组头部移除元素</li>
+<li><font color=red>splice</font> ：删除数组元素</li>
+<li><font color=red>slice</font> ：截取数组元素</li>
+<li><font color=red>indexOf</font> ： 查找某元素第一次出现的位置</li>
+<li><font color=red>lastIndexof</font> ：查找某元素最后一次出现的位置</li>
+<li><font color=red>findIndex</font> ：查找元素第一次出现的位置</li>
+<li><font color=red>forEach</font> ：遍历元素</li>
+<li><font color=red>map</font> ：遍历元素</li>
+<li><font color=red>filter</font> ：过滤元素</li>
+<li><font color=red>some</font> ：包含某元素</li>
+<li><font color=red>every</font> ：所有元素和某元素一致</li>
+<li><font color=red>includes</font> ：查看是否包含某元素</li>
+<li><font color=red>concat</font> ：合并元素</li>
+<li><font color=red>join</font> ：合并元素，变成字符串</li>
+<li><font color=red>toString</font> ：变成字符串</li>
+<li><font color=red>sort</font> ： 元素排序</li>
 </ul>
-<h4>15.2 常见 DOM API</h4>
-<ul>
+<h4 id="15-2-常见-DOM-API"><a href="#15-2-常见-DOM-API" class="headerlink" title="15.2 常见 DOM API"></a>15.2 常见 DOM API</h4><ul>
 <li>获取</li>
 <li>创建</li>
 <li>添加</li>
 <li>删除</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id); <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="built_in">document</span>.createElement(name);</span><br><span class="line">element.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(element);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(node);</span><br></pre></td></tr></table></figure></p>
-<h4>15.3 数据去重</h4>
-<p>数组去重是个经常提及的点</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">// 期望得到[1,2,3,4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法一：for配合新数组截取</span></span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> ( !newArr.includes(arr[i])) &#123;</span><br><span class="line">        newArr.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：使用Set</span></span><br><span class="line"><span class="keyword">const</span> newArr1 = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法三：使用filter</span></span><br><span class="line"><span class="keyword">const</span> newArr2 = arr.filter( <span class="function">(<span class="params">item,index</span>) =&gt;</span> arr.lastIndexOf(index) === index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组对象去重</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1、数组的reduce()方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> hash = &#123;&#125;; </span><br><span class="line">arr = arr.reduce(<span class="function">(<span class="params">preVal, curVal</span>) =&gt;</span> &#123;</span><br><span class="line">	hash[curVal.id] ? <span class="string">''</span> : hash[curVal.id] = <span class="literal">true</span> &amp;&amp; preVal.push(curVal); </span><br><span class="line">	<span class="keyword">return</span> preVal </span><br><span class="line">&#125;, [])</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、for循环遍历</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeRepeat</span>(<span class="params">arr, key</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i][key] === arr[j][key])&#123;</span><br><span class="line">				arr.splice(j, <span class="number">1</span>);</span><br><span class="line">				j = j<span class="number">-1</span>;  <span class="comment">// 关键，因为splice()删除元素之后，会使得数组长度减小，此时如果没有j=j-1的话，会导致相同id项在重复两次以上之后无法进行去重，且会错误删除id没有重复的项。</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>不使用数组 &lt;font color=red&gt;API&lt;/font&gt; 进行去重</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 暂留</span></span><br></pre></td></tr></table></figure></p>
-<h4>15.4 数字化金额</h4>
-<ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id); <span class="comment">// 或者querySelector(&quot;.class/#id/name&quot;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="built_in">document</span>.createElement(name);</span><br><span class="line">element.innerHTML = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(element);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(node);</span><br></pre></td></tr></table></figure>
+<h4 id="15-3-数据去重"><a href="#15-3-数据去重" class="headerlink" title="15.3 数据去重"></a>15.3 数据去重</h4><p>数组去重是个经常提及的点</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">// 期望得到[1,2,3,4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法一：for配合新数组截取</span></span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> ( !newArr.includes(arr[i])) &#123;</span><br><span class="line">        newArr.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：使用Set</span></span><br><span class="line"><span class="keyword">const</span> newArr1 = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法三：使用filter</span></span><br><span class="line"><span class="keyword">const</span> newArr2 = arr.filter( <span class="function">(<span class="params">item,index</span>) =&gt;</span> arr.lastIndexOf(index) === index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组对象去重</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1、数组的reduce()方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> hash = &#123;&#125;; </span><br><span class="line">arr = arr.reduce(<span class="function">(<span class="params">preVal, curVal</span>) =&gt;</span> &#123;</span><br><span class="line">	hash[curVal.id] ? <span class="string">&#x27;&#x27;</span> : hash[curVal.id] = <span class="literal">true</span> &amp;&amp; preVal.push(curVal); </span><br><span class="line">	<span class="keyword">return</span> preVal </span><br><span class="line">&#125;, [])</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、for循环遍历</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeRepeat</span>(<span class="params">arr, key</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i][key] === arr[j][key])&#123;</span><br><span class="line">				arr.splice(j, <span class="number">1</span>);</span><br><span class="line">				j = j-<span class="number">1</span>;  <span class="comment">// 关键，因为splice()删除元素之后，会使得数组长度减小，此时如果没有j=j-1的话，会导致相同id项在重复两次以上之后无法进行去重，且会错误删除id没有重复的项。</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>不使用数组 <font color=red>API</font> 进行去重</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 暂留</span></span><br></pre></td></tr></table></figure>
+<h4 id="15-4-数字化金额"><a href="#15-4-数字化金额" class="headerlink" title="15.4 数字化金额"></a>15.4 数字化金额</h4><ul>
 <li>方法一： 暴力遍历</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="built_in">String</span>(<span class="number">1234567890</span>);</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">let</span> i = num.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">if</span> ( i !== num.length <span class="number">-1</span> &amp;&amp; i % <span class="number">3</span> === <span class="number">0</span>)&#123;</span><br><span class="line">        result = num[i] + <span class="string">','</span> + result;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result = num[i] + result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result)  <span class="comment">// "1,234,567,890"</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="built_in">String</span>(<span class="number">1234567890</span>);</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">let</span> i = num.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">if</span> ( i !== num.length -<span class="number">1</span> &amp;&amp; i % <span class="number">3</span> === <span class="number">0</span>)&#123;</span><br><span class="line">        result = num[i] + <span class="string">&#x27;,&#x27;</span> + result;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result = num[i] + result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result)  <span class="comment">// &quot;1,234,567,890&quot;</span></span><br></pre></td></tr></table></figure>
+
+
 <ul>
 <li>方法二：API技巧</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  <span class="built_in">String</span>(<span class="number">1234567890</span>).split(<span class="string">''</span>).reverse().reduce(<span class="function">(<span class="params">prev, next, index</span>) =&gt;</span> (index % <span class="number">3</span>) === <span class="number">0</span> ? next + <span class="string">','</span> + prev : next + prev)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https:<span class="comment">//juejin.cn/post/6890357960040513550</span></span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  <span class="built_in">String</span>(<span class="number">1234567890</span>).split(<span class="string">&#x27;&#x27;</span>).reverse().reduce(<span class="function">(<span class="params">prev, next, index</span>) =&gt;</span> (index % <span class="number">3</span>) === <span class="number">0</span> ? next + <span class="string">&#x27;,&#x27;</span> + prev : next + prev)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https:<span class="comment">//juejin.cn/post/6890357960040513550</span></span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+
 <ul>
 <li>方法三：API技巧</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  (<span class="number">1234567890</span>).toLocaleString(<span class="string">'en-US'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  (<span class="number">1234567890</span>).toLocaleString(<span class="string">&#x27;en-US&#x27;</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+
 <ul>
 <li>方法四：正则表达式</li>
 </ul>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">String</span>(<span class="number">1234567890</span>).replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>,<span class="string">','</span>);</span><br></pre></td></tr></table></figure></p>
-<h4>15.5 遍历问题</h4>
-<p>以下代码执行后，array的结果是？</p>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [,<span class="number">1</span>,,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr = arr.map(<span class="function">(<span class="params">i</span>) =&gt;</span> i++)</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">String</span>(<span class="number">1234567890</span>).replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>,<span class="string">&#x27;,&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="15-5-遍历问题"><a href="#15-5-遍历问题" class="headerlink" title="15.5 遍历问题"></a>15.5 遍历问题</h4><p>以下代码执行后，array的结果是？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [,<span class="number">1</span>,,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr = arr.map(<span class="function">(<span class="params">i</span>) =&gt;</span> i++)</span><br></pre></td></tr></table></figure>
 <ul>
 <li>A：<code>[ , 2, , 3, , 4]</code></li>
 <li>B：<code>[NaN, 2, NaN, 3, NaN, 4]</code></li>
@@ -497,15 +531,14 @@
 <li>D：<code>[null, 2, null, 3, null, 4]</code></li>
 </ul>
 <hr>
-<p>答案是 &lt;font color=red&gt;A&lt;/font&gt;</p>
+<p>答案是 <font color=red>A</font></p>
 <p>原因:</p>
 <ol>
 <li><code>forEach()</code>、<code>filter()</code>、<code>reduce()</code>、<code>every()</code> 和 <code>some()</code> 都会跳过空位。</li>
 <li><code>map()</code> 会跳过空位，但会保留这个值</li>
 <li><code>join()</code> 和 <code>toString()</code> 会将空位视为 <code>undefined</code>，而 <code>undefined</code> 和 <code>null</code> 会被处理成空字符串。</li>
 </ol>
-<h4>15.6 setTimeout</h4>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span> ; i++) &#123;</span><br><span class="line">    setTimeout( <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="15-6-setTimeout"><a href="#15-6-setTimeout" class="headerlink" title="15.6 setTimeout"></a>15.6 setTimeout</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span> ; i++) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>( <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上代码执行结果？</p>
 <ul>
 <li>A：5 5 5 5 5</li>
@@ -514,15 +547,14 @@
 <li>D：1 2 3 4 5</li>
 </ul>
 <hr>
-<p>答案是 &lt;font color=red&gt;A&lt;/font&gt;</p>
+<p>答案是 <font color=red>A</font></p>
 <p>原因:</p>
 <ol>
-<li>&lt;font color=red&gt;var i &lt;/font&gt; 在 &lt;font color=red&gt; for&lt;/font&gt; 中使用，会造成变量污染，从而导致全局有一个遍历 &lt;font color=red&gt;i&lt;/font&gt; , 这个 &lt;font color=red&gt;i&lt;/font&gt; 运行到最后，就是&lt;font color=red&gt;5&lt;/font&gt;</li>
-<li>&lt;font color=red&gt;setTimeout&lt;/font&gt; 是宏任务，在 &lt;font color=red&gt; script&lt;/font&gt; 这个宏任务执行完毕后才执行，所以收集到的 &lt;font color=red&gt;i&lt;/font&gt; 是 &lt;font color=red&gt;5&lt;/font&gt;</li>
-<li>最终输出5个 &lt;font color=red&gt;5&lt;/font&gt;</li>
+<li><font color=red>var i </font> 在 <font color=red> for</font> 中使用，会造成变量污染，从而导致全局有一个遍历 <font color=red>i</font> , 这个 <font color=red>i</font> 运行到最后，就是<font color=red>5</font> </li>
+<li><font color=red>setTimeout</font> 是宏任务，在 <font color=red> script</font> 这个宏任务执行完毕后才执行，所以收集到的 <font color=red>i</font> 是 <font color=red>5</font> </li>
+<li>最终输出5个 <font color=red>5</font></li>
 </ol>
-<h4>15.7 requestAnimationFrame</h4>
-<p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    requestAnimationFrame( <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="15-7-requestAnimationFrame"><a href="#15-7-requestAnimationFrame" class="headerlink" title="15.7 requestAnimationFrame"></a>15.7 requestAnimationFrame</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    requestAnimationFrame( <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>以上代码运行结果:</p>
 <ul>
 <li>A：1 2 3 4 5</li>
@@ -531,158 +563,19 @@
 <li>D：5 5 5 5 5</li>
 </ul>
 <hr>
-<p>答案是&lt;font color=red&gt;B&lt;/font&gt;</p>
+<p>答案是<font color=red>B</font></p>
 <p>解析：</p>
 <ol>
-<li>&lt;font color=red&gt; let i &lt;/font&gt; 使 &lt;font color=red&gt;for&lt;/font&gt; 形成了块级作用域</li>
-<li>&lt;font color=red&gt;requestAnimationFrame&lt;/font&gt; 类似于&lt;font color=red&gt;setTimeout&lt;/font&gt; ,但是它可以当做一个微任务来看，是在微任务队列执行完毕后，执行UI渲染前，调用的一个方法。</li>
-<li>因此，这道题并不是指 &lt;font color=red&gt;requestAnimationFrame&lt;/font&gt; 会收集 &lt;font color=red&gt; i &lt;/font&gt; ,而是 &lt;font color=red&gt;let &lt;/font&gt; 形成了块级作用域的问题，如果改成&lt;font color=red&gt;var i &lt;/font&gt; ,照样输出5个 &lt;font color=red&gt;5&lt;/font&gt;。</li>
+<li><font color=red> let i </font> 使 <font color=red>for</font> 形成了块级作用域</li>
+<li><font color=red>requestAnimationFrame</font> 类似于<font color=red>setTimeout</font> ,但是它可以当做一个微任务来看，是在微任务队列执行完毕后，执行UI渲染前，调用的一个方法。</li>
+<li>因此，这道题并不是指 <font color=red>requestAnimationFrame</font> 会收集 <font color=red> i </font> ,而是 <font color=red>let </font> 形成了块级作用域的问题，如果改成<font color=red>var i </font> ,照样输出5个 <font color=red>5</font>。</li>
 </ol>
-<h4>15.8 暂时性死区</h4>
-]]></content>
+<h4 id="15-8-暂时性死区"><a href="#15-8-暂时性死区" class="headerlink" title="15.8 暂时性死区"></a>15.8 暂时性死区</h4>]]></content>
       <categories>
         <category>JS</category>
       </categories>
       <tags>
         <tag>JS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2>Quick Start</h2>
-<h3>Create a new post</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3>Run server</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3>Generate static files</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3>Deploy to remote sites</h3>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
-    <url>/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1>简言</h1>
-<blockquote>
-<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。
-📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
-</blockquote>
-<hr>
-<h1>配置Hexo</h1>
-<blockquote>
-<p>✨💙在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
-</blockquote>
-<h3>配置Hexo的_config文件(./_config.yml)</h3>
-<h5>1、克隆仓库到themes下</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure></p>
-<h5>2、在hexo中_config.yml中配置渲染参数</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure></p>
-<h5>3、配置基本信息</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure></p>
-<h5>4、重新预览</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h4>更改主题Next的配置(./themes/next/_config.yml)</h4>
-<h5>1、菜单设置</h5>
-<blockquote>
-<p>菜单包括：首页、归档、分类、标签、关于等等
-刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
-</blockquote>
-<h6>1.1 创建命令</h6>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">'tags'</span>&gt;</span><br></pre></td></tr></table></figure></p>
-<h6>1.2 Menu Setting</h6>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure></p>
-<h5>2 Next样式设置</h5>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure></p>
-<p>这个你可以自己去一个一个的使用，看看那个是自己喜欢的</p>
-<h6>2.1 侧栏设置</h6>
-<blockquote>
-<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等
-打开 主题配置文件 找到sidebar字段</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure></p>
-<h6>2.2 头像设置</h6>
-<blockquote>
-<p>打开 主题配置文件 找到Sidebar Avatar字段</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure></p>
-<h6>2.3 社交媒体设置</h6>
-<blockquote>
-<p>打开 主题配置文件 找到Social Links字段</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure></p>
-<h5>2.4 安装设置RSS</h5>
-<blockquote>
-<p>1、先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 插件</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>2、打开hexo配置文件</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>3、打开Next配置文件 找到rss，设置为</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure></p>
-<h5>2.5 安装设置本地搜索插件</h5>
-<blockquote>
-<p>1、先安装 <a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>2、打开Hexo配置文件</p>
-</blockquote>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure></p>
-<hr>
-<hr>
-<blockquote>
-<p>结语:
-✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
-</blockquote>
-<blockquote>
-<p>⚡💥 整个过程最需要注意的便是在更改Next主题样式的格式问题，一定要按照原本的格式来！！有些参数前一定不能有空格！！如果出现<a href="https://github.com/iissnan/hexo-theme-next/issues/737" target="_blank" rel="noopener">在主题配置文件配置友链后，hexo g报错</a>错误，请参考这个Issues。</p>
-</blockquote>
-<blockquote>
-<p>👍👍 也特别感谢<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">my_杨哥</a>，我在配置过程中大量参考了他的文章，十分感谢！！！更多<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题配置</a>请参考此文章！</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo杂谈</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>微信小程序的学习之路(1)</title>
-    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1>小程序的基本配置</h1>
-<h2>全局配置</h2>
-<p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等
-例如:
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3>entryPagePath</h3>
-<p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3>Pages</h3>
-<p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
-<h5>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5>
-<p>如开发目录:</p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure></p>
-<p><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
       </tags>
   </entry>
 </search>
