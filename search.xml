@@ -1,88 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>HTML和HTML5</title>
-    <url>/HTML%E5%92%8CHTML5/</url>
-    <content><![CDATA[<h1 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h1><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><ul>
-<li>作用：规定元素的一个或多个类名</li>
-<li>值：多个类名之间用空格分隔</li>
-<li>注意：类名不能以数字开头</li>
-</ul>
-<h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
-<li>作用：规定元素的唯一标识</li>
-<li>注意：若浏览器中出现多个id名的情况，CSS样式对所有该id的元素都生效，但javascript脚本仅对第一个（最上面那个）出现该id的元素生效</li>
-</ul>
-<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><ul>
-<li>作用：规定关于元素的额外信息，鼠标移到元素上时显示一段提示文本</li>
-</ul>
-<h3 id="lang"><a href="#lang" class="headerlink" title="lang"></a>lang</h3><ul>
-<li>作用：规定元素内容的语言</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure>
-
-<h3 id="tabindex"><a href="#tabindex" class="headerlink" title="tabindex"></a>tabindex</h3><ul>
-<li>作用：规定元素的tab键次序</li>
-<li>值：number（1是第一个）</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.baidu.com"</span> tabindex=<span class="string">"3"</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.taobao.com"</span> tabindex=<span class="string">"2"</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.qq.com"</span> tabindex=<span class="string">"1"</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="accesskey"><a href="#accesskey" class="headerlink" title="accesskey"></a>accesskey</h3><ul>
-<li>作用：创建激活或聚焦元素的快捷键</li>
-<li>值：一个键盘字符如B</li>
-<li>范围：支付该属性的元素有<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 注意：使用该属性在新窗口打开链接时可能会被浏览器屏蔽</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&lt;!-- 快捷键(alt+b)可以跳转到百度；快捷键(alt+a)可以跳转到阿里；快捷键(alt+t)可以跳转到腾讯 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.baidu.com&quot; accesskey=&quot;b&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.taobao.com&quot; accesskey=&quot;a&quot;&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.qq.com&quot; accesskey=&quot;t&quot;&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h3><ul>
-<li>作用：用户是否可以拖元素</li>
-<li>值：true/false/auto</li>
-<li>注意：链接和图像默认是可拖动的</li>
-</ul>
-<h3 id="contenteditable"><a href="#contenteditable" class="headerlink" title="contenteditable"></a>contenteditable</h3><ul>
-<li>作用：指定是否可以在浏览器里编辑内容</li>
-<li>值：true*false</li>
-<li>注意：设置document.designMode=’on’时，页面的任意位置都可以编辑；使用contenteditable=’true’则只对具体元素和其包含的元素起作用</li>
-<li>移动端：移动端ios5以及Android3之后才支持该属性</li>
-</ul>
-<h3 id="data"><a href="#data" class="headerlink" title="data-*"></a>data-*</h3><ul>
-<li>作用：用于存储页面或者应用程序的私有定制数据</li>
-<li>注意：属性名不应该包含任意大写字母，且在前缀”data-“之后必须要有至少一个字符；属性值可以是任意字符串</li>
-<li>使用：可以在所有浏览器中使用getAttribute方法来获取data-属性，也可以使用JavaScript中的dataset属性来访问data-属性的值，不过IE10-浏览器不支持dataset</li>
-</ul>
-<h1 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h1>]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML5中的Canvas元素</title>
-    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
-    <content><![CDATA[<h2 id="HTML5中的Canvas元素"><a href="#HTML5中的Canvas元素" class="headerlink" title="HTML5中的Canvas元素"></a>HTML5中的Canvas元素</h2><h3 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h3><p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h3><p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">"#fff"</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<p>JavaScript使用id来寻找canvas元素：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br></pre></td></tr></table></figure>
-
-<p>然后，创建context对象:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure>
-
-<p>getContext(‘2d’)对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">"#fff"</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure>
-
-<h3 id="理解坐标"><a href="#理解坐标" class="headerlink" title="理解坐标"></a>理解坐标</h3><p>上面的fillRect方法用于参数(0,0,175,70)。<br>意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
-<h2 id="未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp"><a href="#未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp" class="headerlink" title="未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp"></a>未完待续，更多实例请观看：<a href="https://www.w3school.com.cn/html5/html_5_canvas.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/html5/html_5_canvas.asp</a></h2>]]></content>
-      <categories>
-        <category>HTML</category>
-      </categories>
-      <tags>
-        <tag>HTML</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git — 分布式版本控制系统</title>
     <url>/Git%20%E2%80%94%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id="1-Help指令"><a href="#1-Help指令" class="headerlink" title="1. Help指令"></a>1. Help指令</h1><ul>
@@ -123,136 +41,7 @@
       </tags>
   </entry>
   <entry>
-    <title>微信小程序的学习之路(1)</title>
-    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
-<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
-    <url>/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h1><blockquote>
-<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。<br>📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
-</blockquote>
-<hr>
-<h1 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h1><blockquote>
-<p>✨&#x1F499;在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
-</blockquote>
-<h3 id="配置Hexo的-config文件-config-yml"><a href="#配置Hexo的-config文件-config-yml" class="headerlink" title="配置Hexo的_config文件(./_config.yml)"></a>配置Hexo的_config文件(./_config.yml)</h3><h5 id="1、克隆仓库到themes下"><a href="#1、克隆仓库到themes下" class="headerlink" title="1、克隆仓库到themes下"></a>1、克隆仓库到themes下</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
-
-<h5 id="2、在hexo中-config-yml中配置渲染参数"><a href="#2、在hexo中-config-yml中配置渲染参数" class="headerlink" title="2、在hexo中_config.yml中配置渲染参数"></a>2、在hexo中_config.yml中配置渲染参数</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<h5 id="3、配置基本信息"><a href="#3、配置基本信息" class="headerlink" title="3、配置基本信息"></a>3、配置基本信息</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure>
-
-<h5 id="4、重新预览"><a href="#4、重新预览" class="headerlink" title="4、重新预览"></a>4、重新预览</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h4 id="更改主题Next的配置-themes-next-config-yml"><a href="#更改主题Next的配置-themes-next-config-yml" class="headerlink" title="更改主题Next的配置(./themes/next/_config.yml)"></a>更改主题Next的配置(./themes/next/_config.yml)</h4><h5 id="1、菜单设置"><a href="#1、菜单设置" class="headerlink" title="1、菜单设置"></a>1、菜单设置</h5><blockquote>
-<p>菜单包括：首页、归档、分类、标签、关于等等<br>刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
-</blockquote>
-<h6 id="1-1-创建命令"><a href="#1-1-创建命令" class="headerlink" title="1.1 创建命令"></a>1.1 创建命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">'tags'</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<h6 id="1-2-Menu-Setting"><a href="#1-2-Menu-Setting" class="headerlink" title="1.2 Menu Setting"></a>1.2 Menu Setting</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-Next样式设置"><a href="#2-Next样式设置" class="headerlink" title="2 Next样式设置"></a>2 Next样式设置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
-
-<p>这个你可以自己去一个一个的使用，看看那个是自己喜欢的</p>
-<h6 id="2-1-侧栏设置"><a href="#2-1-侧栏设置" class="headerlink" title="2.1 侧栏设置"></a>2.1 侧栏设置</h6><blockquote>
-<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等<br>打开 主题配置文件 找到sidebar字段</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-2-头像设置"><a href="#2-2-头像设置" class="headerlink" title="2.2 头像设置"></a>2.2 头像设置</h6><blockquote>
-<p>打开 主题配置文件 找到Sidebar Avatar字段</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-3-社交媒体设置"><a href="#2-3-社交媒体设置" class="headerlink" title="2.3 社交媒体设置"></a>2.3 社交媒体设置</h6><blockquote>
-<p>打开 主题配置文件 找到Social Links字段</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="2-4-安装设置RSS"><a href="#2-4-安装设置RSS" class="headerlink" title="2.4 安装设置RSS"></a>2.4 安装设置RSS</h5><blockquote>
-<p>1、先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>2、打开hexo配置文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>3、打开Next配置文件 找到rss，设置为</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-5-安装设置本地搜索插件"><a href="#2-5-安装设置本地搜索插件" class="headerlink" title="2.5 安装设置本地搜索插件"></a>2.5 安装设置本地搜索插件</h5><blockquote>
-<p>1、先安装 <a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>2、打开Hexo配置文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
-
-<hr>
-<hr>
-<blockquote>
-<p>结语:<br>✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
-</blockquote>
-<blockquote>
-<p>⚡💥 整个过程最需要注意的便是在更改Next主题样式的格式问题，一定要按照原本的格式来！！有些参数前一定不能有空格！！如果出现<a href="https://github.com/iissnan/hexo-theme-next/issues/737" target="_blank" rel="noopener">在主题配置文件配置友链后，hexo g报错</a>错误，请参考这个Issues。</p>
-</blockquote>
-<blockquote>
-<p>👍👍 也特别感谢<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">my_杨哥</a>，我在配置过程中大量参考了他的文章，十分感谢！！！更多<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题配置</a>请参考此文章！</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Hexo杂谈</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript基础</title>
+    <title></title>
     <url>/JavaScript%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h2 id="一-DOM常用API"><a href="#一-DOM常用API" class="headerlink" title="一 . DOM常用API"></a><a href="#one">一 . DOM常用API</a></h2><h2 id="二-null-和-undefined的区别"><a href="#二-null-和-undefined的区别" class="headerlink" title="二 . null 和 undefined的区别"></a><a href="#two">二 . null 和 undefined的区别</a></h2><h2 id="三-事件流"><a href="#三-事件流" class="headerlink" title="三 . 事件流"></a><a href="#three">三 . 事件流</a></h2><h2 id="四-typeof-和-instanceof-的区别"><a href="#四-typeof-和-instanceof-的区别" class="headerlink" title="四 . typeof 和 instanceof 的区别"></a><a href="#four">四 . typeof 和 instanceof 的区别</a></h2><h2 id="五-一句话描述this"><a href="#五-一句话描述this" class="headerlink" title="五  . 一句话描述this"></a><a href="#five">五  . 一句话描述this</a></h2><h2 id="六-JS-的位置"><a href="#六-JS-的位置" class="headerlink" title="六 . JS 的位置"></a><a href="#six">六 . JS 的位置</a></h2><h2 id="七-JS-的拖拽"><a href="#七-JS-的拖拽" class="headerlink" title="七 . JS 的拖拽"></a><a href="#seven">七 . JS 的拖拽</a></h2><h2 id="八-setTimeout-实现-setInterval"><a href="#八-setTimeout-实现-setInterval" class="headerlink" title="八 . setTimeout 实现 setInterval"></a><a href="#eight">八 . setTimeout 实现 setInterval</a></h2><h2 id="九-实现Sleep"><a href="#九-实现Sleep" class="headerlink" title="九 . 实现Sleep"></a><a href="#nine">九 . 实现Sleep</a></h2><h2 id="十-执行上下文"><a href="#十-执行上下文" class="headerlink" title="十 . 执行上下文"></a><a href="#ten">十 . 执行上下文</a></h2><h2 id="十一-函数式编程"><a href="#十一-函数式编程" class="headerlink" title="十一 . 函数式编程"></a><a href="#eleven">十一 . 函数式编程</a></h2><h2 id="十二-渐进式网络应用（PWA）"><a href="#十二-渐进式网络应用（PWA）" class="headerlink" title="十二 . 渐进式网络应用（PWA）"></a><a href="#twelve">十二 . 渐进式网络应用（PWA）</a></h2><h2 id="十三-规范化"><a href="#十三-规范化" class="headerlink" title="十三 . 规范化"></a><a href="#thirteen">十三 . 规范化</a></h2><h2 id="十四-babel编译原理"><a href="#十四-babel编译原理" class="headerlink" title="十四 . babel编译原理"></a><a href="#fourteen">十四 . babel编译原理</a></h2><h2 id="十五-题集"><a href="#十五-题集" class="headerlink" title="十五 . 题集"></a><a href="#fiveteen">十五 . 题集</a></h2><h3 id="一-DOM常用API-1"><a href="#一-DOM常用API-1" class="headerlink" title="一 . DOM常用API"></a><a name="one">一 . DOM常用API</a></h3><h6 id="可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素"><a href="#可以使用-document-或-window-元素的API来操作文档本身或获取文档的子类-Web页面中的各种元素" class="headerlink" title="可以使用 document  或 window 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)"></a>可以使用 <strong>document</strong>  或 <strong>window</strong> 元素的API来操作文档本身或获取文档的子类(Web页面中的各种元素)</h6><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id);  <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"><span class="keyword">const</span> heading = <span class="built_in">document</span>.getElementById(name);</span><br><span class="line">node.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(heading);</span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(heading);</span><br></pre></td></tr></table></figure>
 
@@ -531,12 +320,302 @@
 <li><font color="red">toString</font> ：变成字符串</li>
 <li><font color="red">sort</font> ： 元素排序</li>
 </ul>
-<h4 id="15-2-常见-DOM-API"><a href="#15-2-常见-DOM-API" class="headerlink" title="15.2 常见 DOM API"></a>15.2 常见 DOM API</h4>]]></content>
+<h4 id="15-2-常见-DOM-API"><a href="#15-2-常见-DOM-API" class="headerlink" title="15.2 常见 DOM API"></a>15.2 常见 DOM API</h4><ul>
+<li>获取</li>
+<li>创建</li>
+<li>添加</li>
+<li>删除</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取元素</span></span><br><span class="line"><span class="keyword">const</span> node = <span class="built_in">document</span>.getElementById(id); <span class="comment">// 或者querySelector(".class/#id/name");</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建元素</span></span><br><span class="line"><span class="keyword">const</span> element = <span class="built_in">document</span>.createElement(name);</span><br><span class="line">element.innerHTML = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加元素</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(element);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除元素</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(node);</span><br></pre></td></tr></table></figure>
+
+<h4 id="15-3-数据去重"><a href="#15-3-数据去重" class="headerlink" title="15.3 数据去重"></a>15.3 数据去重</h4><p>数组去重是个经常提及的点</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="comment">// 期望得到[1,2,3,4]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法一：for配合新数组截取</span></span><br><span class="line"><span class="keyword">const</span> newArr = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i&lt;arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span> ( !newArr.includes(arr[i])) &#123;</span><br><span class="line">        newArr.push(arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法二：使用Set</span></span><br><span class="line"><span class="keyword">const</span> newArr1 = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方法三：使用filter</span></span><br><span class="line"><span class="keyword">const</span> newArr2 = arr.filter( <span class="function">(<span class="params">item,index</span>) =&gt;</span> arr.lastIndexOf(index) === index);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组对象去重</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1、数组的reduce()方法</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> hash = &#123;&#125;; </span><br><span class="line">arr = arr.reduce(<span class="function">(<span class="params">preVal, curVal</span>) =&gt;</span> &#123;</span><br><span class="line">	hash[curVal.id] ? <span class="string">''</span> : hash[curVal.id] = <span class="literal">true</span> &amp;&amp; preVal.push(curVal); </span><br><span class="line">	<span class="keyword">return</span> preVal </span><br><span class="line">&#125;, [])</span><br><span class="line"></span><br><span class="line"><span class="comment">// 2、for循环遍历</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">removeRepeat</span>(<span class="params">arr, key</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">let</span> j = i+<span class="number">1</span>; j &lt; arr.length; j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(arr[i][key] === arr[j][key])&#123;</span><br><span class="line">				arr.splice(j, <span class="number">1</span>);</span><br><span class="line">				j = j<span class="number">-1</span>;  <span class="comment">// 关键，因为splice()删除元素之后，会使得数组长度减小，此时如果没有j=j-1的话，会导致相同id项在重复两次以上之后无法进行去重，且会错误删除id没有重复的项。</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不使用数组 <font color="red">API</font> 进行去重</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 暂留</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="15-4-数字化金额"><a href="#15-4-数字化金额" class="headerlink" title="15.4 数字化金额"></a>15.4 数字化金额</h4><ul>
+<li>方法一： 暴力遍历</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> num = <span class="built_in">String</span>(<span class="number">1234567890</span>);</span><br><span class="line"><span class="keyword">let</span> result = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">let</span> i = num.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="keyword">if</span> ( i !== num.length <span class="number">-1</span> &amp;&amp; i % <span class="number">3</span> === <span class="number">0</span>)&#123;</span><br><span class="line">        result = num[i] + <span class="string">','</span> + result;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        result = num[i] + result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result)  <span class="comment">// "1,234,567,890"</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法二：API技巧</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  <span class="built_in">String</span>(<span class="number">1234567890</span>).split(<span class="string">''</span>).reverse().reduce(<span class="function">(<span class="params">prev, next, index</span>) =&gt;</span> (index % <span class="number">3</span>) === <span class="number">0</span> ? next + <span class="string">','</span> + prev : next + prev)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">作者：jsliang</span><br><span class="line">链接：https:<span class="comment">//juejin.cn/post/6890357960040513550</span></span><br><span class="line">来源：掘金</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法三：API技巧</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  (<span class="number">1234567890</span>).toLocaleString(<span class="string">'en-US'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法四：正则表达式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">String</span>(<span class="number">1234567890</span>).replace(<span class="regexp">/\B(?=(\d&#123;3&#125;)+(?!\d))/g</span>,<span class="string">','</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="15-5-遍历问题"><a href="#15-5-遍历问题" class="headerlink" title="15.5 遍历问题"></a>15.5 遍历问题</h4><p>以下代码执行后，array的结果是？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [,<span class="number">1</span>,,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr = arr.map(<span class="function">(<span class="params">i</span>) =&gt;</span> i++)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>A：<code>[ , 2, , 3, , 4]</code></li>
+<li>B：<code>[NaN, 2, NaN, 3, NaN, 4]</code></li>
+<li>C：<code>[1, 2, 1, 3, 1, 4]</code></li>
+<li>D：<code>[null, 2, null, 3, null, 4]</code></li>
+</ul>
+<hr>
+<p>答案是 <font color="red">A</font></p>
+<p>原因:</p>
+<ol>
+<li><code>forEach()</code>、<code>filter()</code>、<code>reduce()</code>、<code>every()</code> 和 <code>some()</code> 都会跳过空位。</li>
+<li><code>map()</code> 会跳过空位，但会保留这个值</li>
+<li><code>join()</code> 和 <code>toString()</code> 会将空位视为 <code>undefined</code>，而 <code>undefined</code> 和 <code>null</code> 会被处理成空字符串。</li>
+</ol>
+<h4 id="15-6-setTimeout"><a href="#15-6-setTimeout" class="headerlink" title="15.6 setTimeout"></a>15.6 setTimeout</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span> ; i++) &#123;</span><br><span class="line">    setTimeout( <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i)</span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码执行结果？</p>
+<ul>
+<li>A：5 5 5 5 5</li>
+<li>B：0 0 0 0 0</li>
+<li>C：0 1 2 3 4</li>
+<li>D：1 2 3 4 5</li>
+</ul>
+<hr>
+<p>答案是 <font color="red">A</font></p>
+<p>原因:</p>
+<ol>
+<li><font color="red">var i </font> 在 <font color="red"> for</font> 中使用，会造成变量污染，从而导致全局有一个遍历 <font color="red">i</font> , 这个 <font color="red">i</font> 运行到最后，就是<font color="red">5</font> </li>
+<li><font color="red">setTimeout</font> 是宏任务，在 <font color="red"> script</font> 这个宏任务执行完毕后才执行，所以收集到的 <font color="red">i</font> 是 <font color="red">5</font> </li>
+<li>最终输出5个 <font color="red">5</font></li>
+</ol>
+<h4 id="15-7-requestAnimationFrame"><a href="#15-7-requestAnimationFrame" class="headerlink" title="15.7 requestAnimationFrame"></a>15.7 requestAnimationFrame</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    requestAnimationFrame( <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(i);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上代码运行结果:</p>
+<ul>
+<li>A：1 2 3 4 5</li>
+<li>B：0 1 2 3 4</li>
+<li>C：4 4 4 4 4</li>
+<li>D：5 5 5 5 5</li>
+</ul>
+<hr>
+<p>答案是<font color="red">B</font></p>
+<p>解析：</p>
+<ol>
+<li><font color="red"> let i </font> 使 <font color="red">for</font> 形成了块级作用域</li>
+<li><font color="red">requestAnimationFrame</font> 类似于<font color="red">setTimeout</font> ,但是它可以当做一个微任务来看，是在微任务队列执行完毕后，执行UI渲染前，调用的一个方法。</li>
+<li>因此，这道题并不是指 <font color="red">requestAnimationFrame</font> 会收集 <font color="red"> i </font> ,而是 <font color="red">let </font> 形成了块级作用域的问题，如果改成<font color="red">var i </font> ,照样输出5个 <font color="red">5</font>。</li>
+</ol>
+<h4 id="15-8-暂时性死区"><a href="#15-8-暂时性死区" class="headerlink" title="15.8 暂时性死区"></a>15.8 暂时性死区</h4>]]></content>
+  </entry>
+  <entry>
+    <title>HTML5中的Canvas元素</title>
+    <url>/HTML5%E4%B8%AD%E7%9A%84Canvas%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<h2 id="HTML5中的Canvas元素"><a href="#HTML5中的Canvas元素" class="headerlink" title="HTML5中的Canvas元素"></a>HTML5中的Canvas元素</h2><h3 id="创建Canvas元素"><a href="#创建Canvas元素" class="headerlink" title="创建Canvas元素"></a>创建Canvas元素</h3><p>向HTML5页面添加canvas元素，规定元素的id、宽度和高度：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;canvas id=<span class="string">"myCanvas"</span> width=<span class="string">"200"</span> height=<span class="string">"100"</span>&gt;&lt;canvas&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过JavaScript来绘制"><a href="#通过JavaScript来绘制" class="headerlink" title="通过JavaScript来绘制"></a>通过JavaScript来绘制</h3><p>canvas元素本身是没有绘制能力的。所有的绘制工作必须在JavaScript内部完成：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">        var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br><span class="line">        var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br><span class="line">        cxt.fillStyle = <span class="string">"#fff"</span>;</span><br><span class="line">        ctx.fillRect(0,0,150,70);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript使用id来寻找canvas元素：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var mc = document.getElementById(<span class="string">'myCanvas'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>然后，创建context对象:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">var cxt = mc.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>getContext(‘2d’)对象是内建的HTML5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cxt.fillStyle = <span class="string">"#fff"</span>; //fillStyle是染色的方法</span><br><span class="line">ctx.fillRect(0,0,150,70); //fillRect 方法规定了形状、位置和尺寸。</span><br></pre></td></tr></table></figure>
+
+<h3 id="理解坐标"><a href="#理解坐标" class="headerlink" title="理解坐标"></a>理解坐标</h3><p>上面的fillRect方法用于参数(0,0,175,70)。<br>意思是：在画布上绘制150*70的矩形，从左上角开始(0,0)</p>
+<h2 id="未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp"><a href="#未完待续，更多实例请观看：https-www-w3school-com-cn-html5-html-5-canvas-asp" class="headerlink" title="未完待续，更多实例请观看：https://www.w3school.com.cn/html5/html_5_canvas.asp"></a>未完待续，更多实例请观看：<a href="https://www.w3school.com.cn/html5/html_5_canvas.asp" target="_blank" rel="noopener">https://www.w3school.com.cn/html5/html_5_canvas.asp</a></h2>]]></content>
       <categories>
-        <category>JS</category>
+        <category>HTML</category>
       </categories>
       <tags>
-        <tag>JS</tag>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>微信小程序的学习之路(1)</title>
+    <url>/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="小程序的基本配置"><a href="#小程序的基本配置" class="headerlink" title="小程序的基本配置"></a>小程序的基本配置</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><p>小程序根目录下的app.json文件是用来对微信小程序进行全局配置的，决定页面文件的路径、窗口表现、设置网络超时时间，设置多tab等<br>例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [  //页面路径列表</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">    <span class="string">"pages/logs/index"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"window"</span>: &#123;  //全局的默认窗口表现</span><br><span class="line">    <span class="string">"navigationBarTitleText"</span>: <span class="string">"Demo"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"tabBar"</span>: &#123;  //底部 tab 栏的表现</span><br><span class="line">    <span class="string">"list"</span>: [&#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/index/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"首页"</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">      <span class="string">"pagePath"</span>: <span class="string">"pages/logs/index"</span>,</span><br><span class="line">      <span class="string">"text"</span>: <span class="string">"日志"</span></span><br><span class="line">    &#125;]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"networkTimeout"</span>: &#123;  //网络超时时间 </span><br><span class="line">    <span class="string">"request"</span>: 10000,</span><br><span class="line">    <span class="string">"downloadFile"</span>: 10000</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"debug"</span>: <span class="literal">true</span>, //是否开启 debug 模式，默认关闭</span><br><span class="line">  <span class="string">"navigateToMiniProgramAppIdList"</span>: [</span><br><span class="line">    <span class="string">"wxe5f52902cf4de896"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="entryPagePath"><a href="#entryPagePath" class="headerlink" title="entryPagePath"></a>entryPagePath</h3><p>指定小程序的默认启动路径（首页），常见情景是从微信聊天列表页下拉启动、小程序列表启动等。如果不填，将默认位pages列表的第一项。不支持带页面路径参数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"entryPagePath"</span>: <span class="string">"pages/index/index"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Pages"><a href="#Pages" class="headerlink" title="Pages"></a>Pages</h3><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。文件名不需要写文件后缀，框架会自动去寻找对应位置的 .json, .js, .wxml, .wxss 四个文件进行处理。未指定 entryPagePath 时，数组的第一项代表小程序的初始页面（首页）。</p>
+<h5 id="小程序中新增-减少页面，都需要对-pages-数组进行修改。"><a href="#小程序中新增-减少页面，都需要对-pages-数组进行修改。" class="headerlink" title="小程序中新增/减少页面，都需要对 pages 数组进行修改。"></a>小程序中新增/减少页面，都需要对 pages 数组进行修改。</h5><p>如开发目录:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── app.js</span><br><span class="line">├── app.json</span><br><span class="line">├── app.wxss</span><br><span class="line">├── pages</span><br><span class="line">│   │── index</span><br><span class="line">│   │   ├── index.wxml</span><br><span class="line">│   │   ├── index.js</span><br><span class="line">│   │   ├── index.json</span><br><span class="line">│   │   └── index.wxss</span><br><span class="line">│   └── logs</span><br><span class="line">│       ├── logs.wxml</span><br><span class="line">│       └── logs.js</span><br><span class="line">└── utils</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"pages"</span>: [<span class="string">"pages/index/index"</span>, <span class="string">"pages/logs/logs"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML和HTML5</title>
+    <url>/HTML%E5%92%8CHTML5/</url>
+    <content><![CDATA[<h1 id="常用属性"><a href="#常用属性" class="headerlink" title="常用属性"></a>常用属性</h1><h3 id="class"><a href="#class" class="headerlink" title="class"></a>class</h3><ul>
+<li>作用：规定元素的一个或多个类名</li>
+<li>值：多个类名之间用空格分隔</li>
+<li>注意：类名不能以数字开头</li>
+</ul>
+<h3 id="id"><a href="#id" class="headerlink" title="id"></a>id</h3><ul>
+<li>作用：规定元素的唯一标识</li>
+<li>注意：若浏览器中出现多个id名的情况，CSS样式对所有该id的元素都生效，但javascript脚本仅对第一个（最上面那个）出现该id的元素生效</li>
+</ul>
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><ul>
+<li>作用：规定关于元素的额外信息，鼠标移到元素上时显示一段提示文本</li>
+</ul>
+<h3 id="lang"><a href="#lang" class="headerlink" title="lang"></a>lang</h3><ul>
+<li>作用：规定元素内容的语言</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">en：英文</span><br><span class="line">zh：中文</span><br><span class="line">zh-CN：简体中文</span><br></pre></td></tr></table></figure>
+
+<h3 id="tabindex"><a href="#tabindex" class="headerlink" title="tabindex"></a>tabindex</h3><ul>
+<li>作用：规定元素的tab键次序</li>
+<li>值：number（1是第一个）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;!--用tab键进行切换--&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.baidu.com"</span> tabindex=<span class="string">"3"</span>&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.taobao.com"</span> tabindex=<span class="string">"2"</span>&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=<span class="string">"https://www.qq.com"</span> tabindex=<span class="string">"1"</span>&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="accesskey"><a href="#accesskey" class="headerlink" title="accesskey"></a>accesskey</h3><ul>
+<li>作用：创建激活或聚焦元素的快捷键</li>
+<li>值：一个键盘字符如B</li>
+<li>范围：支付该属性的元素有<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 注意：使用该属性在新窗口打开链接时可能会被浏览器屏蔽</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&lt;!-- 快捷键(alt+b)可以跳转到百度；快捷键(alt+a)可以跳转到阿里；快捷键(alt+t)可以跳转到腾讯 --&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.baidu.com&quot; accesskey=&quot;b&quot;&gt;百度&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.taobao.com&quot; accesskey=&quot;a&quot;&gt;阿里&lt;/a&gt;</span><br><span class="line">  &lt;a href=&quot;https://www.qq.com&quot; accesskey=&quot;t&quot;&gt;腾讯&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="draggable"><a href="#draggable" class="headerlink" title="draggable"></a>draggable</h3><ul>
+<li>作用：用户是否可以拖元素</li>
+<li>值：true/false/auto</li>
+<li>注意：链接和图像默认是可拖动的</li>
+</ul>
+<h3 id="contenteditable"><a href="#contenteditable" class="headerlink" title="contenteditable"></a>contenteditable</h3><ul>
+<li>作用：指定是否可以在浏览器里编辑内容</li>
+<li>值：true*false</li>
+<li>注意：设置document.designMode=’on’时，页面的任意位置都可以编辑；使用contenteditable=’true’则只对具体元素和其包含的元素起作用</li>
+<li>移动端：移动端ios5以及Android3之后才支持该属性</li>
+</ul>
+<h3 id="data"><a href="#data" class="headerlink" title="data-*"></a>data-*</h3><ul>
+<li>作用：用于存储页面或者应用程序的私有定制数据</li>
+<li>注意：属性名不应该包含任意大写字母，且在前缀”data-“之后必须要有至少一个字符；属性值可以是任意字符串</li>
+<li>使用：可以在所有浏览器中使用getAttribute方法来获取data-属性，也可以使用JavaScript中的dataset属性来访问data-属性的值，不过IE10-浏览器不支持dataset</li>
+</ul>
+<h1 id="未完待续…"><a href="#未完待续…" class="headerlink" title="未完待续…."></a>未完待续….</h1>]]></content>
+      <categories>
+        <category>HTML</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的第一篇博客文章 &amp;#x1F49B;&amp;#x1F499;&amp;#x1F49B;&amp;#x1F499;</title>
+    <url>/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h1><blockquote>
+<p>📌📃我一直想有一个能写东西和学习的地方，让自己能更加有兴趣和动力去进行下去，毕竟有成果展示出来会让人更加有动力。在听别人说Hexo这个博客框架时，自己&gt;动心了，经过好几次的搭建和更改，最终终于让自己满意了，虽说这些东西并不是自己搞出来的，但事情总是一步一步的来的，慢慢在自己学到了更多知识后，我希望自己可以完成一个博客网站。<br>📌📃好了，废话不多说了，接下来就将我配置hexo的过程和遇到的坑一一记述下来</p>
+</blockquote>
+<hr>
+<h1 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h1><blockquote>
+<p>✨&#x1F499;在Hexo init &lt;自己博客的文件名&gt;后，hexo会自动下载一个主题“landscape”，这是如果你想能改主题，就需要去寻找主题，hexo官网上有主题展示，你可以去选择，这里我就选择“next”主题作为讲解，因为我自己也是使用的“next”✨✨</p>
+</blockquote>
+<h3 id="配置Hexo的-config文件-config-yml"><a href="#配置Hexo的-config文件-config-yml" class="headerlink" title="配置Hexo的_config文件(./_config.yml)"></a>配置Hexo的_config文件(./_config.yml)</h3><h5 id="1、克隆仓库到themes下"><a href="#1、克隆仓库到themes下" class="headerlink" title="1、克隆仓库到themes下"></a>1、克隆仓库到themes下</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、在hexo中-config-yml中配置渲染参数"><a href="#2、在hexo中-config-yml中配置渲染参数" class="headerlink" title="2、在hexo中_config.yml中配置渲染参数"></a>2、在hexo中_config.yml中配置渲染参数</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、配置基本信息"><a href="#3、配置基本信息" class="headerlink" title="3、配置基本信息"></a>3、配置基本信息</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">title: 标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 描述</span><br><span class="line">author: 作者</span><br><span class="line">language: 语言（简体中文是zh-Hans）</span><br><span class="line">timezone: 网站时区（Hexo 默认使用您电脑的时区，不用写）</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、重新预览"><a href="#4、重新预览" class="headerlink" title="4、重新预览"></a>4、重新预览</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="更改主题Next的配置-themes-next-config-yml"><a href="#更改主题Next的配置-themes-next-config-yml" class="headerlink" title="更改主题Next的配置(./themes/next/_config.yml)"></a>更改主题Next的配置(./themes/next/_config.yml)</h4><h5 id="1、菜单设置"><a href="#1、菜单设置" class="headerlink" title="1、菜单设置"></a>1、菜单设置</h5><blockquote>
+<p>菜单包括：首页、归档、分类、标签、关于等等<br>刚开始菜单只有首页、关于、标签、归档，而且还并没有真正的页面，需要自己去创建</p>
+</blockquote>
+<h6 id="1-1-创建命令"><a href="#1-1-创建命令" class="headerlink" title="1.1 创建命令"></a>1.1 创建命令</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page &lt;要创建页面的名字，例如：<span class="string">'tags'</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h6 id="1-2-Menu-Setting"><a href="#1-2-Menu-Setting" class="headerlink" title="1.2 Menu Setting"></a>1.2 Menu Setting</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home                          //首页</span><br><span class="line">  archives: /archives/ || archive          //归档</span><br><span class="line">  categories: /categories/ || th           //分类</span><br><span class="line">  tags: /tags/ || tags                     //标签</span><br><span class="line">  about: /about/ || user                   //关于</span><br><span class="line">  <span class="comment">#schedule: /schedule/ || calendar        //日程表</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap        //站点地图</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat          //公益404</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-Next样式设置"><a href="#2-Next样式设置" class="headerlink" title="2 Next样式设置"></a>2 Next样式设置</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="comment">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+
+<p>这个你可以自己去一个一个的使用，看看那个是自己喜欢的</p>
+<h6 id="2-1-侧栏设置"><a href="#2-1-侧栏设置" class="headerlink" title="2.1 侧栏设置"></a>2.1 侧栏设置</h6><blockquote>
+<p>侧栏设置包括：侧栏位置、侧栏显示与否、文章间距、返回顶部按钮等等<br>打开 主题配置文件 找到sidebar字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sidebar:</span><br><span class="line"><span class="comment"># Sidebar Position - 侧栏位置（只对Pisces | Gemini两种风格有效）</span></span><br><span class="line"><span class="comment">#position: left #靠左</span></span><br><span class="line">position: right <span class="comment">#靠右</span></span><br><span class="line">  <span class="comment"># Sidebar Display  - 侧栏显示时机（只对Muse | Mist两种风格有效）</span></span><br><span class="line">  <span class="comment">#  - post    //默认行为，在文章页面（拥有目录列表）时显示</span></span><br><span class="line">  <span class="comment">#  - always  //在所有页面中都显示</span></span><br><span class="line">  <span class="comment">#  - hide    //在所有页面中都隐藏（可以手动展开）</span></span><br><span class="line">  <span class="comment">#  - remove  //完全移除</span></span><br><span class="line"><span class="comment">#display: post</span></span><br><span class="line"><span class="comment">#display: always</span></span><br><span class="line"><span class="comment">#display: hide</span></span><br><span class="line"><span class="comment">#display: remove</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">offset: 12 //文章间距（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line">b2t: <span class="literal">false</span> //返回顶部按钮（只对Pisces | Gemini两种风格有效）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scrollpercent: <span class="literal">false</span> //返回顶部按钮的百分比</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">onmobile: <span class="literal">false</span> //在窄视图上启用侧边栏 (只对Muse | Mist两种风格有效)</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-2-头像设置"><a href="#2-2-头像设置" class="headerlink" title="2.2 头像设置"></a>2.2 头像设置</h6><blockquote>
+<p>打开 主题配置文件 找到Sidebar Avatar字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar //侧边栏头像</span></span><br><span class="line"><span class="comment"># in theme directory(source/images): /images/avatar.gif</span></span><br><span class="line"><span class="comment"># in site  directory(source/uploads): /uploads/avatar.gif</span></span><br><span class="line">avatar: /images/avatar.gif</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-3-社交媒体设置"><a href="#2-3-社交媒体设置" class="headerlink" title="2.3 社交媒体设置"></a>2.3 社交媒体设置</h6><blockquote>
+<p>打开 主题配置文件 找到Social Links字段</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Social Links.</span></span><br><span class="line"><span class="comment"># Usage: `Key: permalink || icon`</span></span><br><span class="line"><span class="comment"># Key is the link label showing to end users.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target permalink.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.</span></span><br><span class="line">social:</span><br><span class="line">  GitHub: https://github.com/yourname</span><br><span class="line">  邮箱: mailto:example@mail.com</span><br><span class="line">  微博: http://weibo.com/yourname</span><br><span class="line">  Twitter: https://twitter.com/yourname</span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  icons_only: <span class="literal">false</span></span><br><span class="line">  transition: <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  GitHub: github</span><br><span class="line">  微博 : weibo</span><br><span class="line">  Twitter : twitter</span><br><span class="line">  邮箱 : e-mail</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#Blog rolls</span></span><br><span class="line">links_icon: link</span><br><span class="line">links_title: Links</span><br><span class="line">links_layout: block</span><br><span class="line"><span class="comment">#links_layout: inline</span></span><br><span class="line">links:</span><br><span class="line">  <span class="comment">#Title: http://example.com/</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="2-4-安装设置RSS"><a href="#2-4-安装设置RSS" class="headerlink" title="2.4 安装设置RSS"></a>2.4 安装设置RSS</h5><blockquote>
+<p>1、先安装 <a href="https://github.com/hexojs/hexo-generator-feed" target="_blank" rel="noopener">hexo-generator-feed</a> 插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2、打开hexo配置文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># RSS订阅</span></span><br><span class="line">feed:</span><br><span class="line">  <span class="built_in">type</span>: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  <span class="built_in">limit</span>: 20</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>3、打开Next配置文件 找到rss，设置为</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rss: /atom.xml</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-5-安装设置本地搜索插件"><a href="#2-5-安装设置本地搜索插件" class="headerlink" title="2.5 安装设置本地搜索插件"></a>2.5 安装设置本地搜索插件</h5><blockquote>
+<p>1、先安装 <a href="https://github.com/theme-next/hexo-generator-searchdb" target="_blank" rel="noopener">hexo-generator-searchdb</a> 插件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2、打开Hexo配置文件</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 搜索</span></span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  <span class="built_in">limit</span>: 10000</span><br></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<blockquote>
+<p>结语:<br>✨✨ 搭建的过程很快，而且网上的材料也很多，各个主题配置方法，填坑过程及总结。总之如果出现问题，及时寻找百度，毕竟是面向浏览器编程😂😂</p>
+</blockquote>
+<blockquote>
+<p>⚡💥 整个过程最需要注意的便是在更改Next主题样式的格式问题，一定要按照原本的格式来！！有些参数前一定不能有空格！！如果出现<a href="https://github.com/iissnan/hexo-theme-next/issues/737" target="_blank" rel="noopener">在主题配置文件配置友链后，hexo g报错</a>错误，请参考这个Issues。</p>
+</blockquote>
+<blockquote>
+<p>👍👍 也特别感谢<a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">my_杨哥</a>，我在配置过程中大量参考了他的文章，十分感谢！！！更多<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">主题配置</a>请参考此文章！</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Hexo杂谈</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
