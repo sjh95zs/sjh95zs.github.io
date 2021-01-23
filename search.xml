@@ -683,4 +683,336 @@
         <tag>JS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>原型与原型链</title>
+    <url>/%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/</url>
+    <content><![CDATA[<h2 id="一-前言"><a href="#one">一. 前言</a></h2>
+<h2 id="二-普通对象和函数对象"><a href="#two">二. 普通对象和函数对象</a></h2>
+<h2 id="三-构造函数"><a href="#three">三. 构造函数</a></h2>
+<h2 id="四-原型"><a href="#four">四. 原型</a></h2>
+<h2 id="五-constructor"><a href="#five">五. constructor</a></h2>
+<h2 id="六-new"><a href="#six">六. new</a></h2>
+<h2 id="七-proto"><a href="#seven">七. proto</a></h2>
+<h2 id="八-Object-和-Function的原型指向"><a href="#eight">八. Object 和 Function的原型指向</a></h2>
+<h2 id="九-原型链"><a href="#nine">九. 原型链</a></h2>
+<h2 id="十-题目"><a href="#ten">十. 题目</a></h2>
+<h2 id="十一-参考文献"><a href="#el">十一.  参考文献</a></h2>
+<h3 id="a-name-one-一-前言-a"><a name="one">一. 前言 </a></h3>
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b91169c306924636aa45dbd835f70daf~tplv-k3u1fbpfcp-watermark.image" alt="原型图"></p>
+<p>上面是原型链神图，如果你能理解，你基本不用看这篇文章了。</p>
+<h4 id="1-1-本文知识点概览">1.1 本文知识点概览</h4>
+<p>构造函数 <code>funciton Person() &#123;&#125;</code></p>
+<p>实例 <code>const person = new Person()</code></p>
+<p>原型 <code>Person.prototype</code></p>
+<p>隐藏属性 <code>constructor</code></p>
+<ul>
+<li>等式 1：<code>person.constructor === Person</code></li>
+<li>等式 2：<code>Person.prototype.constructor === Person</code></li>
+</ul>
+<p><code>new</code></p>
+<ul>
+<li><code>new</code> 的原生例子</li>
+<li>手写 <code>new</code>：一、判断首参为函数；二、通过 <code>Object.create()</code> 创建新对象并且绑定原型链；三、通过 <code>call</code> 或者 <code>apply</code> 修正 <code>this</code> 指向和传参；四、通过 <code>typeof</code> 判断函数对象和普通对象；五、函数对象和普通对象返回构造函数的 <code>return</code> 值，否则返回新对象</li>
+<li>通过对手写 <code>new</code> 过程的了解来做题</li>
+</ul>
+<p>查找实例对应的对象的原型 <code>person.__proto__ === Person.prototype</code></p>
+<p>函数对象指向</p>
+<ul>
+<li><code>person.__proto__ === Person.prototype</code></li>
+<li><code>Person.__proto__ === Function.prototype</code></li>
+</ul>
+<p>普通对象指向</p>
+<ul>
+<li><code>obj.__proto__ === Object.prototype</code></li>
+</ul>
+<p>原型链</p>
+<ul>
+<li><code>foo.__proto__ === Object.prototype</code></li>
+<li><code>F.__proto__ === Function.prototype</code></li>
+<li><code>F.__proto__.__proto__ === Object.prototype</code></li>
+</ul>
+<h4 id="2-2-为什么需要原型以及原型链">2.2 为什么需要原型以及原型链</h4>
+<p>这个例子可以解释地很清楚：</p>
+<p><a href="https://github.com/LiangJunrong/document-library/blob/master/%E7%B3%BB%E5%88%97-%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/2019/JavaScript-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md">jsliang 2019 - 原型和原型链</a></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">  <span class="built_in">this</span>.age = age;</span><br><span class="line">  <span class="built_in">this</span>.eat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(age + <span class="string">&quot;岁的&quot;</span> + name + <span class="string">&quot;在吃饭。&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> Person(<span class="string">&quot;jsliang&quot;</span>, <span class="number">24</span>);</span><br><span class="line"><span class="keyword">let</span> p2 = <span class="keyword">new</span> Person(<span class="string">&quot;jsliang&quot;</span>, <span class="number">24</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(p1.eat === p2.eat); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p>可以看到，对于同一个函数，我们通过 <code>new</code> 生成出来的实例，都会开出新的一块堆区，所以上面代码中<code>p1</code> 和 <code>p2</code> 的吃饭是不同的（返回<code>false</code>）。</p>
+<p>拥有属于自己的东西，（例如房子、车子），这样很好。</p>
+<p>但是也有不好的地方，JavaScript的内存空间总共就那么大点，你不停的造房子，到最后不是没有空地了（内存不足）。</p>
+<p>所以 ，咱们要想个法子，建个类似共享库的对象（例如小区公共健身房），这样就可以在需要的时候，大家都跑去公共健身房锻炼，就不需要开辟新空间了。</p>
+<p>而如何开辟好这个空间呢，就需要用到原型<code>prototype</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Person 在它的原型上定义了一块空间 eat，同一个小区的都可以访问它</span></span><br><span class="line">Person.prototype.eat = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&quot;吃饭&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> Person(<span class="string">&quot;jsliang&quot;</span>, <span class="number">24</span>);</span><br><span class="line"><span class="keyword">let</span> p2 = <span class="keyword">new</span> Person(<span class="string">&quot;梁峻荣&quot;</span>, <span class="number">24</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(p1.eat === p2.eat); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>看！这样我们就做好了公共小区健身房了。</p>
+<h3 id="a-name-two-二-普通对象和函数对象-a"><a name="two">二. 普通对象和函数对象</a></h3>
+<p>在 JavaScript 中，万物皆可对象，你想要一个么，那就<code>new object</code> 啊！</p>
+<p>当然，就好比同样的人，也区别普通人和天才。</p>
+<p>对象也是有分类的，分为<code>普通对象</code>和 <code>函数对象</code>。</p>
+<p>而 <code>object</code> 和 <code>Function</code> 都是 JavaScript自带的函数对象。</p>
+<p>下面，我们做个区分：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun1</span>(<span class="params"></span>)</span>;</span><br><span class="line"><span class="keyword">const</span> fun2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">consr fun3 = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj1 = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">const</span> obj3 = <span class="keyword">new</span> fun1();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Object</span>); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Function</span>); <span class="comment">// function  </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun1); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun2); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun3); <span class="comment">// function   </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj1); <span class="comment">// object </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj2); <span class="comment">// object </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj3); <span class="comment">// object 实例对象</span></span><br></pre></td></tr></table></figure>
+<p>在上面代码中，<code>fun1</code>、<code>fun2</code>、<code>fun3</code> 都是函数对象，<code>obj1</code>、<code>obj2</code>、<code>obj3</code> 都是普通对象。</p>
+<p>记住这点，下面我们会很常用~</p>
+<h3 id="a-name-three-三-构造函数-a"><a name="three">三. 构造函数</a></h3>
+<ul>
+<li>什么是构造函数</li>
+</ul>
+<p>当任意一个普通函数用于创建一个类对象，它就被称作为构造函数，或构造器。</p>
+<p>它有几点特征：</p>
+<ol>
+<li>默认函数首字母大写</li>
+<li>通过 <code>new</code> 调用一个函数</li>
+<li>构造函数返回的是一个对象</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person(<span class="string">&#x27;42:P&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>这里Person就是构造函数，而person 则是构造函数Person的实例对象（后面简称实例）。</p>
+<p>要清楚构造函数具体内容，我们应该看一下<code>new</code> 的实现机制，但是现在知识点前置不足，我们后面章节再进行讲解</p>
+<p>小结本章知识点：</p>
+<ul>
+<li>构造函数 <code>funciton Person() &#123;&#125;</code></li>
+<li>实例 <code>const person = new Person()</code></li>
+</ul>
+<h3 id="a-name-four-四-原型-a"><a name="four">四. 原型</a></h3>
+<p>在 JavaScript 中，每当定义一个对象的时候，对象中都会包含一些预定义的属性</p>
+<p>其中每个函数对象都有一个<code>prototype</code> 的属性，这个属性的指向被称为这个函数对象的<strong>原型对象</strong>（简称原型）</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    Person.prototype.name = <span class="string">&#x27;42:P&#x27;</span>;</span><br><span class="line">    Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.sayName(); <span class="comment">// 42:P</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person2 = <span class="keyword">new</span> Person();</span><br><span class="line">person2.sayNanme(); <span class="comment">// 42:P</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这两个实例对应的原型方法 sayName 都是一样的</span></span><br><span class="line"><span class="built_in">console</span>.log(person1.sayName === person2.sayName); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>出来了出来了，呼应前言内容，我们通过<code>prototype</code> 定义了构造函数<code>Person</code> 的小区公布区域，这样区里的邻居就都可以去了。</p>
+<p>小结本章知识点：</p>
+<ul>
+<li>原型 <code>Person.prototype</code></li>
+</ul>
+<h3 id="a-name-five-五-constructor-a"><a name="five">五. constructor</a></h3>
+<p>将完原型，我们来看看<code>constructor</code> 是什么</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person1 = <span class="keyword">new</span> Person(<span class="string">&#x27;42:P&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>在上面代码中，有构造函数Person 和它的实例 person1、</p>
+<p>在JavaScript中，每个实例都会有个隐藏属性<code>constructor</code></p>
+<p>而构造函数和实例存在一个等式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Person.prototype.constructor = Person; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><code>constructor</code> 暂时没找到合适的题目，所以记住上面 2 个点即可~</p>
+<p>小结本章知识点：</p>
+<ul>
+<li>隐藏属性 <code>constructor</code></li>
+<li>等式 1：<code>person.constructor === Person</code></li>
+<li>等式 2：<code>Person.prototype.constructor === Person</code></li>
+</ul>
+<h3 id="a-name-six-六-new-a"><a name="six">六. new</a></h3>
+<p>在上面我们了解了 4 个知识点了；</p>
+<ul>
+<li>构造函数 <code>funciton Person() &#123;&#125;</code></li>
+<li>实例 <code>const person = new Person()</code></li>
+<li>原型 <code>Person.prototype</code></li>
+<li>隐藏属性 <code>constructor</code></li>
+<li>等式 1：<code>person.constructor === Person</code></li>
+<li>等式 2：<code>Person.prototype.constructor === Person</code></li>
+</ul>
+<p>那么，<code>new</code> 在这里起了啥作用？我们先看看原生 <code>new</code> 的一个返回情况：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"> name, age</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">  <span class="built_in">this</span>.age = age;</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// return;                              // 返回 this</span></span><br><span class="line">  <span class="comment">// return null;                         // 返回 this</span></span><br><span class="line">  <span class="comment">// return this;                         // 返回 this</span></span><br><span class="line">  <span class="comment">// return false;                        // 返回 this</span></span><br><span class="line">  <span class="comment">// return &#x27;hello world&#x27;;                // 返回 this</span></span><br><span class="line">  <span class="comment">// return 2;                            // 返回 this</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// return [];                           // 返回 新建的 [], person.name = undefined</span></span><br><span class="line">  <span class="comment">// return function()&#123;&#125;;                 // 返回 新建的 function，抛弃 this, person.name = undefined</span></span><br><span class="line">  <span class="comment">// return new Boolean(false);           // 返回 新建的 boolean，抛弃 this, person.name = undefined</span></span><br><span class="line">  <span class="comment">// return new String(&#x27;hello world&#x27;);    // 返回 新建的 string，抛弃 this, person.name = undefined</span></span><br><span class="line">  <span class="comment">// return new Number(32);               // 返回 新的 number，抛弃 this, person.name = undefined</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">&quot;jsliang&quot;</span>, <span class="number">25</span>);</span><br><span class="line"><span class="built_in">console</span>.log(person); <span class="comment">// Person &#123;name: &quot;42:P&quot;, age: 25&#125;</span></span><br></pre></td></tr></table></figure>
+<p>那么下面根据返回情况，我们试试手写 <code>new</code> 吧！</p>
+<h4 id="6-1-手写new">6.1 手写new</h4>
+<p>先看一遍最终版的简版：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myNew</span>(<span class="params">func,..args</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1. 判断方法体</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> func !== <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="string">&#x27;第一个参数必须是方法体&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2. 创建方法体</span></span><br><span class="line">    <span class="keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3. 这个对象的__Proto__指向 func这个类的原型对象</span></span><br><span class="line">    <span class="comment">// 即实例可以访问构造函数原型(constructor.prototype) 所在原型链上的属性</span></span><br><span class="line">    obj.__proto__ = <span class="built_in">Object</span>.create(func.prototype);</span><br><span class="line">    <span class="comment">// 为了兼容ie，可以让步骤2，3合并</span></span><br><span class="line">    <span class="comment">// const obj = Object.create(func.prototype);</span></span><br><span class="line">    <span class="comment">// 4. 通过apply 绑定 this 执行并且获取运行后的结果</span></span><br><span class="line">    <span class="keyword">let</span> result = func.apply(obj,args);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 5. 如果构造函数返回的结果是引用数据类型，则返回运行后的结果</span></span><br><span class="line">    <span class="comment">// 否则返回创建的obj</span></span><br><span class="line">    <span class="keyword">const</span> isObject = <span class="keyword">typeof</span> result === <span class="string">&#x27;object&#x27;</span> %% <span class="keyword">typeof</span> result !== <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">const</span> isFunction = <span class="keyword">typeof</span> result === <span class="string">&#x27;function&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> isObject || isFunction ? result : obj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 用来测试第5点</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;返回引用数据类型&#x27;</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 用来测试第 2 点和第 3 点</span></span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`My name is <span class="subst">$&#123;<span class="built_in">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> me = myNew(Person, <span class="string">&#x27;jsliang&#x27;</span>); <span class="comment">// 用来测试第 4 点</span></span><br><span class="line">me.sayName(); <span class="comment">// My name is jsliang</span></span><br><span class="line"><span class="built_in">console</span>.log(me); <span class="comment">// Person &#123;name: &#x27;jsliang&#x27;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用来测试第 1 点</span></span><br><span class="line"><span class="comment">// const you = myNew(&#123; name: &#x27;jsliang&#x27; &#125;, &#x27;jsliang&#x27;); // 报错：第一个参数必须是方法体</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-2-题目">6.2 题目</h4>
+<p>如果你知道怎么手写一个 <code>new</code> 了，那么下面问题就轻而易举了：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">A.prototype.n = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> A();</span><br><span class="line">A.prototype = &#123;</span><br><span class="line">  n: <span class="number">2</span>,</span><br><span class="line">  m: <span class="number">3</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> A();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(b.n); <span class="comment">// 输出啥？</span></span><br><span class="line"><span class="built_in">console</span>.log(b.m); <span class="comment">// 输出啥？</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(c.n); <span class="comment">// 输出啥？</span></span><br><span class="line"><span class="built_in">console</span>.log(c.m); <span class="comment">// 输出啥？</span></span><br></pre></td></tr></table></figure>
+<p>求输出结果？</p>
+<hr>
+<p>答案:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">b.n -&gt; <span class="number">1</span></span><br><span class="line">b.m -&gt; <span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">c.n -&gt; <span class="number">2</span></span><br><span class="line">c.m -&gt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>分析：</p>
+<ol>
+<li><code>b.n</code> 和 <code>b.m</code> 考查的是 <code>new</code> 的一个实现机制。我们知道这种场景下 <code>new</code> 操作会生成一个新对象进行挂载，所以在 <code>var b = new A()</code> 的时候，<code>A</code> 的原型（<code>prototype</code>）上挂载的参数就传递过去了。即 <code>b.n</code> 为 <code>1</code>，而 <code>b.m</code> 为 <code>undefined</code>。</li>
+<li>同 1，<code>c = new A()</code> 是在 <code>A.prototype</code> 改变后定义的，所以这时候 <code>A</code> 的原型上的数据挂载上去了。</li>
+</ol>
+<p>小结本章知识点：<code>new</code></p>
+<ul>
+<li><code>new</code> 的原生例子</li>
+<li>手写 <code>new</code></li>
+<li>通过对手写 <code>new</code> 过程的了解来做题</li>
+</ul>
+<h3 id="a-name-seven-七-proto-a"><a name="seven">七. proto</a></h3>
+<p>在上面，我们讲过 <code>Person</code> 有个属于自己的公共区间：<code>Person.prototype</code>。</p>
+<p>那么，小区居民如果要去这个公共健身房，这条路怎么走呢？（<code>person</code> 怎么找到 <code>Person.prototype</code>）</p>
+<p>在 JavaScript 中，每个 JavaScript 对象（普通对象和函数对象）都具有一个属性 <code>__proto__</code>，这个属性会指向该对象的原型。</p>
+<p>看代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>所以，现在我们小区居民（实例对象）知道怎么找到公共健身房（原型）啦！</p>
+<p>小结本章知识点：</p>
+<ul>
+<li>查找实例对应的对象的原型 <code>person.__proto__ === Person.prototype</code></li>
+</ul>
+<h3 id="a-name-eight-八-Object-和-Function的原型指向-a"><a name="eight">八. Object 和 Function的原型指向</a></h3>
+<h4 id="8-1-回顾前面内容">8.1 回顾前面内容</h4>
+<p>在上面我们将这些基础知识点都了解了，是时候回顾拓展下之前的内容了：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun1</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> fun2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> fun3 = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj1 = &#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">const</span> obj3 = <span class="keyword">new</span> fun1();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Object</span>); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Function</span>); <span class="comment">// function  </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun1); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun2); <span class="comment">// function </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> fun3); <span class="comment">// function   </span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj1); <span class="comment">// object </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj2); <span class="comment">// object </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj3); <span class="comment">// object</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+<p>这份代码中，哪些是函数对象，哪些是普通对象，小伙伴们还记得不？</p>
+<p>是的，<code>fun</code> 开头的都是函数对象：<code>fun1</code>、<code>fun2</code>、<code>fun3</code>，特例 <code>Object</code> 和 <code>Function</code> 也是。</p>
+<p>下文我们要对 <code>Object</code> 和 <code>Function</code> 动刀了！</p>
+<h4 id="8-2-Object-和-Function">8.2 Object 和 Function</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();</span><br></pre></td></tr></table></figure>
+<p>在上面代码中，我们看到实例 <code>person</code> 是 <code>new</code> 构造函数 <code>Person</code> 出来的。</p>
+<p>那么，<code>Person</code> 又是怎么来的呢？</p>
+<blockquote>
+<p>定义一个函数对象的 3 种方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> Person = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"><span class="comment">// 相当于 function Person() &#123;&#125;;</span></span><br><span class="line"><span class="comment">// 或者相当于 const Person = function() &#123;&#125;;</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.__proto__ === <span class="built_in">Function</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>所以将这两个结合起来：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> Person = <span class="keyword">new</span> <span class="built_in">Function</span>();</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.__proto__ === <span class="built_in">Function</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>哦豁，有没有一种豁然开朗的感觉？</p>
+<blockquote>
+<p><code>Person.prototype.__proto__</code> 对应的是什么？下一章揭晓</p>
+</blockquote>
+<p>那么，如果是对象呢？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="comment">// 相当于 obj = &#123;&#125;;</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.__proto__ === <span class="built_in">Object</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>现在我们就搞懂了普通对象和函数对象以及 JavaScript 内置 <code>Object</code> 和 <code>Function</code> 的一个指向情况，下面我们做一道小题目。</p>
+<h4 id="8-3-题目：阐述题">8.3 题目：阐述题</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> Person(<span class="string">&#x27;jsliang&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>问题 1：<code>p.__proto__</code> 等于什么？</p>
+<p>问题 2：<code>Person.__proto__</code> 等于什么？</p>
+<p>​	答：</p>
+<ul>
+<li><code>p.__proto__ === Person.prototype</code></li>
+<li><code>Person.__proto__ === Function.prototype</code></li>
+</ul>
+<p>解析：无。本章内容已经讲解了，不需要这里在累述。</p>
+<p>小结本章知识点：</p>
+<ul>
+<li>函数对象指向</li>
+<li><code>person.__proto__ === Person.prototype</code></li>
+<li><code>Person.__proto__ === Function.prototype</code></li>
+<li>普通对象指向</li>
+<li><code>obj.__proto__ === Object.prototype</code></li>
+</ul>
+<h3 id="a-name-nine-九-原型链-a"><a name="nine">九. 原型链</a></h3>
+<h4 id="9-1-万物皆对象">9.1 万物皆对象</h4>
+<p>首先我们需要从 “万物皆对象” 这句话看起：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(Person.__proto__ === <span class="built_in">Function</span>.prototype); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__.__proto__ === <span class="built_in">Object</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>我们先科普一个知识点：</p>
+<ul>
+<li><strong>通过 <code>__proto__</code> 最终查找到的是 <code>null</code></strong></li>
+</ul>
+<p>哎，不是万物皆对象吗？</p>
+<p>是！但是对象从哪来的，无中生有啊：</p>
+<ul>
+<li><code>Object.prototype.__proto__ === null</code></li>
+</ul>
+<p>对象的原型 <code>prototype</code> 通过 <code>__proto__</code> 找到最终归宿：<code>null</code>。</p>
+<p>这就好比小区公共健身房哪里的，通过空地建的，空地 = <code>null</code>。</p>
+<p>OK，那 <code>person.__proto__.__proto__ === Object.prototype</code> 怎么说？</p>
+<p>我们看例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">Person.prototype.name = <span class="string">&#x27;jsliang2&#x27;</span>;</span><br><span class="line"><span class="built_in">Object</span>.prototype.name = <span class="string">&#x27;jsliang3&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> person = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当前展示</span></span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// jsliang2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 往实例添加属性</span></span><br><span class="line">person.name = <span class="string">&#x27;jsliang1&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// jsliang1【person 存在该属性】</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除实例属性</span></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// jsliang2【Person.prototype 存在该属性】</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除构造函数原型</span></span><br><span class="line"><span class="keyword">delete</span> Person.prototype.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// jsliang3 【Object.prototype 存在该属性】</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除 Object 原型</span></span><br><span class="line"><span class="keyword">delete</span> <span class="built_in">Object</span>.prototype.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name); <span class="comment">// undefined 【都删除了，都不存在了】</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__ === Person.prototype); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(person.__proto__.__proto__ === <span class="built_in">Object</span>.prototype); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>原型链：如果一个实例对象不存在某个属性，那么 JavaScript 就会往该构造函数的原型上找；如果该构造函数的原型没找到，那么会继续往 <code>Object</code> 的原型上找；如果 <code>Object</code> 的原型还没有，那就返回 <code>undefined</code>。</p>
+<p>这条链：</p>
+<ul>
+<li><strong><a href="http://xn--fsq270a3hh32o.xxx">实例对象.xxx</a> -&gt; <a href="http://xn--bbrz78btpbe71f.prototype.xxx">构造函数.prototype.xxx</a> -&gt; <a href="http://Object.prototype.xxx">Object.prototype.xxx</a></strong></li>
+</ul>
+<p>这样是不是就缕清了：</p>
+<ul>
+<li><code>person.__proto__ === Person.prototype</code></li>
+<li><code>Person.__proto__ === Function.prototype</code></li>
+<li><code>person.__proto__.__proto__ === Object.prototype</code></li>
+<li><code>Object.prototype.__proto__ === null</code></li>
+</ul>
+<p>那么如果有代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> str1 = <span class="string">&#x27;jsliang1&#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> str2 = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">&#x27;jsliang2&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>下面这几个对应啥？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">str1.__proto__ === ?</span><br><span class="line">str1.__proto__.__proto__ === ?</span><br><span class="line">str2.__proto__ === ?</span><br><span class="line">str2.__proto__.__proto__ === ?</span><br></pre></td></tr></table></figure>
+<p>答案：</p>
+<ul>
+<li><code>str1.__proto__</code> 和 <code>str2.__proto__</code> 都等于 <code>String.prototype</code></li>
+<li><code>str1.__proto__.__proto__</code> 和 <code>str2.__proto__.__proto__</code> 都等于 <code>Object.prototype</code></li>
+</ul>
+<p>最后再看看其他类型的，相信小伙伴就彻底搞懂 JavaScript 原型链了；</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 字符串</span></span><br><span class="line"><span class="keyword">let</span> str = <span class="string">&#x27;jsliang&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.__proto__ === <span class="built_in">String</span>.prototype);             <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 数字</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="number">25</span>;</span><br><span class="line"><span class="built_in">console</span>.log(num.__proto__ === <span class="built_in">Number</span>.prototype);             <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(num.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 布尔值</span></span><br><span class="line"><span class="keyword">let</span> bool = <span class="literal">false</span>;</span><br><span class="line"><span class="built_in">console</span>.log(bool.__proto__ === <span class="built_in">Boolean</span>.prototype);            <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(bool.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);   <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 数组</span></span><br><span class="line"><span class="keyword">let</span> arr = [];</span><br><span class="line"><span class="built_in">console</span>.log(arr.__proto__ === <span class="built_in">Array</span>.prototype);               <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正则</span></span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/jsliang/g</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.__proto__ === <span class="built_in">RegExp</span>.prototype);              <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);    <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 日期</span></span><br><span class="line"><span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">console</span>.log(date.__proto__ === <span class="built_in">Date</span>.prototype);               <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(date.__proto__.__proto__ === <span class="built_in">Object</span>.prototype);   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>万物皆对象~</p>
+<p>下面做两个小测试。</p>
+<h4 id="9-2-题目-1：求输出结果">9.2 题目 1：求输出结果</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;a&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Function</span>.prototype.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;b&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</span><br><span class="line"></span><br><span class="line">f.a(); <span class="comment">// 输出啥？</span></span><br><span class="line">f.b(); <span class="comment">// 输出啥？</span></span><br><span class="line"></span><br><span class="line">F.a(); <span class="comment">// 输出啥？</span></span><br><span class="line">F.b(); <span class="comment">// 输出啥？</span></span><br></pre></td></tr></table></figure>
+<p>求输出结果？</p>
+<hr>
+<p>答案：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">f.a() -&gt; a</span><br><span class="line">f.b() -&gt; f.b is not a <span class="function"><span class="keyword">function</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">F</span>.<span class="title">a</span>(<span class="params"></span>) -&gt; <span class="title">a</span></span></span><br><span class="line"><span class="function"><span class="title">F</span>.<span class="title">b</span>(<span class="params"></span>) -&gt; <span class="title">b</span></span></span><br></pre></td></tr></table></figure>
+<p>解析：</p>
+<p><strong>首先</strong>，看 <code>f</code>：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</span><br></pre></td></tr></table></figure>
+<p>我们知道：</p>
+<ul>
+<li><code>f.__proto__ === F.prototype</code></li>
+<li><code>F.__proto__ === Function.prototype</code></li>
+<li><code>f.__proto__.__proto__ === Object.prototype</code></li>
+</ul>
+<p>所以，<code>f.a()</code> 会先查找 <code>f</code> 自身存在 <code>a</code> 属性否；如果不存在，往 <code>F</code> 原型 <code>F.prototype</code> 上，看看有没有 <code>a</code> 否；如果不存在，往 <code>Object.prototype</code> 上找，发现 <code>a</code>。</p>
+<p>而 <code>f.b</code> 就没有了，它可以通过 <code>F.__proto__</code> 去查找到，因为定义到 <code>Function.prototype</code> 上了。</p>
+<h4 id="10-3-题目-2：求输出结果">10.3 题目 2：求输出结果</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.a = <span class="string">&#x27;value a&#x27;</span>;</span><br><span class="line"><span class="built_in">Function</span>.prototype.b = <span class="string">&#x27;value b&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(foo.a); <span class="comment">// 输出啥</span></span><br><span class="line"><span class="built_in">console</span>.log(foo.b); <span class="comment">// 输出啥</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(F.a); <span class="comment">// 输出啥</span></span><br><span class="line"><span class="built_in">console</span>.log(F.b); <span class="comment">// 输出啥</span></span><br></pre></td></tr></table></figure>
+<p>求输出结果？</p>
+<hr>
+<p>答:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">foo.a -&gt; value a</span><br><span class="line">foo.b -&gt; <span class="literal">undefined</span></span><br><span class="line"></span><br><span class="line">F.a -&gt; value a</span><br><span class="line">F.b -&gt; value b</span><br></pre></td></tr></table></figure>
+<p>列举关系：</p>
+<ul>
+<li><code>foo.__proto__ === Object.prototype</code></li>
+<li><code>F.__proto__ === Function.prototype</code></li>
+<li><code>F.__proto__.__proto__ === Object.prototype</code></li>
+</ul>
+<p>所以：</p>
+<ol>
+<li><code>foo</code> 自身没有 <code>a</code> 属性，那就往 <code>Object</code> 上去找，从而得到 <code>value a</code>。而 <code>foo.b</code> 就找不到了，返回 <code>undefined</code>。</li>
+<li><code>F</code> 自身没有 <code>a</code> 属性，那就往 <code>Function</code> 上去找，没找到；继续往 <code>Object.prototype</code> 上找，返回 <code>value a</code>。而 <code>Function.prototype</code> 存在 <code>b</code> 属性，返回 <code>value b</code>。</li>
+</ol>
+<h3 id="a-name-ten-十-题目-a"><a name="ten">十. 题目</a></h3>
+<p>JavaScript 原型和原型链的题目挺多的，后面逐步收录到这里吧！</p>
+<h4 id="10-1-选择题">10.1 选择题</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">Function</span>.prototype.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</span><br></pre></td></tr></table></figure>
+<p>请选择：</p>
+<ul>
+<li>A：<code>f</code> 能取到 <code>a</code>，但取不到 <code>b</code>。</li>
+<li>B：<code>f</code> 能取到 <code>a</code>、<code>b</code>。</li>
+<li>C：<code>F</code> 能取到 <code>b</code>，不能取到 <code>a</code>。</li>
+<li>D：<code>F</code> 能取到 <code>a</code>，不能取到 <code>b</code>。</li>
+</ul>
+<hr>
+<p>答案：A</p>
+<p>解析：</p>
+<ul>
+<li><code>F.a = function</code></li>
+<li><code>F.b = function</code></li>
+<li><code>f.a = function</code></li>
+<li><code>f.b = undefined</code></li>
+</ul>
+<p>首先，函数 <code>F</code> 通过原型链，可以找到</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">Function</span>.prototype.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+<p>这两个绑定的 <code>a</code> 和 <code>b</code>。</p>
+<p>但是 <code>f = new F()</code> 出来的是一个 Object，而不是 Function。</p>
+<p>所以 <code>f</code> 能找到 <code>a</code>，但是找不到 <code>b</code>。</p>
+<h4 id="10-2-阐释原因">10.2 阐释原因</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype.a = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="built_in">Object</span>.prototype.b = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>;</span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(p.a); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(p.b); <span class="comment">// b</span></span><br></pre></td></tr></table></figure>
+<p>请讲述下原因？</p>
+<hr>
+<p>答案：</p>
+<p><code>Person</code> 函数是 <code>Function</code> 对象的一个实例，所以可以访问 <code>Function</code> 和 <code>Object</code> 原型链上的内容。</p>
+<p>而 <code>new Person</code> 返回的是一个对象，只能访问挂载到 <code>Object</code> 原型链上的内容。</p>
+<p>所以只有 <code>p.b</code>。</p>
+<h3 id="a-name-el-十一-参考文献-a"><a name="el">十一. 参考文献</a></h3>
+<ul>
+<li><a href="https://github.com/LiangJunrong/document-library/blob/master/%E7%B3%BB%E5%88%97-%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/2019/JavaScript-%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE.md">jsliang 2019 面试 - JavaScript-原型与原型链</a>【阅读建议：1h】</li>
+<li><a href="https://juejin.im/post/6844904094948130824">【何不三连】比继承家业还要简单的JS继承题-封装篇(牛刀小试)</a>【阅读建议：2h】</li>
+<li><a href="https://mp.weixin.qq.com/s/1UDILezroK5wrcK-Z5bHOg">深入理解 JavaScript 原型</a>【阅读建议：1h】</li>
+<li><a href="https://juejin.im/post/5dba456d518825721048bce9">【THE LAST TIME】一文吃透所有JS原型相关知识点</a>【阅读建议：30min】</li>
+<li><a href="https://github.com/mqyqingfeng/blog/issues/2">JavaScript深入之从原型到原型链</a>【阅读建议：30min】</li>
+<li><a href="https://github.com/mqyqingfeng/Blog/issues/15">JavaScript深入之创建对象的多种方式以及优缺点</a>【阅读建议：10min】</li>
+<li><a href="https://hijiangtao.github.io/2018/08/21/Prototypes/">JavaScript 引擎基础：原型优化</a>【阅读建议：10min】</li>
+<li><a href="http://louiszhai.github.io/2015/12/15/prototypeChain/">详解JS原型链与继承</a>【阅读建议：30min】</li>
+<li><a href="https://github.com/creeperyang/blog/issues/9">从proto和prototype来深入理解JS对象和原型链</a>【阅读建议：10min】</li>
+<li><a href="https://github.com/jayli/javascript-patterns/blob/master/chapter6.markdown">代码复用模式</a>【阅读建议：10min】</li>
+<li><a href="https://juejin.im/post/6844903575974313992">深度解析原型中的各个难点</a>【阅读建议：10min】</li>
+<li><a href="https://www.jianshu.com/p/dee9f8b14771">最详尽的 JS 原型与原型链终极详解，没有「可能是」。（一）</a>【阅读建议：内容有些误导】</li>
+<li><a href="https://www.jianshu.com/p/652991a67186">最详尽的 JS 原型与原型链终极详解，没有「可能是」。（二）</a>【阅读建议：高程书摘取，经第一篇后不继续往后看】</li>
+<li><a href="https://www.jianshu.com/p/a4e1e7b6f4f8">最详尽的 JS 原型与原型链终极详解，没有「可能是」。（三）</a>【阅读建议：高程书摘取，经第一篇后不继续往后看】</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
 </search>
