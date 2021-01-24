@@ -1015,4 +1015,113 @@
         <tag>JS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>闭包与柯里化</title>
+    <url>/%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9F%AF%E9%87%8C%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="一-闭包"><a href="#one">一. 闭包</a></h2>
+<h2 id="二-闭包好处和坏处"><a href="#two">二. 闭包好处和坏处</a></h2>
+<h2 id="三-柯里化"><a href="#three">三. 柯里化</a></h2>
+<h2 id="四-题记"><a href="#four">四. 题记</a></h2>
+<h3 id="a-name-one-一-闭包-a"><a name="one">一. 闭包</a></h3>
+<p>在 JavaScript 中，根据词法作用域的规则，内部函数总是可以访问其外部函数中声明的变量。</p>
+<p>当通过调用一个外部函数返回一个内部函数后，即使该外部函数已经执行结束了，但是内部函数引用外部函数的变量依然保存在内存中，我们就把这些变量的集合称为闭包。</p>
+<p>简单来说：</p>
+<ul>
+<li><strong>在函数 A 中还有函数 B，函数 B 调用了函数 A 中的变量，那么函数 B 就称为函数 A 的闭包。</strong></li>
+</ul>
+<p>举个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    num++;</span><br><span class="line">    <span class="built_in">console</span>.log(num);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> f = foo();</span><br><span class="line">f(); <span class="comment">// 1</span></span><br><span class="line">f(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<p>这个 <code>num</code> 在返回的函数中存在了，所以每次调用都会 + 1。</p>
+<h3 id="a-name-two-二-闭包好处和坏处-a"><a name="two">二. 闭包好处和坏处</a></h3>
+<p>好处：</p>
+<ol>
+<li>缓存。将变量隐藏起来不被 GC 回收。</li>
+<li>实现柯里化。利用闭包特性完成柯里化。</li>
+</ol>
+<p>坏处：</p>
+<ol>
+<li>内存消耗。闭包产生的变量无法被销毁。</li>
+<li>性能问题。由于闭包内部变量优先级高于外部变量，所以需要多查找作用域链的一个层次，一定程度影响查找速度。</li>
+</ol>
+<h3 id="a-name-three-三-柯里化-a"><a name="three">三. 柯里化</a></h3>
+<p>柯里化（Currying）是把接受多个参数的函数转变为单一参数的函数，并且返回接受余下的参数且返回结果的新函数的技术。</p>
+<p><strong>简单来说</strong>：</p>
+<ol>
+<li>通过闭包管理</li>
+<li>支持链式调用</li>
+<li>每次运行返回一个 <code>function</code></li>
+</ol>
+<p>即：通过将多个参数换成一个参数，每次运行返回新函数的技术</p>
+<h4 id="3-1-柯里化举例">3.1 柯里化举例</h4>
+<blockquote>
+<p>普通的 add 函数</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span> (<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>柯里化函数</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingAdd</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">y</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">curryingAdd(x)(y);</span><br></pre></td></tr></table></figure>
+<p>哎，这样不是浪费程序员时间么？</p>
+<p>不急，我们继续往下面看。</p>
+<h4 id="3-2-柯里化好处">3.2 柯里化好处</h4>
+<ol>
+<li>参数复用</li>
+<li>提前确认</li>
+<li>延迟运行</li>
+</ol>
+<blockquote>
+<p>参数复用</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 正则表达式</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 校验数字</span></span><br><span class="line"><span class="keyword">let</span> numberReg = <span class="regexp">/[0-9]+/g</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 校验小写字母</span></span><br><span class="line"><span class="keyword">let</span> stringReg = <span class="regexp">/[a-z]+/g</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// currying 后</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingCheck</span>(<span class="params">reg</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">txt</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> reg.test(txt);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 校验数字</span></span><br><span class="line"><span class="keyword">let</span> checkNumber = curryingCheck(numberReg);</span><br><span class="line"><span class="keyword">let</span> checkString = curryingCheck(stringReg);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="built_in">console</span>.log(checkNumber(<span class="string">&#x27;13888888888&#x27;</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(checkString(<span class="string">&#x27;jsliang&#x27;</span>)); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>利用闭包实现柯里化。</p>
+<h4 id="3-3-题目：实现-add-1-2-3">3.3 题目：实现 add(1)(2)(3)</h4>
+<h2 id="code￼4"><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 实现一个 add 方法，使计算结果能够满足以下预期</span></span><br><span class="line">add(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>) = <span class="number">6</span>;</span><br><span class="line">add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)(<span class="number">4</span>) = <span class="number">10</span>;</span><br><span class="line">add(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)(<span class="number">4</span>)(<span class="number">5</span>) = <span class="number">15</span>;</span><br></pre></td></tr></table></figure></h2>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> numList = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//进一步收集剩余参数</span></span><br><span class="line">    <span class="keyword">const</span> calculate = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        numList.push(...arguments);</span><br><span class="line">        <span class="keyword">return</span> calculate;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//利用toString隐式转换。最后执行时进行转换</span></span><br><span class="line">    calculate.toString = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> numList.reduce(<span class="function">(<span class="params">a,b</span>) =&gt;</span> a + b, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> calculate;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实现一个add方法，使计算结果能够满足一下预期</span></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)); <span class="comment">// 6</span></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)(<span class="number">4</span>)); <span class="comment">// 10;</span></span><br><span class="line"><span class="built_in">console</span>.log(add(<span class="number">1</span>)(<span class="number">2</span>)(<span class="number">3</span>)(<span class="number">4</span>)(<span class="number">5</span>)); <span class="comment">// 15;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-4-题目：实现-compose-foo-bar-baz-‘start’">3.4 题目：实现 compose(foo, bar, baz)(‘start’)</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args[<span class="number">0</span>]);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;foo&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args[<span class="number">0</span>]);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;bar&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baz</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args[<span class="number">0</span>]);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;baz&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compose</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 闭包元素，函数列表</span></span><br><span class="line">    <span class="keyword">const</span> list = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 闭包元素，函数列表执行位置</span></span><br><span class="line">    <span class="keyword">let</span> index = <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 闭包元素，上一个函数的返回</span></span><br><span class="line">    <span class="keyword">let</span> prev = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//返回闭包函数</span></span><br><span class="line">    <span class="keyword">const</span> doNext = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        index++ <span class="comment">//索引值累加</span></span><br><span class="line">        <span class="comment">// 一开始没有上一个元素时，获取第二个括号的值</span></span><br><span class="line">        <span class="keyword">if</span>(!prev) &#123;</span><br><span class="line">            prev = <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 设置前一个结果为当前函数返回</span></span><br><span class="line">        prev = list[index](prev);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//递归调用</span></span><br><span class="line">        <span class="keyword">if</span>( index &lt;  list.lenght - <span class="number">1</span>) &#123;</span><br><span class="line">            doNext(index + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> doNext;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">compose(foo, bar, baz)(<span class="string">&#x27;start&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="a-name-four-四-题记-a"><a name="four">四. 题记</a></h3>
+<h4 id="4-1-求打印结果-1">4.1 求打印结果 1</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> n = <span class="number">4399</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    n++;</span><br><span class="line">    <span class="built_in">console</span>.log(n);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    n,</span><br><span class="line">    add</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = test();</span><br><span class="line"><span class="keyword">var</span> result2 = test();</span><br><span class="line"></span><br><span class="line">result.add(); <span class="comment">// 输出啥</span></span><br><span class="line">result.add(); <span class="comment">// 输出啥</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(result.n); <span class="comment">// 输出啥</span></span><br><span class="line"></span><br><span class="line">result2.add(); <span class="comment">// 输出啥</span></span><br></pre></td></tr></table></figure>
+<p>选择：</p>
+<ul>
+<li>A：4400 4401 4399 4400</li>
+<li>B：4400 4401 4401 4402</li>
+<li>C：4400 4400 4399 4400</li>
+<li>D：4400 4401 4399 4402</li>
+<li>E：4400 4401 4401 4400</li>
+</ul>
+<hr>
+<p>答案: A</p>
+<h4 id="4-2-求打印结果-2">4.2 求打印结果 2</h4>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i++);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f1 = Foo();</span><br><span class="line"><span class="keyword">var</span> f2 = Foo();</span><br><span class="line"></span><br><span class="line">f1();</span><br><span class="line">f1();</span><br><span class="line">f2();</span><br></pre></td></tr></table></figure>
+<p>请选择：</p>
+<ul>
+<li>A：0 1 0</li>
+<li>B：0 1 2</li>
+<li>C：0 0 0</li>
+<li>D：0 0 2</li>
+</ul>
+<hr>
+<p>答案：A</p>
+<p>原因：<code>f1</code> 每次执行会产生闭包，然后 <code>i++</code> 是先赋值后展示。</p>
+<h3 id="五-参考文献">五.参考文献</h3>
+<ul>
+<li><a href="https://www.jianshu.com/p/2975c25e4d71">详解JS函数柯里化</a>【阅读建议：20min】</li>
+<li><a href="https://beta.segmentfault.com/q/1010000004342477/a-1020000004344356">编写add函数 然后 add(1)(2)(3)(4) 输出10 再考虑拓展性</a>【阅读建议：10min】</li>
+<li><a href="https://juejin.im/post/6844903769646317576">发现 JavaScript 中闭包的强大威力</a>【阅读建议：20min】</li>
+<li><a href="http://blog.leapoahead.com/2015/09/15/js-closure/">JavaScript闭包的底层运行机制</a>【阅读建议：20min】</li>
+<li><a href="https://zhuanlan.zhihu.com/p/56490498">我从来不理解JavaScript闭包，直到有人这样向我解释它</a>【阅读建议：10min】</li>
+<li><a href="https://juejin.im/post/5c4e6a90e51d4552266576d2">发现 JavaScript 中闭包的强大威力</a>【阅读建议：10min】</li>
+<li><a href="http://blog.leapoahead.com/2015/09/15/js-closure/">JavaScript闭包的底层运行机制</a>【阅读建议：20min】</li>
+<li><a href="https://zhuanlan.zhihu.com/p/56490498">我从来不理解JavaScript闭包，直到有人这样向我解释它…</a>【阅读建议：10min】</li>
+<li><a href="https://juejin.im/post/6844903474212143117">破解前端面试（80% 应聘者不及格系列）：从闭包说起</a>【阅读建议：10min】</li>
+</ul>
+]]></content>
+      <categories>
+        <category>JS</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+      </tags>
+  </entry>
 </search>

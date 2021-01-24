@@ -6,7 +6,7 @@
   <link href="https://sjh95zs.github.io/atom.xml" rel="self"/>
   
   <link href="https://sjh95zs.github.io/"/>
-  <updated>2021-01-23T12:09:22.501Z</updated>
+  <updated>2021-01-24T12:49:40.510Z</updated>
   <id>https://sjh95zs.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闭包与柯里化</title>
+    <link href="https://sjh95zs.github.io/%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9F%AF%E9%87%8C%E5%8C%96/"/>
+    <id>https://sjh95zs.github.io/%E9%97%AD%E5%8C%85%E4%B8%8E%E6%9F%AF%E9%87%8C%E5%8C%96/</id>
+    <published>2021-01-23T16:00:00.000Z</published>
+    <updated>2021-01-24T12:49:40.510Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-闭包&quot;&gt;&lt;a href=&quot;#one&quot;&gt;一. 闭包&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;二-闭包好处和坏处&quot;&gt;&lt;a href=&quot;#two&quot;&gt;二. 闭包好处和坏处&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;三-柯里化&quot;&gt;&lt;a href=&quot;#three&quot;&gt;三.</summary>
+        
+      
+    
+    
+    
+    <category term="JS" scheme="https://sjh95zs.github.io/categories/JS/"/>
+    
+    
+    <category term="JS" scheme="https://sjh95zs.github.io/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>原型与原型链</title>
